@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
 				`${client.user.username} Commands list`,
 				client.user.displayAvatarURL()
 			)
-			.setColor("GREEN")
+			.setColor("YELLOW")
 			.setDescription(
 				`**Bee-Boop-Bee-Bee (Translation: How may I help you?)\nMy prefix:** \`${prefixesdatabase.prefix}\` \nSlash Commands list for \`/help\`\nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=8&scope=bot) to invite me to your server.`
 				

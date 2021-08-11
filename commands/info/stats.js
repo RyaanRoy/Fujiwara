@@ -36,7 +36,7 @@ module.exports.run = async (client, message) => {
 					true
 				)
 				.setFooter(
-					"Swaggy 2021",
+					"Bumblebee",
 					
 				);
 			return message.channel.send({ embed });

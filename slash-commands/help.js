@@ -73,7 +73,7 @@ module.exports = {
 			);
 
 			const embed = new Discord.MessageEmbed()
-				.setTitle(`${emoji.slash} Swaggy Slash Commands List`)
+				.setTitle(`${emoji.slash}Bumblebee Slash Commands List`)
 				.setColor("GREEN")
 				.setDescription(
 					`**My prefix:** \`${prefixesdatabase.prefix}\` , Traditional Command List for \`${prefixesdatabase.prefix}help\`\nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=711937599975063584&permissions=8&scope=bot%20applications.commands) to invite me to your server.\n\n\`avatar\`, \`cat\`, \`dog\`, \`enlarge\`, \`help\`, \`meme\`, \`ping\`, \`snipe\`, \`uptime\`, \`weather\``

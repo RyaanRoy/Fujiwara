@@ -5,7 +5,7 @@ module.exports = async client => {
 	const activities = [
 		`${client.guilds.cache.size} Servers`,
 		`${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} Users`,
-		"Swaggers Official Bot"
+		"Living life in Cybertron"
 	];
 	const commandFiles = fs
 		.readdirSync("./slash-commands")
@@ -34,7 +34,7 @@ module.exports = async client => {
 	setInterval(
 		() =>
 			client.user.setActivity(
-				`z!help | ${activities[i++ % activities.length]}`,
+				`b-help | ${activities[i++ % activities.length]}`,
 				{ type: "WATCHING" }
 			),
 		15000

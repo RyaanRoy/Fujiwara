@@ -1,7 +1,7 @@
 const express = require("express");
 const server = express();
 server.all("/", (req, res) => {
-	res.send("Swaggy is alive!");
+	res.send("Bumblebee is alive!");
 });
 
 function keepAlive() {

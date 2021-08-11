@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args) => {
 			}`
 		)
 		.setImage(body.url)
-		.setFooter("©Swaggy");
+		.setFooter("Bumblebee");
 	message.channel.send({ embed });
 };
 

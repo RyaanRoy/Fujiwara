@@ -49,7 +49,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.addField("**:gear:Custom Function(another idk what to name)**", "`setprefix`")
 			.setFooter(
-				`© ${nowyear} ${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
+				`${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
 			);
 		message.channel.send({ embed });
 	}

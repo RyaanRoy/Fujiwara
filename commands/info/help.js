@@ -17,21 +17,21 @@ module.exports.run = async (client, message, args) => {
 			.setDescription(
 				`**My prefix:** \`${prefixesdatabase.prefix}\` , ${emojis.slash} Slash Commands list for \`/help\`\nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=8&scope=bot) to invite me to your server.`
 			)
-			.addField("**📱Basic**", "`help`, `ping`, `vote`, `uptime`")
+			.addField("**📱Idk miscellaneous maybe**", "`help`, `ping`, `uptime`")
 			.addField(
-				"**⚙utility**",
+				"**utility**",
 				"`aes256`, `avatar`, `channel`, `embed`, `roleinfo`, `reverse`, `setafk`, `snipe`, `stats`, `timer`, `translate`, `whois`, `weather`, `youtube`"
 			)
 			.addField(
-				"**🎃Fun**",
+				"**Fun(not really tho)**",
 				"`8ball`, `cat`, `deaes256`, `kiss`, `meme`, `ngif`, `pat`, `poke`, `smug`, `thigh`, `tickle`"
 			)
 			.addField(
-				"**:tada:Giveaways**",
+				"**Giveaways**",
 				"`start-giveaway`, `reroll`, `end-giveaway`"
 			)
 			.addField(
-				"**:frame_photo:Image**",
+				"**Images**",
 				"`captcha`, `circle`, `delete`, `gay`, `changemymind`, `trigger`, `clyde`, `petpet`, `magik`, `iphonex`"
 			)
 			.addField(
@@ -43,10 +43,10 @@ module.exports.run = async (client, message, args) => {
 				"`ban`, `clear`, `clearwarn`, `createchannel`, `createemoji`, `kick`, `lockchannel`, `mute`, `rename`, `slowmode`, `unban`, `unlockchannel`, `unmute`, `warn`, `warnings`"
 			)
 			.addField(
-				"**:underage:NSFW**",
+				"**:underage:NSFW(go to horny jail)**",
 				"`4knsfw`, `anal`, `ass`, `hentai`, `holo`, `pussy`, `porn`, `urban`"
 			)
-			.addField("**:gear:Custom Function**", "`setprefix`")
+			.addField("**:gear:Custom Function(another idk what to name)**", "`setprefix`")
 			.setFooter(
 				`© ${nowyear} ${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
 			);

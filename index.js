@@ -48,7 +48,7 @@ for (const file of commandFiles) {
 //Ready Event
 client.on('ready', () => {
   const mongo_url = process.env.mongo_url;
-  console.log("IGBot is online!");
+  console.log("Bumblebeeeee is online!");
 
   mongoose.connect(mongo_url, {
     useNewUrlParser: true,

@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.setColor("GREEN")
 			.setDescription(
-				`**Bee-Boop-Bee-Bee (Translation: How may I help you?)\nMy prefix:** \`${prefixesdatabase.prefix}\` , ${emojis.slash} Slash Commands list for \`/help\`\nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=8&scope=bot) to invite me to your server.`
+				`**Bee-Boop-Bee-Bee (Translation: How may I help you?)\nMy prefix:** \`${prefixesdatabase.prefix}\` \nSlash Commands list for \`/help\`\nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=8&scope=bot) to invite me to your server.`
 				
 			)
 			.addField("**📱Idk miscellaneous maybe**", "`help`, `ping`, `uptime`")

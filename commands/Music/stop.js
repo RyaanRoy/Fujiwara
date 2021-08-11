@@ -1,28 +1,20 @@
-const { MessageEmbed } = require("discord.js")
+module.exports.run = async (client, message, args) => {
+	if (!message.member.voice.channel)
+		return message.channel.send(
+			`${client.emotes.error} | You must be in a voice channel!`
+		);
+	if (!client.distube.isPlaying(message))
+		return message.channel.send(
+			`${client.emotes.error} | There is nothing playing!`
+		);
+	client.distube.stop(message);
+	message.channel.send(`${client.emotes.success} | Stopped!`);
+};
 
-module.exports = {
-    name: 'stop',
-    description: "Stops the Music & clears the queue",
-    usage: "?stop",
-    aliases: [],
-    run: async(client, message, args) => {
-        if (!message.member.voice.channel) {
-            const stopError = new MessageEmbed()
-              .setDescription("You Need to be in a Voice Channel to stop Music!")
-              .setColor("RED")
-            return message.channel.send(stopError)
-        }
-        if(!client.distube.isPlaying(message)) {
-            const stopError2 = new MessageEmbed()
-            .setDescription("There is Nothing Playing")
-            .setColor("RED")
-            return message.channel.send(stopError2)
-        }
-        client.distube.stop(message);
-        const embed = new MessageEmbed()
-        .setDescription('Stopped!')
-        .setColor("BLUE")
-        message.channel.send(embed)
-
-    }
-}
+module.exports.help = {
+	name: "stop",
+	description: "This command is used for stopping music.",
+	usage: "d!stop",
+	accessableby: "Member",
+	aliases: ["s", "dc", "fuckoff", "disconnect"]
+};

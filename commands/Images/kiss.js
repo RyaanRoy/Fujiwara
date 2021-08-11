@@ -1,21 +1,33 @@
-const Canvacord = require("canvacord/src/Canvacord")
-const { MessageAttachment } = require("discord.js")
+const Discord = require("discord.js");
 
-module.exports = {
-    name: 'kiss',
-    description: "Kiss other member. virtually.",
-    usage: "?kiss <mentionSomeone>",
-    run: async(client, message, args) => {
-        const member = message.mentions.users.first()
-        if(!member) return message.channel.send('No members mentioned. Please mention the person you wanna kiss ;)')
-        const mentionedMemberAvatar = member.displayAvatarURL({dynamic: false, format: "png"})
-        const messageAuthorAvatar = message.author.displayAvatarURL({dynamic: false, format: "png"})
+module.exports.run = async (client, message, args) => {
+	try {
+		const member = message.mentions.members.first();
+		require("request")(
+			{ url: "https://nekos.life/api/kiss", json: true },
+			(req, res, json) => {
+				if (member) {
+					const embed = new Discord.MessageEmbed()
+						.setTitle(
+							`${message.author.username} kisses ${member.user.username}`
+						)
+						.setColor("#eeeeee")
 
-        let image = await Canvacord.kiss(mentionedMemberAvatar, messageAuthorAvatar)
+						.setImage(json.url);
 
-        let kiss = new MessageAttachment(image, "kiss.png")
+					message.channel.send(embed);
+				} else message.reply("You need to mention the user to kiss!");
+			}
+		);
+	} catch (err) {
+		message.channel.send(`Their was an error!\n${err}`).catch();
+	}
+};
 
-        message.channel.send(kiss)
-
-    }
-}
+module.exports.help = {
+	name: "kiss",
+	description: "This command is used for kiss someone u loVe.",
+	usage: "d!kiss <mentions>",
+	accessableby: "Member",
+	aliases: []
+};

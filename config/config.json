@@ -1,10 +1,14 @@
 {
-    "emoji": {
-        "play": "▶️",
-        "stop": "⏹️",
-        "queue": "📄",
-        "success": "☑️",
-        "repeat": "🔁",
-        "error": "❌"
-    }
+	"prefix": "z!",
+	"ownerID": "744847481430343691",
+	"everyoneMention": false,
+	"hostedBy": true,
+	"emoji": {
+		"play": "▶️",
+		"stop": "⏹️",
+		"queue": "📄",
+		"success": "☑️",
+		"repeat": "🔁",
+		"error": "❌"
+	}
 }

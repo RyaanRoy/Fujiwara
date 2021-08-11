@@ -1,27 +1,35 @@
-const randomPuppy = require('random-puppy')
-const { MessageEmbed } = require('discord.js');
+const Discord = require("discord.js");
+const request = require("request");
 
-module.exports = {
-    name: 'meme',
-    description: "Sends A Random Meme!",
-    usage: "?meme",
-    run: async(client, message, args) => {
+module.exports.run = (client, message, _args) => {
+	try {
+		// This is a command purely for memes
+		request("https://some-random-api.ml/meme", (error, _response, body) => {
+			if (error) {
+				return message.channel
+					.send("Sorry, it appears an error has occurred fetching your meme!")
+					.then(() => console.error(error.message));
+			}
 
-        const subReddits = ['memes' , 'dankmemes']
-        const random = subReddits[Math.floor(Math.random() * subReddits.length)]
+			const json = JSON.parse(body);
+			const { id, image, caption, category } = json;
 
-        const img = await randomPuppy(random)
+			const emb = new Discord.MessageEmbed();
+			emb.setDescription(`${caption} - ${category} #${id}`);
+			emb.setColor("GREEN");
+			emb.setImage(image);
 
+			message.channel.send(emb);
+		});
+	} catch (e) {
+		console.error(e.message);
+	}
+};
 
-        const embed = new MessageEmbed()
-        .setColor("BLUE")
-        .setImage(img)
-        .setTitle(`Meme from ${random}`)
-        .setURL(`https://reddit.com/r/${random}`)
-
-
-    
-    message.channel.send(embed);
-
-    }
-}
+module.exports.help = {
+	name: "meme",
+	description: "This command is used for generating some cool memes.",
+	usage: "d!meme",
+	accessableby: "Member",
+	aliases: []
+};

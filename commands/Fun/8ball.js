@@ -1,30 +1,33 @@
-const { MessageEmbed } = require('discord.js');
-const answers = require('../../data/8ball.json')
+const Discord = require("discord.js");
 
-module.exports = {
-    name: '8ball',
-    description: "Returns a Yes/No/Maybe and those kind of Answers. Ask Away!",
-    usage: "?8ball <question>",
-    aliases: [],
-    run: async(client, message, args) => {
-        const question = args.join(" ")
+function doMagic8BallVoodoo() {
+	const rand = [
+		"Yes",
+		"No",
+		"Why are you even trying?",
+		"What do you think? NO",
+		"Maybe",
+		"Never",
+		"Yep",
+		"idk"
+	];
 
-        if(!question) {
-            const eightBallError = new MessageEmbed()
-            .setDescription('Please Provide a Question')
-            .setColor('RED')
-            return message.channel.send(eightBallError)
-        }
-        const answer = answers[Math.floor(Math.random() * answers.length)];
-
-        const embed = new MessageEmbed()
-        .setTitle("8Ball")
-        .setColor("BLUE")
-        .addField(`Question:`, question)
-        .addField(`Answer:`, answer);
-        
-
-        message.channel.send(embed);
-        
-    }
+	return rand[Math.floor(Math.random() * rand.length)];
 }
+
+module.exports.run = async (client, message, args) => {
+	if (!args[0])
+		return message.channel.send(
+			"Please ask me question first to access to this command."
+		);
+	message.channel.send(`My anwser is: ${doMagic8BallVoodoo()}`);
+};
+
+module.exports.help = {
+	name: "8ball",
+	description:
+		"This command is used for asking the bot what he wanted to answer as 8ball.",
+	usage: "d!8ball <questions>",
+	accessableby: "Member",
+	aliases: []
+};

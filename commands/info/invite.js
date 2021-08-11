@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
 		.setAuthor(`Invite Me to your server!`, client.user.displayAvatarURL())
 		.setColor("#2A2A2A")
 		.setDescription(
-			`[Click Here (Recommended Permissions)](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=3757436791&scope=bot%20applications.commands)\n[Click Here (Administrator Permissions)](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands)`
+			`[Click Here (Recommended Permissions)](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=261993004279&scope=bot)\n[Click Here (Administrator Permissions)](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=8&scope=bot)`
 		)
 		.setFooter(`© ${nowyear} ${client.user.username}`);
 	message.channel.send(embed);

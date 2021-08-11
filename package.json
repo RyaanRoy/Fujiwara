@@ -15,7 +15,6 @@
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
     "@k3rn31p4nic/google-translate-api": "^1.1.1",
-    "blague.xyz": "^2.0.4",
     "canvacord": "^5.0.7",
     "discord-backup": "^2.2.5",
     "discord-canvas": "^1.4.1",

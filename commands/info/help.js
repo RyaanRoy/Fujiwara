@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.addField("**📱Idk miscellaneous maybe**", "`help`, `ping`, `uptime`")
 			.addField(
-				"**utility**",
+				"**Utility**",
 				"`aes256`, `avatar`, `channel`, `embed`, `roleinfo`, `reverse`, `setafk`, `snipe`, `stats`, `timer`, `translate`, `whois`, `weather`, `youtube`"
 			)
 			.addField(

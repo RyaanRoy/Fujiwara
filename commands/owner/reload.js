@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
 		return message.channel.send("Only my developer can use this command...");
 
 	message.channel.send(
-		":warning: When all commands reloaded, all commands will be turned into latest changes! Type `confirm` to confirm! Or being cancelled in `20` seconds."
+		":warning: Latest changes will be applied Type `confirm` to confirm or will be cancelled in `20` seconds."
 	);
 	await message.channel
 		.awaitMessages(

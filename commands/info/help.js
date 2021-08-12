@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.setColor("YELLOW")
 			.setDescription(
-				`**Bee-Boop-Bee-Bee (Translation: How may I help you?)\nMy prefix:** \`${prefixesdatabase.prefix}\` \nSlash Commands list for \`/help\`\nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=8&scope=bot) to invite me to your server.`
+				`**Bee-Boop-Bee-Bee (Translation: How may I help you?)\nMy prefix in this server:** \`${prefixesdatabase.prefix}\` \nSlash Commands list for \`/help\`\nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=8&scope=bot) to invite me to your server.`
 				
 			)
 			.addField("**📱Idk miscellaneous maybe**", "`help`, `ping`, `uptime`")
@@ -36,15 +36,15 @@ module.exports.run = async (client, message, args) => {
 				"`captcha`, `circle`, `delete`, `gay`, `changemymind`, `trigger`, `clyde`, `petpet`, `magik`, `iphonex`"
 			)
 			.addField(
-				"**:musical_note:Music**",
+				"**Music**",
 				"`play`, `stop`, `skip`, `queue`, `autoplay`, `loop`, `volume`, `pause`, `resume`,`filter`"
 			)
 			.addField(
-				"**🛠️Moderation**",
+				"**Moderation**",
 				"`ban`, `clear`, `clearwarn`, `createchannel`, `createemoji`, `kick`, `lockchannel`, `mute`, `rename`, `slowmode`, `unban`, `unlockchannel`, `unmute`, `warn`, `warnings`"
 			)
 			.addField(
-				"**:underage:NSFW(go to horny jail)**",
+				"**NSFW(go to horny jail)**",
 				"`4knsfw`, `anal`, `ass`, `hentai`, `holo`, `pussy`, `porn`, `urban`"
 			)
 			.addField("**:gear:Custom Function(another idk what to name)**", "`setprefix`")
@@ -80,7 +80,7 @@ module.exports.run = async (client, message, args) => {
 				)
 				.setColor("#4a4b4d")
 				.setFooter(
-					`© ${nowyear} ${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
+					`${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
 				);
 
 			message.channel.send(embed);

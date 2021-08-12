@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 			`${client.emotes.error} | There is nothing playing!`
 		);
 	client.distube.stop(message);
-	message.channel.send(`${client.emotes.success} | Stopped!`);
+	message.channel.send(`${client.emotes.success} | Sigh! Music Stopped now gimme some rest!`);
 };
 
 module.exports.help = {

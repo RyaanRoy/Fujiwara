@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
     if (!args[0]) {
         const filterOptions = new MessageEmbed()
             .setTitle(`**Filter Options:**`)
-            .setDescription(`\`3d, bassboost, echo, karaoke, nightcore, vaporwave\``)
+            .setDescription(`\`3d, bassboost, echo, karaoke, nightcore, vaporwave,cle\``)
             .setColor("BLUE")
 
         return message.channel.send(filterOptions)

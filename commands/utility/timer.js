@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 		return message.reply("heh, text time huh? How about **no**?");
 	if (ms(Timer) > 2147483647)
 		return message.reply(
-			"You dweeb how do you expect me to handle such a big number nerd!"
+			"Dumbass how do you expect me to handle such a big number nerd!"
 		);
 	if (ms(Timer) < 1) return message.reply("What's the point of that?");
 

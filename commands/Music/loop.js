@@ -29,7 +29,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "loop",
 	description: "This command is used for lopping the songs in music system.",
-	usage: "d!loop <off/song/queue>",
+	usage: "b-loop <off/song/queue>",
 	accessableby: "Connecting to Voice channel",
 	aliases: []
 };

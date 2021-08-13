@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
 		return message.channel.send("Only my developer can use this command...");
 
 	message.channel.send(
-		":warning: Latest changes will be applied Type `confirm` to confirm or will be cancelled in `20` seconds."
+		":warning: When all commands reloaded, all commands will be turned into latest changes! Type `confirm` to confirm! Or being cancelled in `20` seconds."
 	);
 	await message.channel
 		.awaitMessages(
@@ -40,7 +40,7 @@ module.exports.run = async (client, message, args) => {
 		})
 		.catch(collected =>
 			message.channel.send(
-				":x: | Time's up! Reload commands actions cancelled!"
+				":x: | Time's up! Reload commands actions cancelleb-"
 			)
 		);
 };
@@ -49,7 +49,7 @@ module.exports.help = {
 	name: "reload-all",
 	description:
 		"This command is used for reload all commands without rebooting/restart the bot.",
-	usage: "d!reload-all",
+	usage: "b-reload-all",
 	accessableby: "Bot Owners",
 	aliases: []
 };

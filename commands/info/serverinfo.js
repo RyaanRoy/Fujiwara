@@ -69,7 +69,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "serverinfo",
 	description: "This command is used for checking the server info.",
-	usage: "d!serverinfo",
+	usage: "b-serverinfo",
 	accessableby: "Member",
 	aliases: []
 };

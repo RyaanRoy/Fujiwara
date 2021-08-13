@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
 
 	const embed1 = new Discord.MessageEmbed()
 		.setTitle("Error")
-		.setDescription(`${emojis.tick} The user you entered has not been banned!`)
+		.setDescription(`${emojis.tick} The user you entered has not been banneb-`)
 		.setColor("RED");
 
 	const mmqembed = new Discord.MessageEmbed()
@@ -46,7 +46,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "unban",
 	description: "This command is used for unbanning someone",
-	usage: "d!unban <USER ID>",
+	usage: "b-unban <USER ID>",
 	accessableby: "Ban Members",
 	aliases: []
 };

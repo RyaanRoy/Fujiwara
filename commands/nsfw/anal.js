@@ -12,7 +12,7 @@ module.exports.run = (client, msg, args) => {
 					.setColor("#00ff00")
 					.setTitle("Anal here")
 					.setFooter(
-						`Bumblebee| This command requested by ${msg.author.username}#${msg.author.discriminator}`
+						`©2021 Bumblebee| This command requested by ${msg.author.username}#${msg.author.discriminator}`
 					);
 
 				msg.channel.send(emb);
@@ -26,7 +26,7 @@ module.exports.help = {
 	name: "anal",
 	description:
 		"This command is used for calling NSFW images API to send them, but NSFW channel needed.",
-	usage: "d!anal",
+	usage: "b-anal",
 	accessablechannel: "NSFW Channel",
 	accessableby: "NSFW/Member",
 	aliases: []

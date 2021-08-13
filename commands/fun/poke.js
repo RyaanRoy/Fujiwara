@@ -25,14 +25,14 @@ module.exports.run = async (client, message, args) => {
 			}`
 		)
 		.setImage(body.url)
-		.setFooter("Bumblebee");
+		.setFooter("©Bumblebee");
 	message.channel.send({ embed });
 };
 
 module.exports.help = {
 	name: "poke",
 	description: "This command is used for poke someone",
-	usage: "d!poke <mention>",
+	usage: "b-poke <mention>",
 	accessableby: "Members",
 	aliases: []
 };

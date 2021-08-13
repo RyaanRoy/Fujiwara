@@ -3,7 +3,7 @@ const canvacord = require("canvacord");
 
 module.exports.run = async (client, message, args) => {
 	const usernotfind = new Discord.MessageEmbed()
-		.setDescription(`${emojis.cross} User is not found!`)
+		.setDescription(`${emojis.cross} User is not founb-`)
 		.setColor("RED");
 
 	const target = message.mentions.users.first();
@@ -49,7 +49,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "trigger",
 	description: "This command is used for generating trigger image",
-	usage: "d!trigger <mention or attachment>",
+	usage: "b-trigger <mention or attachment>",
 	accessableby: "Member",
 	aliases: []
 };

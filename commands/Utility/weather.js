@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
 			.addField("Week", `${current.day}`, true)
 			.addField("Date", `${current.date}`, true)
 			.setFooter(
-				`Bumblebee | Requested by ${message.author.username}#${message.author.discriminator}`
+				`©©2021 Bumblebee | Requested by ${message.author.username}#${message.author.discriminator}`
 			);
 
 		// Display when it's called
@@ -43,7 +43,7 @@ module.exports.help = {
 	name: "weather",
 	description:
 		"Check the weather in your location or area within newest climate/weather status",
-	usage: "d!weather <location/area>",
+	usage: "b-weather <location/area>",
 	accessableby: "Members",
 	aliases: []
 };

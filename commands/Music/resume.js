@@ -5,14 +5,14 @@ module.exports.run = async (client, message, args) => {
 		);
 	const queue = client.distube.resume(message);
 	message.channel.send(
-		`${client.emotes.success} | Resumed! Now playing:\n${queue.songs[0].name}`
+		`${client.emotes.success} | Resumeb- Now playing:\n${queue.songs[0].name}`
 	);
 };
 
 module.exports.help = {
 	name: "resume",
 	description: "This command is used for resuming music.",
-	usage: "d!resume",
+	usage: "b-resume",
 	accessableby: "Member",
 	aliases: []
 };

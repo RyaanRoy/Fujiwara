@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
     if (!args[0]) {
         const filterOptions = new MessageEmbed()
             .setTitle(`**Filter Options:**`)
-            .setDescription(`\`3d, bassboost, echo, karaoke, nightcore, vaporwave,cle\``)
+            .setDescription(`\`3d, bassboost, echo, karaoke, nightcore, vaporwave\``)
             .setColor("BLUE")
 
         return message.channel.send(filterOptions)
@@ -36,6 +36,7 @@ module.exports.run = async (client, message, args) => {
         return;
     }
 
+
 };
 
 
@@ -44,7 +45,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "filter",
 	description: "filter",
-	usage: "d!filter <filterOption>",
+	usage: "b-filter <filterOption>",
 	accessableby: "Members",
 	aliases: []
 };

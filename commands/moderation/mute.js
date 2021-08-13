@@ -30,8 +30,8 @@ module.exports.run = async (client, message, args) => {
 		return message.channel.send(embed6).then(m => m.delete({ timeout: 5000 }));
 	}
 	const embed50 = new Discord.MessageEmbed()
-		.setTitle("Command: d!mute")
-		.setDescription("Usage: d!mute @user [length] [reason]")
+		.setTitle("Command: b-mute")
+		.setDescription("Usage: b-mute @user [length] [reason]")
 		.setColor(0xff0000);
 
 	if (!tomute) return message.channel.send(embed50);
@@ -52,7 +52,7 @@ module.exports.run = async (client, message, args) => {
 		)
 		.setColor("RED");
 	const sdfsdfsdfsssd = new Discord.MessageEmbed()
-		.setDescription(`${emojis.cross} Please Type the muting period!`)
+		.setDescription(`${emojis.cross} Please Type the muting periob-`)
 		.setColor("RED");
 	const dddfs = new Discord.MessageEmbed()
 		.setDescription(
@@ -155,7 +155,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "mute",
 	description: "This command is used for muting some people really annoying.",
-	usage: "d!mute <mention> <duration> <reason>",
+	usage: "b-mute <mention> <duration> <reason>",
 	accessableby: "Manage Roles",
 	aliases: []
 };

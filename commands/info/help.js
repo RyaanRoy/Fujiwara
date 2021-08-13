@@ -13,43 +13,42 @@ module.exports.run = async (client, message, args) => {
 				`${client.user.username} Commands list`,
 				client.user.displayAvatarURL()
 			)
-			.setColor("YELLOW")
+			.setColor("GREEN")
 			.setDescription(
-				`**Bee-Boop-Bee-Bee (Translation: How may I help you?)\nMy prefix in this server:** \`${prefixesdatabase.prefix}\` \nSlash Commands list for \`/help\`\nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=8&scope=bot) to invite me to your server.`
-				
+				`**My prefix:** \`${prefixesdatabase.prefix}\` , ${emojis.slash} Slash Commands list for \`/help\`\nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.`
 			)
-			.addField("**📱Idk miscellaneous maybe**", "`help`, `ping`, `uptime`")
+			.addField("**📱Basic**", "`help`, `ping`, `vote`, `uptime`")
 			.addField(
-				"**Utility**",
+				"**⚙utility**",
 				"`aes256`, `avatar`, `channel`, `embed`, `roleinfo`, `reverse`, `setafk`, `snipe`, `stats`, `timer`, `translate`, `whois`, `weather`, `youtube`"
 			)
 			.addField(
-				"**Fun(not really tho)**",
+				"**🎃Fun**",
 				"`8ball`, `cat`, `deaes256`, `kiss`, `meme`, `ngif`, `pat`, `poke`, `smug`, `thigh`, `tickle`"
 			)
 			.addField(
-				"**Giveaways**",
+				"**:tada:Giveaways**",
 				"`start-giveaway`, `reroll`, `end-giveaway`"
 			)
 			.addField(
-				"**Images**",
+				"**:frame_photo:Image**",
 				"`captcha`, `circle`, `delete`, `gay`, `changemymind`, `trigger`, `clyde`, `petpet`, `magik`, `iphonex`"
 			)
 			.addField(
-				"**Music**",
+				"**:musical_note:Music**",
 				"`play`, `stop`, `skip`, `queue`, `autoplay`, `loop`, `volume`, `pause`, `resume`,`filter`"
 			)
 			.addField(
-				"**Moderation**",
+				"**🛠️Moderation**",
 				"`ban`, `clear`, `clearwarn`, `createchannel`, `createemoji`, `kick`, `lockchannel`, `mute`, `rename`, `slowmode`, `unban`, `unlockchannel`, `unmute`, `warn`, `warnings`"
 			)
 			.addField(
-				"**NSFW(go to horny jail)**",
+				"**:underage:NSFW**",
 				"`4knsfw`, `anal`, `ass`, `hentai`, `holo`, `pussy`, `porn`, `urban`"
 			)
-			.addField("**:gear:Custom Function(another idk what to name)**", "`setprefix`")
+			.addField("**:gear:Custom Function**", "`setprefix`")
 			.setFooter(
-				`${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
+				`© ${nowyear} ${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
 			);
 		message.channel.send({ embed });
 	}
@@ -80,13 +79,13 @@ module.exports.run = async (client, message, args) => {
 				)
 				.setColor("#4a4b4d")
 				.setFooter(
-					`${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
+					`© ${nowyear} ${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
 				);
 
 			message.channel.send(embed);
 		} else {
 			const embeds = new Discord.MessageEmbed()
-				.setDescription(`${emojis.cross} Command is not found!`)
+				.setDescription(`${emojis.cross} Command is not founb-`)
 				.setColor("RED");
 
 			return message.channel.send(embeds);
@@ -97,7 +96,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "help",
 	description: "This command is used for displaying all commands.",
-	usage: "d!help",
+	usage: "b-help",
 	accessableby: "Members",
 	aliases: []
 };

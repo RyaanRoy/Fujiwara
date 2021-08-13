@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
 
 	// If no message ID or giveaway name is specified
 	if (!args[0]) {
-		return message.channel.send(":x: You have to specify a valid message ID!");
+		return message.channel.send(":x: You have to specify a valid message Ib-");
 	}
 
 	// try to found the giveaway with prize then with ID
@@ -50,7 +50,7 @@ module.exports.run = async (client, message, args) => {
 					`Giveaway with message ID ${giveaway.messageID} is already ended.`
 				)
 			) {
-				message.channel.send("This giveaway is already ended!");
+				message.channel.send("This giveaway is already endeb-");
 			} else {
 				console.error(e);
 				message.channel.send("An error occured...");
@@ -61,7 +61,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "gend",
 	description: "This command is used for endding the currents giveaway section",
-	usage: "d!gend <giveaway-message-id>",
+	usage: "b-gend <giveaway-message-id>",
 	accessableby: "Manage Messages",
 	aliases: []
 };

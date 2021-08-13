@@ -3,7 +3,7 @@ const { parse } = require("twemoji-parser");
 
 module.exports.run = async (client, message, args) => {
 	const emoji = args[0];
-	if (!emoji) return message.channel.send("No emoji provided!");
+	if (!emoji) return message.channel.send("No emoji provideb-");
 
 	const custom = Discord.Util.parseEmoji(emoji);
 	const embed = new Discord.MessageEmbed()
@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "enlarge",
 	description: "This command is used for enlarging some emoji from everywhere",
-	usage: "d!enlarge <emojis>",
+	usage: "b-enlarge <emojis>",
 	accessableby: "Memeber",
 	aliases: []
 };

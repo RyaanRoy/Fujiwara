@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 		return message.reply("heh, text time huh? How about **no**?");
 	if (ms(Timer) > 2147483647)
 		return message.reply(
-			"Dumbass how do you expect me to handle such a big number nerd!"
+			"You dweeb how do you expect me to handle such a big number nerb-"
 		);
 	if (ms(Timer) < 1) return message.reply("What's the point of that?");
 
@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
 
 	setTimeout(() => {
 		message.channel.send(
-			`${message.author.toString()} The Timer Has FINISHED!, it lasted: ${ms(
+			`${message.author.toString()} The Timer Has FINISHEb-, it lasted: ${ms(
 				ms(Timer),
 				{ long: true }
 			)}`
@@ -42,7 +42,7 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
 	name: "timer",
 	description: "This command is used for timing.",
-	usage: "d!timer <duration in ms>",
+	usage: "b-timer <duration in ms>",
 	accessableby: "Member",
 	aliases: []
 };

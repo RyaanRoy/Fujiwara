@@ -8,13 +8,13 @@ module.exports.run = async (client, message, args) => {
 			`${client.emotes.error} | There is nothing playing!`
 		);
 	client.distube.stop(message);
-	message.channel.send(`${client.emotes.success} | Sigh! Music Stopped now gimme some rest!`);
+	message.channel.send(`${client.emotes.success} | Stoppeb-`);
 };
 
 module.exports.help = {
 	name: "stop",
 	description: "This command is used for stopping music.",
-	usage: "d!stop",
+	usage: "b-stop",
 	accessableby: "Member",
-	aliases: ["s", "dc", "stop", "disconnect"]
+	aliases: ["s", "dc", "fuckoff", "disconnect"]
 };

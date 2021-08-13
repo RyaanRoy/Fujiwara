@@ -12,7 +12,7 @@ module.exports.run = (client, msg, args) => {
 					.setColor("#00ff00")
 					.setTitle("4K NSFW here")
 					.setFooter(
-						`Bumblebee | This command requested by ${msg.author.username}#${msg.author.discriminator}`
+						`©2021 Bumblebee | This command requested by ${msg.author.username}#${msg.author.discriminator}`
 					);
 
 				msg.channel.send(emb);
@@ -25,7 +25,7 @@ module.exports.run = (client, msg, args) => {
 module.exports.help = {
 	name: "4knsfw",
 	description: "This command is used for generating some 4knsfw images.",
-	usage: "d!4knsfw",
+	usage: "b-4knsfw",
 	accessableby: "NSFW/Member",
 	aliases: []
 };

@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
 
 	const noticwsse1 = new Discord.MessageEmbed()
 		.setDescription(
-			`${emojis.cross} Failed to set slowmode in this channel, you can only type in 0 - 21600 second!`
+			`${emojis.cross} Failed to set slowmode in this channel, you can only type in 0 - 21600 seconb-`
 		)
 		.setColor("RED");
 
@@ -63,7 +63,7 @@ module.exports.help = {
 	name: "slowmode",
 	description:
 		"This command is used for changing the slowmode as settings page cannot.",
-	usage: "d!slowmode <1-21600>",
+	usage: "b-slowmode <1-21600>",
 	accessableby: "Manage Channels",
 	aliases: []
 };

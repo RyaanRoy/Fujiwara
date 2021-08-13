@@ -23,7 +23,7 @@ module.exports.help = {
 	name: "pussy",
 	description:
 		"This command is used for calling NSFW images API to send them, but NSFW channel needed.",
-	usage: "d!pussy <mention>",
+	usage: "b-pussy <mention>",
 	accessableby: "NSFW/Members",
 	aliases: []
 };

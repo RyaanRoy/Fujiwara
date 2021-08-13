@@ -12,7 +12,7 @@ exports.run = (client, msg, args) => {
 					.setColor("#00ff00")
 					.setTitle("Thigh here")
 					.setFooter(
-						`Bumblebee | This command requested by ${msg.author.username}#${msg.author.discriminator}`
+						`©2021 Bumblebee | This command requested by ${msg.author.username}#${msg.author.discriminator}`
 					);
 
 				msg.channel.send(emb);
@@ -25,7 +25,7 @@ exports.run = (client, msg, args) => {
 module.exports.help = {
 	name: "thigh",
 	description: "This command is used for generating thigh image.",
-	usage: "d!thigh",
+	usage: "b-thigh",
 	accessableby: "NSFW/Member",
 	aliases: []
 };

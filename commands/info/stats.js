@@ -25,7 +25,7 @@ module.exports.run = async (client, message) => {
 			const embed = new Discord.MessageEmbed()
 				.setColor(0x7289da)
 				.setTimestamp()
-				// .addField("Prefix", 'd!', true)
+				// .addField("Prefix", 'b-', true)
 				// .addField("Total Commands", `${totcmds} commands`, true)
 				.addField("Total Servers", `${client.guilds.cache.size}`, true)
 				.addField("Uptime Percentage", `${numberas}%`)
@@ -36,7 +36,7 @@ module.exports.run = async (client, message) => {
 					true
 				)
 				.setFooter(
-					"Bumblebee",
+					"Bumblebee 2021",
 					
 				);
 			return message.channel.send({ embed });
@@ -45,7 +45,7 @@ module.exports.run = async (client, message) => {
 module.exports.help = {
 	name: "stats",
 	description: "This command is used for monitoring stats of bot.",
-	usage: "d!stats",
+	usage: "b-stats",
 	accessableby: "Member",
 	aliases: []
 };

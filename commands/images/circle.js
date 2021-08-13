@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
 	const attachment = message.attachments.array()[0];
 
 	const usernotfind = new Discord.MessageEmbed()
-		.setDescription(`${emojis.cross} User is not found!`)
+		.setDescription(`${emojis.cross} User is not founb-`)
 		.setColor("RED");
 	let imagetarget;
 	try {
@@ -50,7 +50,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "circle",
 	description: "Circle the images or avatar",
-	usage: "d!circle <mentions>(optional)",
+	usage: "b-circle <mentions>(optional)",
 	accessableby: "Member",
 	aliases: []
 };

@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 
 module.exports.run = async (client, message, args) => {
 	const usernotfind = new Discord.MessageEmbed()
-		.setDescription(`${emojis.cross} User is not found!`)
+		.setDescription(`${emojis.cross} User is not founb-`)
 		.setColor("RED");
 
 	const target = message.mentions.users.first();
@@ -68,7 +68,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "magik",
 	description: "This command is used for magik.",
-	usage: "d!magik",
+	usage: "b-magik",
 	accessableby: "Members",
 	aliases: []
 };

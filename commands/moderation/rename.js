@@ -36,7 +36,7 @@ exports.run = (client, message, args) => {
 module.exports.help = {
 	name: "rename",
 	description: "This command is used for renaming someone's nickname.",
-	usage: "d!rename <mentions> <nickname>",
+	usage: "b-rename <mentions> <nickname>",
 	accessableby: "Manage Nicknames",
 	aliases: []
 };

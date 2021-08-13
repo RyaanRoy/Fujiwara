@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
 	// let user;
 
 	const usernotfind = new Discord.MessageEmbed()
-		.setDescription(`${emojis.cross} User is not found!`)
+		.setDescription(`${emojis.cross} User is not founb-`)
 		.setColor("RED");
 
 	const rankuser = message.mentions.users.first();
@@ -83,7 +83,7 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
 	name: "whois",
 	description: "Check who is him/her",
-	usage: "d!whois <mention or keep blank>",
+	usage: "b-whois <mention or keep blank>",
 	accessableby: "Members",
 	aliases: []
 };

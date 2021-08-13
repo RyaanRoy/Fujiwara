@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
 	const target = message.mentions.users.first();
 	const attachment = message.attachments.array()[0];
 	const usernotfind = new Discord.MessageEmbed()
-		.setDescription(`${emojis.cross} User is not found!`)
+		.setDescription(`${emojis.cross} User is not founb-`)
 		.setColor("RED");
 
 	let imagetarget;
@@ -51,7 +51,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "rip",
 	description: "This command is used for generating people IN RiP.",
-	usage: "d!rip <mentions>",
+	usage: "b-rip <mentions>",
 	accessableby: "Member",
 	aliases: []
 };

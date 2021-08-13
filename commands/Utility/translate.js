@@ -143,7 +143,7 @@ module.exports.run = (client, message, [args, ...words]) => {
 			);
 		if (args[2] !== "-")
 			return message.channel.send(
-				'Please correctly format the command, like so\n\n`d!translate en-es "word or sentence to translate"`'
+				'Please correctly format the command, like so\n\n`b-translate en-es "word or sentence to translate"`'
 			);
 		if (!langs.hasOwnProperty(targetLang))
 			return message.channel.send(
@@ -184,8 +184,8 @@ module.exports.run = (client, message, [args, ...words]) => {
 module.exports.help = {
 	name: "translate",
 	description:
-		"This command is used for translating stuff. Example: d!translate zh-en 你好, response: hello here",
-	usage: "d!translate <language>-<to-translate-language> <text>",
+		"This command is used for translating stuff. Example: b-translate zh-en 你好, response: hello here",
+	usage: "b-translate <language>-<to-translate-language> <text>",
 	accessableby: "Member",
 	aliases: []
 };

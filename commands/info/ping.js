@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "ping",
 	description: "This command is used for pinging the bot.",
-	usage: "d!ping",
+	usage: "b-ping",
 	accessableby: "Members",
 	aliases: []
 };

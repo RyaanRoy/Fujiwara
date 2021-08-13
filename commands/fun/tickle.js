@@ -18,14 +18,14 @@ module.exports.run = async (client, message, args) => {
 			}`
 		)
 		.setImage(body.url)
-		.setFooter("Bumblebee");
+		.setFooter("©Bumblebee");
 	message.channel.send({ embed });
 };
 
 module.exports.help = {
 	name: "tickle",
 	description: "This command is used for generating tickle image.",
-	usage: "d!tickle <mention>",
+	usage: "b-tickle <mention>",
 	accessableby: "Member",
 	aliases: []
 };

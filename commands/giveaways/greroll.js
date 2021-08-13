@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
 
 	// If no message ID or giveaway name is specified
 	if (!args[0]) {
-		return message.channel.send(":x: You have to specify a valid message ID!");
+		return message.channel.send(":x: You have to specify a valid message Ib-");
 	}
 
 	// try to found the giveaway with prize then with ID
@@ -35,7 +35,7 @@ exports.run = async (client, message, args) => {
 		.reroll(giveaway.messageID)
 		.then(() => {
 			// Success message
-			message.channel.send("Giveaway rerolled!");
+			message.channel.send("Giveaway rerolleb-");
 		})
 		.catch(e => {
 			if (
@@ -43,7 +43,7 @@ exports.run = async (client, message, args) => {
 					`Giveaway with message ID ${giveaway.messageID} is not ended.`
 				)
 			) {
-				message.channel.send("This giveaway is not ended!");
+				message.channel.send("This giveaway is not endeb-");
 			} else {
 				console.error(e);
 				message.channel.send("An error occured...");
@@ -54,7 +54,7 @@ exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "greroll",
 	description: "This command is used for rerolling giveaways.",
-	usage: "d!greroll <giveaway-message-ID>",
+	usage: "b-greroll <giveaway-message-ID>",
 	accessableby: "Manage Messages",
 	aliases: []
 };

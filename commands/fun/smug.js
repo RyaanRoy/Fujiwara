@@ -7,14 +7,14 @@ module.exports.run = async (client, message, args) => {
 	const embed = new Discord.MessageEmbed()
 		.setColor("#ff9900")
 		.setImage(body.url)
-		.setFooter("Bumblebee");
+		.setFooter("©Bumblebee");
 	message.channel.send({ embed });
 };
 
 module.exports.help = {
 	name: "smug",
 	description: "This command is used for generating smug.",
-	usage: "d!smug",
+	usage: "b-smug",
 	accessableby: "Member",
 	aliases: []
 };

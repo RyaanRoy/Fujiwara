@@ -9,14 +9,14 @@ module.exports.run = async (client, message, args) => {
 		);
 	const queue = client.distube.skip(message);
 	message.channel.send(
-		`${client.emotes.success} | Skipped! Now playing:\n${queue.songs[0].name}`
+		`${client.emotes.success} | Skippeb- Now playing:\n${queue.songs[0].name}`
 	);
 };
 
 module.exports.help = {
 	name: "skip",
 	description: "This command is used for skiping songs.",
-	usage: "d!skip",
+	usage: "b-skip",
 	accessableby: "Manage Server",
 	aliases: []
 };

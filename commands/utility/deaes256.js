@@ -25,7 +25,7 @@ module.exports.help = {
 	name: "dae256",
 	description:
 		"This command is used for dencrypting your text data with AES256 dencryption",
-	usage: "d!dae256 <encrypted-data>",
+	usage: "b-dae256 <encrypted-data>",
 	accessableby: "Member",
 	aliases: []
 };

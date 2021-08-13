@@ -48,7 +48,7 @@ module.exports.run = async (client, message, args) => {
 
 	const calcelembed = new Discord.MessageEmbed()
 		.setDescription(
-			`${emojis.cross} Time's up! Setting prefix's action cancelled!`
+			`${emojis.cross} Time's up! Setting prefix's action cancelleb-`
 		)
 		.setColor("RED");
 
@@ -81,7 +81,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "setprefix",
 	description: "This command is used for changing the prefix.",
-	usage: "d!setprefix <value>",
+	usage: "b-setprefix <value>",
 	accessableby: "Manage Server",
 	aliases: []
 };

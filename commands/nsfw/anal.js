@@ -12,7 +12,7 @@ module.exports.run = (client, msg, args) => {
 					.setColor("#00ff00")
 					.setTitle("Anal here")
 					.setFooter(
-						`©2021 Bumblebee| This command requested by ${msg.author.username}#${msg.author.discriminator}`
+						` Bumblebee| This command requested by ${msg.author.username}#${msg.author.discriminator}`
 					);
 
 				msg.channel.send(emb);

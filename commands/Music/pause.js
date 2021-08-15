@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 			`${client.emotes.error} | There is nothing playing!`
 		);
 	const queue = client.distube.pause(message);
-	message.channel.send(`${client.emotes.success} | Pauseb-`);
+	message.channel.send(`${client.emotes.success} | Paused!`);
 };
 module.exports.help = {
 	name: "pause",

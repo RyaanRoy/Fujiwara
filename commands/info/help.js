@@ -17,14 +17,15 @@ module.exports.run = async (client, message, args) => {
 			.setDescription(
 				`**My prefix:** \`${prefixesdatabase.prefix}\` , ${emojis.slash} Slash Commands list for \`/help\`\nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.`
 			)
-			.addField("**📱Basic**", "`help`, `ping`, `vote`, `uptime`")
+			.setThumbnail("https://i.pinimg.com/originals/a6/93/64/a69364e140065cde46923bd8622aa3e2.png")
+			.addField("**📱Basic**", "`help`, `ping`, `uptime`, `vote`[please??]")
 			.addField(
 				"**⚙utility**",
 				"`aes256`, `avatar`, `channel`, `embed`, `roleinfo`, `reverse`, `setafk`, `snipe`, `stats`, `timer`, `translate`, `whois`, `weather`, `youtube`"
 			)
 			.addField(
 				"**🎃Fun**",
-				"`8ball`, `cat`, `deaes256`, `kiss`, `meme`, `ngif`, `pat`, `poke`, `smug`, `thigh`, `tickle`"
+				"`8ball`, `cat`, `deaes256`, `kiss`, `meme`, `ngif`, `pat`, `poke`, `smug`, `thigh`, `tickle`, `youtubetogether (ytt)`"
 			)
 			.addField(
 				"**:tada:Giveaways**",

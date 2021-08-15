@@ -124,7 +124,7 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 			data: {
 				type: 4,
 				data: {
-					content: "Sorry, error occurred when running this command!"
+					content: "Sorry, error occurred when running this commanb-"
 				}
 			}
 		});

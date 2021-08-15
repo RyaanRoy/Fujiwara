@@ -42,7 +42,7 @@ module.exports.run = async (client, message, args) => {
 
 	const kntlembed = new Discord.MessageEmbed()
 		.setColor("GREEN")
-		.setDescription(`${emojis.tick} Cleared **${args[0]}** Message here`);
+		.setDescription(` Cleared **${args[0]}** Message here`);
 
 	try {
 		message.delete();

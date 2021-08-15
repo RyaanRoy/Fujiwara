@@ -2,8 +2,7 @@ const Discord = require("discord.js");
 const urban = require("urban");
 
 module.exports.run = async (bot, message, args) => {
-	if (message.channel.nsfw == false)
-		return message.channel.send("This is not NSFW channel");
+
 	if (args.length < 1) return message.reply("Type something!");
 	const XD = args.join(" ");
 
@@ -26,6 +25,6 @@ module.exports.help = {
 	name: "urban",
 	description: "This command is used for fetching urban stuff",
 	usage: "b-urban <search stuff>",
-	accessableby: "NSFW/Member",
+	accessableby: "Members",
 	aliases: []
 };

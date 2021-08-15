@@ -56,7 +56,7 @@ module.exports.run = (client, message, args) => {
 			.then(() => {
 				const bsuembed = new Discord.MessageEmbed()
 					.setDescription(
-						`${emojis.tick} Locked the channel down for **${ms(ms(time), {
+						`Locked the channel down for **${ms(ms(time), {
 							long: true
 						})}**`
 					)

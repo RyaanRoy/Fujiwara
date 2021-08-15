@@ -4,7 +4,7 @@ const { ShardingManager } = require("discord.js");
 
 const shard = new ShardingManager("./index.js", {
 	token: process.env.TOKEN,
-	totalShards: 1
+	totalShards: "auto"
 });
 
 shard.on("launch", shard => {

@@ -67,7 +67,7 @@ module.exports.run = async (client, message, args) => {
 			message.delete();
 			const doneembed = new Discord.MessageEmbed()
 				.setDescription(
-					`${emojis.tick} Prefix has been changed to: \`${client.settings.get(
+					` Prefix has been changed to: \`${client.settings.get(
 						message.guild.id,
 						"prefix"
 					)}\``

@@ -127,7 +127,7 @@ module.exports.run = async (client, message, args) => {
 
 	const embed10 = new Discord.MessageEmbed()
 		.setDescription(
-			`${emojis.tick} Muted **${tomute.username}#${tomute.discriminator}** | **${reason}**`
+			` Muted **${tomute.username}#${tomute.discriminator}** | **${reason}**`
 		)
 		.setColor("GREEN");
 	const rightNow = Date.now();

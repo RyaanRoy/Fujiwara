@@ -5,7 +5,7 @@ module.exports = async client => {
 	const activities = [
 		`${client.guilds.cache.size} Servers`,
 		`${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} Users`,
-		"Living Life in Cybertron"
+		"Fighting for Cybertron"
 	];
 	const commandFiles = fs
 		.readdirSync("./slash-commands")
@@ -41,7 +41,7 @@ module.exports = async client => {
 	);
 
 	setInterval(() => {
-		const filtered = client.moderationdb.filter(p => p.isMuted ==true);
+		const filtered = client.moderationdb.filter(p => p.isMuted == true);
 		const rightNow = Date.now();
 		filtered.forEach(async data => {
 			const mutedendstime = data.timeMuteEnd;

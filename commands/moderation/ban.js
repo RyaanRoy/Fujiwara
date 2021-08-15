@@ -35,7 +35,7 @@ module.exports.run = async (client, msg, args) => {
 	const kntlembed = new Discord.MessageEmbed()
 		.setTitle("Command: b-ban")
 		.setDescription(
-			"Wrong Usage!。\n\n**Function:** Ban a member\n**Usage:** b-ban [User] [Reason]\n**Example:** b-ban @RealKoolisw Noob"
+			"Wrong Usage!。\n\n**Function:** Ban a member\n**Usage:** b-ban [User] [Reason]\n**Example:** b-ban @Ryaan Noob"
 		)
 		.setColor("RED");
 	if (!banTaged) {
@@ -90,12 +90,13 @@ module.exports.run = async (client, msg, args) => {
 		.setTimestamp()
 		.setFooter("• Ban User Information"); //
 	const bsuembed = new Discord.MessageEmbed()
+	    .setThumbnail("https://media0.giphy.com/media/uktnk9GDoCgpnjHJwM/giphy.gif?cid=6c09b95265c6fd8b962adea8eabd0d4c2cdd1a444f30025a&rid=giphy.gif&ct=g")
 		.setDescription(
-			`${emojis.tick} Banned **${banTaged.username}#${banTaged.discriminator}** | **${reason}**`
+			`Banned **${banTaged.username}#${banTaged.discriminator}** | **Reason:${reason}**`
 		)
-		.setColor("GREEN");
+		.setColor("YELLOW");
 
-	msg.delete();
+	
 	msg.channel.send(bsuembed);
 	msg.guild.members.ban(banTaged.id, { reason });
 

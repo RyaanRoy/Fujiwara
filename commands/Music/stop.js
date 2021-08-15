@@ -1,3 +1,5 @@
+const { DiscordAPIError } = require("discord.js");
+const Discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
 	if (!message.member.voice.channel)
 		return message.channel.send(
@@ -8,7 +10,13 @@ module.exports.run = async (client, message, args) => {
 			`${client.emotes.error} | There is nothing playing!`
 		);
 	client.distube.stop(message);
-	message.channel.send(`${client.emotes.success} | Stoppeb-`);
+	const stopembed = new Discord.MessageEmbed()
+	.setAuthor(`Stop`, client.user.displayAvatarURL({ dynamic: true }))
+    .setTitle(`${message.author.username} used stop command`)
+    .setDescription(`Stopped playing the Music! See you again next time!`) 
+    .setColor(`YELLOW`)
+    .setThumbnail(`https://thumbs.gfycat.com/MiniatureFlatHarrier-size_restricted.gif`);
+	message.channel.send(stopembed);
 };
 
 module.exports.help = {

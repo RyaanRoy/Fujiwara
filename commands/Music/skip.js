@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
 		);
 	const queue = client.distube.skip(message);
 	message.channel.send(
-		`${client.emotes.success} | Skippeb- Now playing:\n${queue.songs[0].name}`
+		`${client.emotes.success} | Skipped:\n${queue.songs[0].name}`
 	);
 };
 

@@ -14,7 +14,7 @@ module.exports.run = (client, message, args) => {
 		.setColor("GREEN")
 		.setTitle(`Avatar for ${message.author.username}:`)
 		.setImage(
-			imageitem.displayAvatarURL({ dynamic: false, format: "png", size: 4096 })
+			imageitem.displayAvatarURL({ dynamic: true, format: "png", size: 4096 })
 		);
 
 	message.channel.send({ embed });

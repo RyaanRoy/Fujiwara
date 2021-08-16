@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
 				: args[0]
 				? args[0].length == 18
 					? message.guild.members.cache.get(args[0]).user.displayAvatarURL({
-							dynamic: false,
+							dynamic: true,
 							format: "png",
 							size: 4096
 					  })

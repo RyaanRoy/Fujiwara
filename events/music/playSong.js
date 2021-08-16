@@ -7,6 +7,6 @@ module.exports = async (client, message, queue, song) => {
 		song.formattedDuration
 	}\`\n${client.status(queue)}`) 
     .setColor(`YELLOW`)
-    .setThumbnail(song.thumbnail);
+    .setThumbnail(`https://c.tenor.com/hR2ZbUCQOncAAAAC/transformers-bumblebee.gif`);
 	message.channel.send(Embed);
 };

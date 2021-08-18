@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
 			.addField("**📱Basic**", "`help`, `ping`, `uptime`, `vote`[please??]")
 			.addField(
 				"**⚙utility**",
-				"`aes256`, `urban`, `avatar`, `channel`, `embed`, `imageembed`, `roleinfo`, `reverse`, `setafk`, `snipe`, `stats`, `timer`, `translate`, `whois`, `weather`"
+				"`aes256`, `roblox`, `urban`, `avatar`, `channel`, `embed`, `imageembed`, `roleinfo`, `reverse`, `setafk`, `snipe`, `stats`, `timer`, `translate`, `whois`, `weather`"
 			)
 			.addField(
 				"**🎃Fun**",
@@ -33,7 +33,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.addField(
 				"**:frame_photo:Image**",
-				"`captcha`, `circle`, `delete`, `gay`, `changemymind`, `trigger`, `clyde`, `petpet`, `magik`, `iphonex`"
+				"`captcha`, `circle`, `delete`, `think`, `gay`, `changemymind`, `trigger`, `clyde`, `petpet`, `magik`, `iphonex`"
 			)
 			.addField(
 				"**:musical_note:Music**",

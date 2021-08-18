@@ -3,7 +3,7 @@ const petPetGif = require("pet-pet-gif");
 
 module.exports.run = async (client, message, args) => {
 	const usernotfind = new Discord.MessageEmbed()
-		.setDescription(`${emojis.cross} User is not founb-`)
+		.setDescription(`${emojis.cross} User is not found!`)
 		.setColor("RED");
 
 	const target = message.mentions.users.first();
@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
 				: args[0]
 				? args[0].length == 18
 					? message.guild.members.cache.get(args[0]).user.displayAvatarURL({
-							dynamic: false,
+							dynamic: true,
 							format: "png",
 							size: 4096
 					  })
@@ -28,12 +28,12 @@ module.exports.run = async (client, message, args) => {
 									args.join(" ").toLocaleLowerCase()
 							)
 							.user.displayAvatarURL({
-								dynamic: false,
+								dynamic: true,
 								format: "png",
 								size: 4096
 							})
 				: message.author.displayAvatarURL({
-						dynamic: false,
+						dynamic: true,
 						format: "png",
 						size: 4096
 				  }));

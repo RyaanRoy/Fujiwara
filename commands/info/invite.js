@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
 		.setDescription(
 			`[Click Here (Recommended Permissions)](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=261956828791&scope=bot)\n[Click Here (Administrator Permissions)](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=8&scope=bot)`
 		)
-		.setFooter(`© ${nowyear} ${client.user.username}`);
+		.setFooter(`${client.user.username}`);
 	message.channel.send(embed);
 };
 

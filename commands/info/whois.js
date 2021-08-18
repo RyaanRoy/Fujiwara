@@ -45,7 +45,7 @@ module.exports.run = async (bot, message, args) => {
 			.setColor(user.displayHexColor)
 			.setAuthor(
 				`${user.tag} User Information`,
-				user.displayAvatarURL({ dynamic: false, format: "png", size: 4096 })
+				user.displayAvatarURL({ dynamic: true, format: "png", size: 4096 })
 			)
 			.setDescription(
 				`**Name: **${user.tag}\n**ID: **${
@@ -53,7 +53,7 @@ module.exports.run = async (bot, message, args) => {
 				}\n**Status: **${user.presence.status.toUpperCase()}\n**• Game: **${
 					user.presence.game
 						? user.presence.game.name
-						: "I do not see him playing anything!"
+						: "I do not see him/her playing anything!"
 				}\n**Account Type: **${trufal[user.bot]}\n**Joined At: **${moment(
 					userguild.joinedAt
 				).format("DD-MM-YYYY")}\n**Created at: ** ${moment(
@@ -61,7 +61,7 @@ module.exports.run = async (bot, message, args) => {
 				).format(
 					"DD-MM-YYYY"
 				)}\n**Avatar**: [Click here](${user.displayAvatarURL({
-					dynamic: false,
+					dynamic: true,
 					format: "png",
 					size: 4096
 				})})\n**Roles: **${roles}`
@@ -69,7 +69,7 @@ module.exports.run = async (bot, message, args) => {
 
 			.setThumbnail(
 				`${user.displayAvatarURL({
-					dynamic: false,
+					dynamic: true,
 					format: "png",
 					size: 4096
 				})}`

@@ -18,8 +18,7 @@ module.exports = {
 		} else {
 			userid = interaction.member.user.id;
 		}
-		// let id = interaction.data.options[0].value
-		//	id.replace(/[\\<>@#&!]/g, "");
+		
 		const userss = client.users.fetch(userid);
 		userss.then(result => {
 			const avatar = result.displayAvatarURL({

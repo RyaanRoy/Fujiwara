@@ -5,13 +5,14 @@ module.exports.run = async (client, message, args) => {
 		return message.channel.send("Only my developer can use this command...");
 	const msg = args.slice(0).join(" ");
 	if (!msg) return message.reply("Send something!");
+	message.delete();
 	message.channel.send(msg);
 };
 
 module.exports.help = {
-	name: "send-message",
+	name: "say",
 	description: "N/A",
-	usage: "b-send-message [Message]",
+	usage: "b-say [Message]",
 	accessableby: "Bot Owners",
-	aliases: []
+	aliases: ["say"]
 };

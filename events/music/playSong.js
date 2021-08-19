@@ -7,7 +7,7 @@ module.exports = async (client, message, queue, song) => {
         song.formattedDuration
     }`)
     .setDescription(`Requested by: ${song.user.tag}`) 
-    .addField(`Options`,
+       .addField(`Options`,
             `${client.status(queue)}`
     )
     .setColor(`YELLOW`)

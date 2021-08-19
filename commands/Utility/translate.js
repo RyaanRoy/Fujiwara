@@ -124,11 +124,11 @@ module.exports.run = (client, message, [args, ...words]) => {
 
 		const embed1 = new Discord.MessageEmbed()
 			.setColor(client.config.embedColor)
-			.setTitle("List of languages yabe can translate:")
+			.setTitle("List of languages Bumblebee can translate:")
 			.setDescription(listOfDLangs)
 			.addField(
 				"How to use: ",
-				"`yabe translate lang1-lang2 stuff to translate`"
+				"`Bumblebee translate lang1-lang2 stuff to translate`"
 			)
 			.setTimestamp();
 

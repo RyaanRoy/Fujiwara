@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
 			.addField("**📱Basic**", "`help`, `ping`, `uptime`, `vote`[please??]")
 			.addField(
 				"**⚙utility**",
-				"`aes256`, `roblox`, `urban`, `avatar`, `channel`, `embed`, `imageembed`, `roleinfo`, `reverse`, `setafk`, `snipe`, `stats`, `timer`, `translate`, `whois`, `weather`"
+				"`aes256`, `roblox`, `avatar`, `channel`, `embed`, `imageembed`, `roleinfo`, `reverse`, `setafk`, `snipe`, `stats`, `timer`, `translate`, `whois`, `weather`"
 			)
 			.addField(
 				"**🎃Fun**",

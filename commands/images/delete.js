@@ -27,12 +27,12 @@ module.exports.run = async (client, message, args) => {
 									args.join(" ").toLocaleLowerCase()
 							)
 							.user.displayAvatarURL({
-								dynamic: false,
+								dynamic: true,
 								format: "png",
 								size: 4096
 							})
 				: message.author.displayAvatarURL({
-						dynamic: false,
+						dynamic: true,
 						format: "png",
 						size: 4096
 				  }));

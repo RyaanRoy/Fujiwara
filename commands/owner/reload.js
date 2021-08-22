@@ -40,7 +40,7 @@ module.exports.run = async (client, message, args) => {
 		})
 		.catch(collected =>
 			message.channel.send(
-				":x: | Time's up! Reload commands actions cancelleb-"
+				":x: | Time's up! Reload commands actions cancelled!"
 			)
 		);
 };

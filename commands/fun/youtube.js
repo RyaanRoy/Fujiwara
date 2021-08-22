@@ -60,5 +60,5 @@ module.exports.help = {
 	description: "This command is used for starting yt together session.",
 	usage: "b-ytt <channelid>",
 	accessableby: "Member",
-	aliases: ["youtubetogether"]
+	aliases: ["youtubetogether","ytt"]
 };

@@ -11,8 +11,8 @@ module.exports.run = (client, message, args) => {
 			: message.author);
 
 	const embed = new Discord.MessageEmbed()
-		.setColor("YELLOW")
-		.setTitle(`Avatar of ${message.mentions.users.first().username}:`)
+		.setColor("GREEN")
+		.setTitle(`Avatar for ${message.author.username}:`)
 		.setImage(
 			imageitem.displayAvatarURL({ dynamic: true, format: "png", size: 4096 })
 		);
@@ -23,7 +23,7 @@ module.exports.run = (client, message, args) => {
 module.exports.help = {
 	name: "avatar",
 	description: "This command is used for showing your/other member's avatar.",
-	usage: "b-avatar <mentions>(optional)",
+	usage: "z!avatar <mentions>(optional)",
 	accessableby: "Member",
 	aliases: ["av"]
 };

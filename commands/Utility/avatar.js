@@ -17,7 +17,7 @@ module.exports.run = (client, message, args) => {
 			imageitem.displayAvatarURL({ dynamic: true, format: "png", size: 4096 })
 		);
 
-	message.channel.send({ embed });
+	message.channel.send(embed);
 };
 
 module.exports.help = {

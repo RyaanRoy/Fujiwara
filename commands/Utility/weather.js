@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
 			.addField("Feels like", `${current.feelslike} Degrees`, true)
 			.addField("Wind speed", current.winddisplay, true)
 			.addField("Wet Rate", ` ${current.humidity}%`, true)
-			.addField("Week", `${current.day}`, true)
+			.addField("Day of Week", `${current.day}`, true)
 			.addField("Date", `${current.date}`, true)
 			.setFooter(
 				`© Bumblebee | Requested by ${message.author.username}#${message.author.discriminator}`

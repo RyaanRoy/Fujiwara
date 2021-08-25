@@ -37,7 +37,7 @@ module.exports = async client => {
 				`b-help | ${activities[i++ % activities.length]}`,
 				{ type: "WATCHING" }
 			),
-		15000
+		10000
 	);
 
 	setInterval(() => {

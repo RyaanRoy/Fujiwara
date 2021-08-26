@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
 
 	setTimeout(() => {
 		message.channel.send(
-			`${message.author.toString()} The Timer Has FINISHEb-, it lasted: ${ms(
+			`${message.author.toString()} The Timer Has FINISHED!, it lasted: ${ms(
 				ms(Timer),
 				{ long: true }
 			)}`

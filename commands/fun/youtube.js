@@ -20,7 +20,7 @@ const ACTIVITIES = {
 };
 
 module.exports.run = async (client, message, args) => {
-    const channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0]);
+    const channel = message.channel.id;
     if (!channel || channel.type !== "voice") return message.channel.send("❌ | Invalid channel specified!");
     if (!channel.permissionsFor(message.guild.me).has("CREATE_INSTANT_INVITE")) return message.channel.send("❌ | I need `CREATE_INSTANT_INVITE` permission");
 

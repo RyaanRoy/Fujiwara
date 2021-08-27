@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
 	// let user;
 
 	const usernotfind = new Discord.MessageEmbed()
-		.setDescription(`${emojis.cross} User is not founb-`)
+		.setDescription(`${emojis.cross} User is not found!`)
 		.setColor("RED");
 
 	const rankuser = message.mentions.users.first();

@@ -83,7 +83,7 @@ module.exports.run = async (client, message, args) => {
 			message.channel.send(embed);
 		} else {
 			const embeds = new Discord.MessageEmbed()
-				.setDescription(`${emojis.cross} Command is not founb-`)
+				.setDescription(`${emojis.cross} Command is not found!`)
 				.setColor("RED");
 
 			return message.channel.send(embeds);

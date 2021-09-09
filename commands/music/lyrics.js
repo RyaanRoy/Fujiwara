@@ -1,7 +1,5 @@
-const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 const lyricsFinder = require("lyrics-finder");
-
 module.exports.run = async (client, message, args) => {
     const queue = client.distube.getQueue(message);
     if (!queue) return message.channel.send("There is nothing playing.").catch(console.error);
@@ -15,7 +13,7 @@ module.exports.run = async (client, message, args) => {
       lyrics = `No lyrics found for ${queue.songs[0].title}.`;
     }
 
-    let lyricsEmbed = new Discord.MessageEmbed()
+    let lyricsEmbed = new MessageEmbed()
       .setTitle("Lyrics")
       .setDescription(lyrics)
       .setColor("#F0EAD6")
@@ -28,8 +26,8 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.help = {
 	name: "lyrics",
-	description: "This command is used for getting lyrics.",
-	usage: "b-lyrics <name of song>",
-	accessableby: "Members",
+	description: "This command is used for getting lyrics",
+	usage: "b-lyrics",
+	accessableby: "Connecting to Voice channel",
 	aliases: []
 };

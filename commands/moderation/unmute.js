@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args) => {
 	if (member.id === message.author.id) return message.channel.send(notice2);
 	const embed7 = new Discord.MessageEmbed()
 		.setTitle("Wrong Usage!")
-		.setDescription("Correct Example: b-unmute @Ryaan")
+		.setDescription("Correct Example: b-unmute @RealKoolisw")
 		.setColor("RED");
 	if (!member) {
 		message.delete();

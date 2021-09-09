@@ -29,7 +29,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.addField(
 				"**:tada:Giveaways**",
-				"`start-giveaway`, `reroll`, `end-giveaway`"
+				"`starb-giveaway`, `reroll`, `end-giveaway`"
 			)
 			.addField(
 				"**:frame_photo:Image**",
@@ -83,7 +83,7 @@ module.exports.run = async (client, message, args) => {
 			message.channel.send(embed);
 		} else {
 			const embeds = new Discord.MessageEmbed()
-				.setDescription(`${emojis.cross} Command is not found!`)
+				.setDescription(`${emojis.cross} Command is not founb-`)
 				.setColor("RED");
 
 			return message.channel.send(embeds);

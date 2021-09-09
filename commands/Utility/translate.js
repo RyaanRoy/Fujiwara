@@ -174,7 +174,7 @@ module.exports.run = (client, message, [args, ...words]) => {
 			} catch (err) {
 				console.log(err);
 				message.channel.send(
-					"Something went wrong while translating, please check you formatted it correctly and try again."
+					"Something went wrong while translating, please check you formatted it correctly and try again.\nor if you believe this is a bug please report it with `yabe bug`"
 				);
 			}
 		});

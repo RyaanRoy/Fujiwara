@@ -3,9 +3,9 @@ const canvacord = require("canvacord");
 
 module.exports.run = async (client, message, args) => {
 	const usernotfind = new Discord.MessageEmbed()
-		.setDescription(`${emojis.cross} User is not found!`)
+		.setDescription(`${emojis.cross} User is not founb-`)
 		.setColor("RED");
-	const target = message.mentions.users.first()
+	const target = message.mentions.users.first();
 	const attachment = message.attachments.array()[0];
 	let imagetarget;
 	try {

@@ -36,7 +36,7 @@ module.exports.run = async (client, message, args) => {
         }),
         headers: {
             "Authorization": `Bot ${process.env.TOKEN}`,
-            "Content-Type": "application/json"
+            "Contenb-Type": "application/json"
         }
     })
         .then(res => res.json())

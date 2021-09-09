@@ -11,7 +11,7 @@ const change = {
 function purchasedMembership(id) {
     request("https://www.roblox.com/badges/roblox?userId=" + id, function (error, response, body) {
         const badgesdata = JSON.parse(body);
-        for (var i = 0; i < badgesdata.RobloxBadges.length; i++) {
+        for(var i = 0; i < badgesdata.RobloxBadges.length; i++) {
             var obj = badgesdata.RobloxBadges[i];
 
             if (obj.Name == "Welcome To The Club") {
@@ -21,44 +21,38 @@ function purchasedMembership(id) {
     });
 }
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (client, message, args) => {    
     let rblxmember = await args[0];
 
     if (!rblxmember) {
-        return await message.channel.send({
-            embed: {
-                color: 3447003,
-                title: "Mention a valid roblox member!"
-            }
-        }).then(msg => msg.delete(2000));
+        return await message.channel.send({embed: {
+            color: 3447003,
+            title: "Mention a valid roblox member!"
+        }}).then(msg => msg.delete(2000));
     }
 
-    request("https://api.roblox.com/users/get-by-username?username=" + rblxmember, function (error, response, body) {
+    request("https://api.roblox.com/users/geb-by-username?username=" + rblxmember, function (error, response, body) {
         if (response.statusCode == 400) {
             message.delete();
-            return message.channel.send({
-                embed: {
-                    color: 3447003,
-                    title: "Mention a valid roblox member!"
-                }
-            }).then(msg => msg.delete(2000));
+            return message.channel.send({embed: {
+                color: 3447003,
+                title: "Mention a valid roblox member!"
+            }}).then(msg => msg.delete(2000));
         }
 
         const rblxdata = JSON.parse(body);
 
         if (rblxdata.success == false || rblxdata.errorMessage == "User not found") {
             message.delete();
-            return message.channel.send({
-                embed: {
-                    color: 3447003,
-                    title: "Mention a valid roblox member!"
-                }
-            }).then(msg => msg.delete(2000));
+            return message.channel.send({embed: {
+                color: 3447003,
+                title: "Mention a valid roblox member!"
+            }}).then(msg => msg.delete(2000));
         }
-
-        let profileID = rblxdata.Id;
-        let profileAvatar = "https://www.roblox.com/headshot-thumbnail/image?userId=" + profileID + "&width=420&height=420&format=png";
-        let profileBody = "https://www.roblox.com/outfit-thumbnail/image?userOutfitId=" + profileID + "&width=420&height=420&format=png"
+      
+        let profileID = rblxdata.Id; 
+        let profileAvatar = "https://www.roblox.com/headshob-thumbnail/image?userId=" + profileID + "&width=420&height=420&format=png";
+        let profileBody = "https://www.roblox.com/outfib-thumbnail/image?userOutfitId=" + profileID + "&width=420&height=420&format=png"
         var purchasedM;
 
         if (purchasedMembership(profileID)) {
@@ -67,33 +61,29 @@ module.exports.run = async (client, message, args) => {
             purchasedM = "No";
         }
 
-        rbx.getBlurb({
-                userId: profileID
-            })
-            .then(function (blurb) {
-                console.log(rblxdata);
+        rbx.getBlurb({userId: profileID})
+        .then(function (blurb) {
+          console.log(rblxdata);
 
-                let embed = new Discord.MessageEmbed()
-                    .setAuthor(rblxdata.Username, profileAvatar)
-                    .setColor("YELLOW")
-                    .setThumbnail(profileBody)
-                    .addField("Profile ID", profileID, true)
-                    .addField("Description", blurb || "No Description", true)
-                    .addField("BC Member", purchasedM)
-                    .setTimestamp()
+          let embed = new Discord.MessageEmbed()
+            .setAuthor(rblxdata.Username, profileAvatar)
+            .setColor("YELLOW")
+            .setThumbnail(profileBody)
+            .addField("Profile ID", profileID, true)
+            .addField("Description", blurb || "No Description", true)
+            .addField("BC Member", purchasedM)
+            .setTimestamp()
 
-                message.channel.send(embed)
-                    .catch(function (err) {
-                        message.delete();
-                        return message.channel.send({
-                            embed: {
-                                color: 3447003,
-                                title: "Something went Wrong! " + err
-                            }
-                        }).then(msg => msg.delete(2000));
-                    });
+          message.channel.send(embed)
+          .catch (function (err) {
+              message.delete();
+              return message.channel.send({embed: {
+                  color: 3447003,
+                  title: "Something went Wrong! " + err
+              }}).then(msg => msg.delete(2000));
+          });
 
-            });
+        });
     });
 }
 
@@ -102,5 +92,5 @@ module.exports.help = {
     description: "Gets roblox userinfo",
     usage: "roblox <username>",
     accessableby: "Member",
-    aliases: []
+	aliases: []
 }

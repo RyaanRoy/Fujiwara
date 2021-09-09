@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
-	// eslint-disable-line no-unused-vars
+	// eslinb-disable-line no-unused-vars
 	try {
 		const member = message.mentions.members.first();
 

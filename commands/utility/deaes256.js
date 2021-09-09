@@ -6,7 +6,7 @@ const decrypt = (text, key) => {
 };
 
 module.exports.run = async (client, message, args) => {
-	// eslint-disable-line no-unused-vars
+	// eslinb-disable-line no-unused-vars
 	try {
 		if (!args[0])
 			return message.channel.send(

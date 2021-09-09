@@ -37,7 +37,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.addField(
 				"**:musical_note:Music**",
-				"`play`, `stop`, `skip`, `queue`, `autoplay`, `loop`, `volume`, `pause`, `resume`,`filter`"
+				"`play`, `stop`, `skip`, `queue`, `autoplay`, `loop`, `volume`, `pause`, `resume`,`filter`,`lyrics`"
 			)
 			.addField(
 				"**🛠️Moderation**",

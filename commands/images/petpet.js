@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const petPetGif = require("peb-peb-gif");
+const petPetGif = require("pet-pet-gif");
 
 module.exports.run = async (client, message, args) => {
 	const usernotfind = new Discord.MessageEmbed()

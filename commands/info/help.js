@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
 			.addField("**📱Basic**", "`help`, `ping`, `uptime`, `vote`[please??]")
 			.addField(
 				"**⚙utility**",
-				"`aes256`, `roblox`, `avatar`, `channel`, `embed`, `imageembed`, `roleinfo`, `reverse`, `setafk`, `snipe`, `stats`, `timer`, `translate`, `whois`, `weather`"
+				"`aes256`, `roblox`,`serverinfo`, `serverav`, `avatar`, `channel`, `embed`, `imageembed`, `roleinfo`, `reverse`, `setafk`, `snipe`, `stats`, `timer`, `translate`, `whois`, `weather`"
 			)
 			.addField(
 				"**🎃Fun**",
@@ -29,7 +29,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.addField(
 				"**:tada:Giveaways**",
-				"`starb-giveaway`, `reroll`, `end-giveaway`"
+				"`start-giveaway`, `reroll`, `end-giveaway`"
 			)
 			.addField(
 				"**:frame_photo:Image**",

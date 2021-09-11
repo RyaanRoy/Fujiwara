@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.setColor("GREEN")
 			.setDescription(
-				`\`${emojis.help}\`**My prefix:** \`${prefixesdatabase.prefix}\` \nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.`
+				`**My prefix:** \`${prefixesdatabase.prefix}\` \nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.`
 			)
 			.setThumbnail("https://i.pinimg.com/originals/a6/93/64/a69364e140065cde46923bd8622aa3e2.png")
 			.addField("**📱Basic**", "`help`, `ping`, `uptime`, `vote`[please??]")

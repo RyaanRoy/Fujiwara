@@ -7,13 +7,13 @@ module.exports.run = async (client, message, args) => {
 
     try {
       lyrics = await lyricsFinder(msg, "");
-      if (!lyrics) lyrics = `No lyrics found for ${queue.songs[0].title}.`;
+      if (!lyrics) lyrics = `No lyrics found for ${msg}.`;
     } catch (error) {
       lyrics = `No lyrics found for ${msg}.`;
     }
 
     let lyricsEmbed = new MessageEmbed()
-      .setTitle("Lyrics")
+      .setTitle("Lyrics for" `${msg}`)
       .setDescription(lyrics)
       .setColor("#FFFF00")
       .setTimestamp();

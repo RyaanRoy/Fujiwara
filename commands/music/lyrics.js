@@ -1,16 +1,15 @@
 const { MessageEmbed } = require("discord.js");
 const lyricsFinder = require("lyrics-finder");
 module.exports.run = async (client, message, args) => {
-    const queue = client.distube.getQueue(message);
-    if (!queue) return message.channel.send("There is nothing playing.").catch(console.error);
 
+    const msg = args.slice(0).join(" ");
     let lyrics = null;
 
     try {
-      lyrics = await lyricsFinder(queue.songs[0].title, "");
+      lyrics = await lyricsFinder(msg, "");
       if (!lyrics) lyrics = `No lyrics found for ${queue.songs[0].title}.`;
     } catch (error) {
-      lyrics = `No lyrics found for ${queue.songs[0].title}.`;
+      lyrics = `No lyrics found for ${msg}.`;
     }
 
     let lyricsEmbed = new MessageEmbed()

@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
     }
 
     let lyricsEmbed = new MessageEmbed()
-      .setTitle("Lyrics for" `${msg}`)
+      .setTitle("Lyrics")
       .setDescription(lyrics)
       .setColor("#FFFF00")
       .setTimestamp();

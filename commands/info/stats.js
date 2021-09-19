@@ -2,50 +2,64 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const fetch = require("node-fetch");
 const config = require("../../config/config.json");
-
+const {
+	Client,
+	Message,
+	MessageEmbed,
+	version: djsversion,
+  } = require("discord.js");
+  const { utc } = require("moment");
+  const version = require("../../package.json").version;
+  const os = require("os");
+  const ms = require("ms");
+  const pretty = require("pretty-ms");
 module.exports.run = async (client, message) => {
-	const milliseconds = parseInt((client.uptime % 1000) / 100);
-	let seconds = parseInt((client.uptime / 1000) % 60);
-	let minutes = parseInt((client.uptime / (1000 * 60)) % 60);
-	let hours = parseInt((client.uptime / (1000 * 60 * 60)) % 24);
-	let days = parseInt((client.uptime / (1000 * 60 * 60 * 24)) % 60);
-	days = days < 10 ? `0${days}` : days;
-	hours = hours < 10 ? `0${hours}` : hours;
-	minutes = minutes < 10 ? `0${minutes}` : minutes;
-	seconds = seconds < 10 ? `0${seconds}` : seconds;
-	// var totcmds = files.length;
-
-	fetch(
-		"https://api.hetrixtools.com/v1/f10ac71364c8b1aa149b4079fe8eafc9/uptime/report/483cfd9cb2dd306bf8c00917da1df827/"
-	)
-		.then(response => response.json())
-		.then(data => {
-			const numberas = data.Uptime_Stats.Total.Uptime.toLocaleString();
-
-			const embed = new Discord.MessageEmbed()
-				.setColor(0x7289da)
-				.setTimestamp()
-				// .addField("Prefix", 'b-', true)
-				// .addField("Total Commands", `${totcmds} commands`, true)
-				.addField("Total Servers", `${client.guilds.cache.size}`, true)
-				.addField("Uptime Percentage", `${numberas}%`)
-				.addField("Ping", `${Math.round(client.ws.ping)}ms`, true)
-				.addField(
-					"Uptime",
-					`${days}d ${hours}h ${minutes}m ${seconds}.${milliseconds}s`,
-					true
-				)
-				.setFooter(
-					"Bumblebee",
-					
-				);
-			return message.channel.send({ embed });
-		});
+    // Capitalize Func
+    function capitalizeFirst(string) {
+		return string.charAt(0).toUpperCase() + string.slice(1);
+	  }
+	  const core = os.cpus()[0];
+	  const embed = new MessageEmbed()
+		.setTitle(`Bumblebee Stats`)
+		.setURL(client.web)
+		.setThumbnail(client.user.displayAvatarURL())
+		.setColor(message.guild.me.displayHexColor || client.color)
+		.addField("<a:bot:863216970554933269> General", [
+		  `**❯ Client :** ${client.user.tag} (${client.user.id})`,
+		  `**❯ Commands Total :** ${client.commands.size}`,
+		  `**❯ Server :** ${client.guilds.cache.size.toLocaleString()} Servers`,
+		  `**❯ Users :** ${client.guilds.cache
+			.reduce((a, b) => a + b.memberCount, 0)
+			.toLocaleString()} Users`,
+		  `**❯ Channels :** ${client.channels.cache.size.toLocaleString()} Channels`,
+		  `**❯ Creation Date :** ${utc(client.user.createdTimestamp).format(
+			"Do MMMM YYYY HH:mm:ss"
+		  )}`,
+		  `**❯ Node.js :** ${process.version}`,
+		  `**❯ Version :** v${version}`,
+		  `**❯ Discord.js :** v${djsversion}`,
+		  `**❯ Bot Uptime :** ${pretty(client.uptime)}`,
+		  "\u200b",
+		])
+		.addField("System", [
+		  `**❯ OS Platform :** ${capitalizeFirst(process.platform)}`,
+		  `**❯ OS Uptime :** ${ms(os.uptime() * 1000, { long: true })}`,
+		  `**❯ CPU :**`,
+		  `\u3000 Cores : ${os.cpus().length}`,
+		  `\u3000 Model : ${core.model}`,
+		  `\u3000 Speed : ${core.speed} MHz`,
+		])
+		.addField("Network", [
+		  `**❯ Latency :** ${client.ws.ping} ms`,
+		])
+		.setTimestamp();
+  
+	  message.channel.send(embed);
 };
 module.exports.help = {
 	name: "stats",
 	description: "This command is used for monitoring stats of bot.",
-	usage: "b-stats",
+	usage: "t-stats",
 	accessableby: "Member",
 	aliases: []
 };

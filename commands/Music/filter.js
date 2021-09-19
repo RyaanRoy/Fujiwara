@@ -21,18 +21,18 @@ module.exports.run = async (client, message, args) => {
             .setTitle(`**Filter Options:**`)
             .setDescription(`\`
             3d
-             bassboost
-              echo
-               karaoke
-                nightcore
-                 vaporwave
-                  flanger
-                      gate
-                  reverse
-                 surround
-                mcompand
-              phaser
-             tremolo
+            bassboost
+            echo
+            karaoke
+            nightcore
+            vaporwave
+            flanger
+            gate
+            reverse
+            surround
+            mcompand
+            phaser
+            tremolo
             earwax\`` )
             .setColor("BLUE")
 

@@ -24,7 +24,7 @@ module.exports.run = async (client, message) => {
 		.setURL(client.web)
 		.setThumbnail(client.user.displayAvatarURL())
 		.setColor(message.guild.me.displayHexColor || client.color)
-		.addField("<a:bot:863216970554933269> General", [
+		.addField("<General", [
 		  `**❯ Client :** ${client.user.tag} (${client.user.id})`,
 		  `**❯ Commands Total :** ${client.commands.size}`,
 		  `**❯ Server :** ${client.guilds.cache.size.toLocaleString()} Servers`,

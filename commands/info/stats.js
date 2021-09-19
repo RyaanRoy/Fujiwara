@@ -25,7 +25,7 @@ module.exports.run = async (client, message) => {
 		.setThumbnail(client.user.displayAvatarURL())
 		.setColor(message.guild.me.displayHexColor || client.color)
 		.addField("General", [
-		  `**❯ Client :** ${client.user.tag} (${client.user.id})`,
+		  `**❯ Client :** ${client.user.tag}`,
 		  `**❯ Commands Total :** ${client.commands.size}`,
 		  `**❯ Server :** ${client.guilds.cache.size.toLocaleString()} Servers`,
 		  `**❯ Users :** ${client.guilds.cache

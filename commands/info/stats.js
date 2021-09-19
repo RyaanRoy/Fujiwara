@@ -50,7 +50,7 @@ module.exports.run = async (client, message) => {
 		  `\u3000 Speed : ${core.speed} MHz`,
 		])
 		.addField("Network", [
-		  `**❯ Latency :** ${client.ws.ping} ms`,
+		  `**❯ Latency :** ${Math.round(client.ws.ping)} ms`,
 		])
 		.setTimestamp();
   

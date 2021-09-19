@@ -27,6 +27,15 @@ module.exports.run = async (client, message, args) => {
           );
         } catch (error) {
           console.log(error);
+          message.channel.send(
+            new Discord.MessageEmbed()
+              .setTitle(
+                `<:tickNo:863367014092898314> | Evaluated Content too long to displayed`
+              )
+              .setDescription(`Error Logs\n\`\`\`yml\n${error}\n\`\`\``)
+              .setColor("#FF0000")
+              .setFooter(`Actioned by : ${message.author.tag}`)
+          );
         };
 
 };

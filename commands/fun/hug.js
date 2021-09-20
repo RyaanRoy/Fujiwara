@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
     if (!ment) return message.channel.send("Please mention a user!");
     if (ment.id == message.author.id)
       return message.channel.send("How Is That Possible?");
-    if (ment.id == bot.user.id && message.author.id == "788260234409672754")
+    if (ment.id == client.user.id)
       return message.channel.send("B-BAKA!");
     const { body } = await request.get("https://api.waifu.pics/sfw/hug");
 

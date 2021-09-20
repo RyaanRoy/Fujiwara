@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 const moment = require("moment");
 module.exports.run = async (client, message, args) => {
     const query = args.join(" ");
-    if (!query) return message.lineReply("Please specify a query to search!");
+    if (!query) return message.channel.send("Please specify a query to search!");
     fetch(`https://api.jikan.moe/v3/search/anime?q=${query}`)
       .then((res) => res.json())
       .then((body) => {

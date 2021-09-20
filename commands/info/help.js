@@ -33,7 +33,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.addField(
 				"**:frame_photo:Image**",
-				"`captcha`, `circle`, `delete`, `think`, `gay`, `changemymind`, `trigger`, `clyde`, `petpet`, `magik`, `iphonex`"
+				"`captcha`, `circle`, `delete`, `think`, `gay`, `changemymind`, `trigger`, `clyde`, `petpet`, `magik`, `iphonex`, `drake`"
 			)
 			.addField(
 				"**:musical_note:Music**",

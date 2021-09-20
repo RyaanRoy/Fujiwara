@@ -21,11 +21,11 @@ module.exports.run = async (client, message, args) => {
 			.addField("**📱Basic**", "`help`, `ping`, `uptime`, `vote`[please??]")
 			.addField(
 				"**⚙utility**",
-				"`aes256`, `roblox`,`serverinfo`, `serverav`, `avatar`, `channel`, `embed`, `imageembed`, `roleinfo`, `reverse`, `setafk`, `snipe`, `stats`, `timer`, `translate`, `whois`, `weather`"
+				"`aes256`,`urban`, `roblox`,`serverinfo`, `serverav`, `avatar`, `channel`, `embed`, `imageembed`, `roleinfo`, `reverse`, `setafk`, `snipe`, `stats`, `timer`, `translate`, `whois`, `weather`"
 			)
 			.addField(
 				"**🎃Fun**",
-				"`8ball`, `cat`, `animesearch`, `deaes256`, `kiss`, `meme`, `ngif`, `hug`, `pat`, `poke`, `smug`, `tickle`, `youtubetogether (ytt)`, `betrayal(btt)`"
+				"`8ball`, `ship`, `cat`, `animesearch`, `deaes256`, `kiss`, `meme`, `ngif`, `hug`, `pat`, `poke`, `smug`, `tickle`, `youtubetogether (ytt)`, `betrayal(btt)`"
 			)
 			.addField(
 				"**:tada:Giveaways**",

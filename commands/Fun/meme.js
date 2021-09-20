@@ -1,29 +1,19 @@
 const Discord = require("discord.js");
 const request = require("request");
-
+const { Client, Message, MessageEmbed } = require("discord.js");
+const Discord = require("discord.js");
+const fetch = require("node-fetch");
 module.exports.run = (client, message, _args) => {
-	try {
-		// This is a command purely for memes
-		request("https://some-random-api.ml/meme", (error, _response, body) => {
-			if (error) {
-				return message.channel
-					.send("Sorry, it appears an error has occurred fetching your meme!")
-					.then(() => console.error(error.message));
-			}
+    const res = await fetch(`http://api.popcatdev.repl.co/meme`);
+    const meme = await res.json();
+    const embed = new MessageEmbed()
+      .setTitle(meme.title)
+      .setURL(meme.url)
+      .setColor("RANDOM")
+      .setImage(meme.image)
+      .setFooter(`👍 ${meme.upvotes} || 💬 ${meme.comments}`);
 
-			const json = JSON.parse(body);
-			const { id, image, caption, category } = json;
-
-			const emb = new Discord.MessageEmbed();
-			emb.setDescription(`${caption} - ${category} #${id}`);
-			emb.setColor("GREEN");
-			emb.setImage(image);
-
-			message.channel.send(emb);
-		});
-	} catch (e) {
-		console.error(e.message);
-	}
+    message.channel.send(embed);
 };
 
 module.exports.help = {

@@ -29,6 +29,6 @@ module.exports.help = {
 	name: "enlarge",
 	description: "This command is used for enlarging some emoji from everywhere",
 	usage: "b-enlarge <emojis>",
-	accessableby: "Memeber",
+	accessableby: "Member",
 	aliases: []
 };

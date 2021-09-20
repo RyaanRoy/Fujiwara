@@ -37,6 +37,7 @@
 		"express": "^4.17.1",
 		"ffmpeg-static": "^4.4.0",
 		"fs": "^0.0.1-security",
+		"google-translate": "^3.0.0",
 		"lyrics-finder": "^21.7.0",
 		"moment": "^2.29.1",
 		"ms": "^2.1.3",

@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const request = require("request");
 const { Client, Message, MessageEmbed } = require("discord.js");
-const Discord = require("discord.js");
 const fetch = require("node-fetch");
 module.exports.run = (client, message, _args) => {
     const res = await fetch(`http://api.popcatdev.repl.co/meme`);

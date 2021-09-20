@@ -20,7 +20,7 @@ module.exports.run = async (client, message) => {
 	  }
 	  const core = os.cpus()[0];
 	  const embed = new MessageEmbed()
-		.setTitle(`Bumblebee Stats`)
+		.setTitle(`Fujiwara Stats`)
 		.setURL(client.web)
 		.setThumbnail(client.user.displayAvatarURL())
 		.setColor(message.guild.me.displayHexColor || client.color)

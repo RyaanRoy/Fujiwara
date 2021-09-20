@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.setColor("GREEN")
 			.setDescription(
-				`**My prefix:** \`${prefixesdatabase.prefix}\` \nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.`
+				`Yoo! **My prefix is:** \`${prefixesdatabase.prefix}\` \nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.`
 			)
 			.setThumbnail("https://i.pinimg.com/originals/a6/93/64/a69364e140065cde46923bd8622aa3e2.png")
 			.addField("**📱Basic**", "`help`, `ping`, `uptime`, `vote`[please??]")
@@ -45,9 +45,11 @@ module.exports.run = async (client, message, args) => {
 			)
 			
 			.addField("**:gear:Custom Function**", "`setprefix`")
+			.setImage(`https://c.tenor.com/dOjio6NWz8QAAAAC/chika-fujiwara-dance.gif`)
 			.setFooter(
 				`© ${nowyear} ${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
 			);
+		
 		message.channel.send({ embed });
 	}
 

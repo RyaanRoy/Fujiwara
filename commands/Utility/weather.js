@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
 			.addField("Day of Week", `${current.day}`, true)
 			.addField("Date", `${current.date}`, true)
 			.setFooter(
-				`© Bumblebee | Requested by ${message.author.username}#${message.author.discriminator}`
+				`© Fujiwara | Requested by ${message.author.username}#${message.author.discriminator}`
 			);
 
 		// Display when it's called

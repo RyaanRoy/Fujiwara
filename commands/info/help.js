@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.addField(
 				"**🎃Fun**",
-				"`8ball`, `ship`, `cat`, `animesearch`, `deaes256`, `kiss`, `meme`, `ngif`, `hug`, `pat`, `poke`, `smug`, `tickle`, `youtubetogether (ytt)`, `betrayal(btt)`"
+				"`8ball`, `ship`, `animesearch`, `deaes256`, `kiss`, `meme`, `ngif`, `hug`, `pat`, `poke`, `smug`, `tickle`, `youtubetogether (ytt)`, `betrayal(btt)`"
 			)
 			.addField(
 				"**:tada:Giveaways**",
@@ -33,7 +33,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.addField(
 				"**:frame_photo:Image**",
-				"`captcha`, `circle`, `delete`, `think`, `gay`, `changemymind`, `trigger`, `clyde`, `petpet`, `magik`, `iphonex`, `drake`"
+				"`captcha`, `circle`, `delete`, `think`, `gay`, `changemymind`, `trigger`, `clyde`, `petpet`, `magik`, `dog`, `cat`, `iphonex`, `drake`, `rip`"
 			)
 			.addField(
 				"**:musical_note:Music**",

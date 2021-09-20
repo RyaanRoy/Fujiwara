@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
     .setTitle(`${message.author.username} used stop command`)
     .setDescription(`Stopped playing the Music! See you again next time!`) 
     .setColor(`YELLOW`)
-    .setThumbnail(`https://thumbs.gfycat.com/MiniatureFlatHarrier-size_restricted.gif`);
+    .setThumbnail(`https://i.pinimg.com/originals/e5/8f/52/e58f521070bf76ac69d583923b499012.gif`);
 	message.channel.send(stopembed);
 };
 

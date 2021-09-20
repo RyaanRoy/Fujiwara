@@ -1,14 +1,11 @@
 const Discord = require("discord.js");
 const { Client, Message, MessageEmbed } = require("discord.js");
 const block = "⬛";
-const heart = ":heart:";
+const heart = ":red_square:";
 module.exports.run = async (client, message, args) => {
     const user = message.mentions.users.first();
     if (!user)
       return message.channel.send(`Please specify a user to ship with!`);
-    if (user && user.id === message.author.id) {
-      return message.reply("Bruh you want to ship yourself XD");
-    }
     if (message.mentions.users.size < 2) {
       let loveEmbed = new MessageEmbed()
         .setColor("dd2e44")

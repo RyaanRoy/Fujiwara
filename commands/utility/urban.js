@@ -23,8 +23,8 @@ module.exports.run = async (client, message, args) => {
         .setTitle(answer.word)
         .setURL(answer.permalink)
         .setColor("RANDOM")
-        .addField("DEFINITION", trim(answer.definition))
-        .addField("EXAMPLE", trim(answer.example))
+        .addField("DEFINITION", answer.definition)
+        .addField("EXAMPLE", answer.example)
         .addField(
           "RATINGS",
           `${answer.thumbs_up} 👍 || ${answer.thumbs_down} 👎`

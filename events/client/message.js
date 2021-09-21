@@ -3,7 +3,7 @@ const settings = require("../../config/settings.json");
 
 const cooldowns = new Discord.Collection();
 
-module.exports = async (client, message, args) => {
+module.exports = async (client, message) => {
 	if (message.author.bot) return;
 	const prefixesdatabase = client.settings.ensure(message.guild.id, settings);
 

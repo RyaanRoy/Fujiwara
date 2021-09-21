@@ -3,7 +3,7 @@ const settings = require("../../config/settings.json");
 
 const cooldowns = new Discord.Collection();
 
-module.exports = async (client, message) => {
+module.exports = async (client, message, args) => {
 	if (message.author.bot) return;
 	const prefixesdatabase = client.settings.ensure(message.guild.id, settings);
 
@@ -12,10 +12,22 @@ module.exports = async (client, message) => {
 			prefix: settings.prefix
 		});
 	}
-
+	if (!args[0]){
 	if (message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))) {
 		message.reply(`my prefix is: \`${prefixesdatabase.prefix}\``);
 	}
+}
+const input = args.join(" ");
+fetch(
+  `https://api.monkedev.com/fun/chat?msg=${encodeURIComponent(input)}&uid=${
+	message.author.id
+  }`
+)
+  .then((res) => res.json())
+  .then((body) => {
+	message.channel.send(body.response);
+  });
+
 
 	if (!message.content.startsWith(prefixesdatabase.prefix)) return;
 	const command = message.content

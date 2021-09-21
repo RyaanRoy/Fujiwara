@@ -28,5 +28,5 @@ module.exports.help = {
 	description: "This command is used for embedding stuff in discord",
 	usage: "b-embed <title> <desc>",
 	accessableby: "Member",
-	aliases: []
+	aliases: ["ed"]
 };

@@ -135,7 +135,7 @@ client.on("message", async message => {
 
 	if (message.mentions.has(client.user.id)){
 	  message.channel.startTyping();
-	fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${encodeURIComponent(message.content)}&botname=${client.user.username}&ownername=DEVELOPER_NAME`)
+	fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${encodeURIComponent(message.content)}&botname=${client.user.username}&ownername=Ryaan`)
 		.then(res => res.json())
 		.then(data => {
 			message.reply(`${data.message}`);

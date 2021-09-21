@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
           message.channel.send(
             new Discord.MessageEmbed()
               .setColor("#00FF00")
-              .setTitle(`<:tickYes:863367013464408084> | 200 : Success`)
+              .setTitle(`Success`)
               .setDescription(`Results\n\`\`\`yml\n${output}\n\`\`\``)
               .setFooter(`Actioned by : ${message.author.tag}`)
           );

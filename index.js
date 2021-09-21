@@ -135,7 +135,7 @@ client.on("message", async message => {
 
 	if (message.mentions.has(client.user.id) && !message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))){
 	  message.channel.startTyping();
-	fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${encodeURIComponent(message.content)}&botname=${client.user.username}&ownername=Ryaan`)
+	fetch(`http://api.brainshop.ai/get?bid=159771&key=5RopgmgY4hFiKTEj&uid=${message.author.id}&msg=${encodeURIComponent(message.content)}`)
 		.then(res => res.json())
 		.then(data => {
 			message.reply(`${data.message}`);

@@ -93,7 +93,7 @@ module.exports.run = async (client, message, args) => {
 		.setColor("GREEN");
 	const bsuembed = new Discord.MessageEmbed()
 		.setDescription(
-			`${emojis.tick} Warned **${user.username}#${user.discriminator}** | **${reason}**`
+			`<a:ChikaFingerspin:796724538397556747> Warned **${user.username}#${user.discriminator}** | **${reason}**`
 		)
 		.setColor("GREEN");
 

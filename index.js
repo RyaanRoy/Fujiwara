@@ -138,7 +138,7 @@ client.on("message", async message => {
 	fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${encodeURIComponent(message.content)}&botname=${client.user.username}&ownername=DEVELOPER_NAME`)
 		.then(res => res.json())
 		.then(data => {
-			message.channel.send(`> ${message.content} \n <@${message.author.id}> ${data.message}`);
+			message.reply(`${data.message}`);
 		});
 		  message.channel.stopTyping();
 	}

@@ -130,3 +130,17 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 		});
 	}
 });
+client.on("message", async message => {
+	if (message.author.bot) return;
+
+	if (message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))){
+	  message.channel.startTyping();
+	if (!message.content) return message.channel.send("Please say something.");
+	fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${encodeURIComponent(message.content)}&botname=${client.user.username}&ownername=DEVELOPER_NAME`)
+		.then(res => res.json())
+		.then(data => {
+			message.channel.send(`> ${message.content} \n <@${message.author.id}> ${data.message}`);
+		});
+		  message.channel.stopTyping();
+	}
+	});

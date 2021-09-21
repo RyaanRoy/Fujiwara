@@ -17,17 +17,6 @@ module.exports = async (client, message, args) => {
 		message.reply(`my prefix is: \`${prefixesdatabase.prefix}\``);
 	}
 }
-const input = args.join(" ");
-fetch(
-  `https://api.monkedev.com/fun/chat?msg=${encodeURIComponent(input)}&uid=${
-	message.author.id
-  }`
-)
-  .then((res) => res.json())
-  .then((body) => {
-	message.channel.send(body.response);
-  });
-
 
 	if (!message.content.startsWith(prefixesdatabase.prefix)) return;
 	const command = message.content

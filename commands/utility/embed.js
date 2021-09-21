@@ -1,38 +1,23 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args) => {
-	const shoutinfo = args.slice(1).join(" ");
-	const shouttitle = args[0];
-
-	const noPerms = new Discord.MessageEmbed()
-		.setDescription(
-			`:no_entry_sign: ${message.author.username}, Missing Permission!`
-		)
-		.setColor(0xff0000);
-
-	const noPerms123 = new Discord.MessageEmbed()
-		.setDescription(
-			`:no_entry_sign: ${message.author.username}, Missing Info or Title!`
-		)
-		.setColor(0xff0000);
-
-	if (!message.member.hasPermission("MANAGE_MESSAGES"))
-		return message.channel.send(noPerms).then(msg => msg.delete(5000));
-
-	if (!shoutinfo) {
-		message.delete();
-		return message.channel.send(noPerms123);
+module.exports.run = async (client, message, args) => {
+    const split = args.join(" ").split(",");
+    const title = split[0];
+    const description = split[1];
+	const image = split[2];
+	const embed50 = new Discord.MessageEmbed()
+	.setTitle("Command: b-embed")
+	.setDescription("Usage: b-embed [title], [description], [image link]")
+	.setColor(0xff0000);
+	if (!split){
+	return message.channel.send(embed50);
 	}
-
-	if (!shouttitle) {
-		message.delete();
-		return message.channel.send(noPerms123);
-	}
-
 	const embed1 = new Discord.MessageEmbed()
-		.setTitle(`${shouttitle}`)
-		.setDescription(`${shoutinfo}`)
+		.setTitle(`${title}`)
+		.setDescription(`${description}`)
+		.setImage(image)
 		.setColor("GREEN");
+		
 
 	message.delete();
 	message.channel.send(embed1);

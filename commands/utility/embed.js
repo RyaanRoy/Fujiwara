@@ -16,6 +16,7 @@ module.exports.run = async (client, message, args) => {
 		.setTitle(`${title}`)
 		.setDescription(`${description}`)
 		.setImage(image)
+		.setFooter(`Actioned by : ${message.author.tag}`)
 		.setColor("GREEN");
 		
 

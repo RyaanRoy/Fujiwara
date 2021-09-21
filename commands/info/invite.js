@@ -3,12 +3,13 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 	const embed = new Discord.MessageEmbed()
-	    .setThumbnail("https://i.pinimg.com/originals/ba/78/f8/ba78f8790ae149f20fa1bde30357401f.gif")
+	    .setThumbnail("https://pa1.narvii.com/7849/ac3614d844c7e1bc826addec9597af577b42d54er1-498-410_00.gif")
 		.setAuthor(`Invite Me to your server!`, client.user.displayAvatarURL())
 		.setColor("#2A2A2A")
 		.setDescription(
-			`[Click Here (Recommended Permissions)](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=261956828791&scope=bot)\n[Click Here (Administrator Permissions)](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=8&scope=bot)`
+			`[Click Here (Recommended Permissions)](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=3757173863&scope=bot)\n[Click Here (Administrator Permissions)]( https://dsc.gg/fujiwara-invite)`
 		)
+		.setImage(`https://c.tenor.com/vdquT9UOP3QAAAAC/kawaii-chika.gif`)
 		.setFooter(`${client.user.username}`);
 	message.channel.send(embed);
 };

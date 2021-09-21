@@ -4,16 +4,16 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 const fetch = require("node-fetch");
 
 module.exports.run = async (client, message, _args) => {
-    const res = await fetch(`http://api.popcatdev.repl.co/meme`);
-    const meme = await res.json();
-    const embed = new MessageEmbed()
-      .setTitle(meme.title)
-      .setURL(meme.url)
-      .setColor("RANDOM")
-      .setImage(meme.image)
-      .setFooter(`👍 ${meme.upvotes} || 💬 ${meme.comments}`);
+  const res = await fetch(`http://api.popcatdev.repl.co/meme`);
+  const meme = await res.json();
+  const embed = new MessageEmbed()
+    .setTitle(meme.title)
+    .setURL(meme.url)
+    .setColor("RANDOM")
+    .setImage(meme.image)
+    .setFooter(`👍 ${meme.upvotes} || 💬 ${meme.comments}`);
 
-    message.channel.send(embed);
+  message.channel.send(embed);
 };
 
 module.exports.help = {

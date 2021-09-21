@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
-    const split = args.join(" ").split(",");
+    const split = args.join(" ").split("|");
     const title = split[0];
     const description = split[1];
 	const image = split[2];

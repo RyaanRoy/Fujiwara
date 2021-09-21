@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, msg, args) => {
+module.exports.run = async (client, msg, args) => {
 	msg.delete();
 	msg.channel.send(
 		"Please upvote here every 12 hours if possible >https://top.gg/bot/874922249411518484#/vote"

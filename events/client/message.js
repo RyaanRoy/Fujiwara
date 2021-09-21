@@ -12,11 +12,11 @@ module.exports = async (client, message, args) => {
 			prefix: settings.prefix
 		});
 	}
-	if (!args[0]){
+	
 	if (message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))) {
 		message.reply(`my prefix is: \`${prefixesdatabase.prefix}\``);
 	}
-}
+
 
 	if (!message.content.startsWith(prefixesdatabase.prefix)) return;
 	const command = message.content

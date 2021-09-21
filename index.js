@@ -2,7 +2,7 @@ require("dotenv").config();
 const config = require("./config/config.json");
 const Enmap = require("enmap");
 const Discord = require("discord.js");
-
+const fetch = require("node-fetch");
 const client = new Discord.Client({
 	partials: ["MESSAGE", "USER", "REACTION"],
 	disableMentions: "everyone"
@@ -133,9 +133,8 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 client.on("message", async message => {
 	if (message.author.bot) return;
 
-	if (message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))){
+	if (message.mentions.has(client.user.id)){
 	  message.channel.startTyping();
-	if (!message.content) return message.channel.send("Please say something.");
 	fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${encodeURIComponent(message.content)}&botname=${client.user.username}&ownername=DEVELOPER_NAME`)
 		.then(res => res.json())
 		.then(data => {

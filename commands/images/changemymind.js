@@ -4,7 +4,7 @@ const canvacord = require("canvacord");
 module.exports.run = async (client, message, args) => {
 	const notice3 = new Discord.MessageEmbed()
 		.setDescription(
-			"<:cross1:747728200691482746> **Please type the text you want to changemyminb-**"
+			"<:cross1:747728200691482746> **Please type the text you want to changemymind!**"
 		)
 		.setColor("RED");
 	const mindtxt = args.slice(0).join(" ");

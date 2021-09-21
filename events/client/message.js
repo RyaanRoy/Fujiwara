@@ -1,11 +1,9 @@
 const Discord = require("discord.js");
 const settings = require("../../config/settings.json");
-const { Client, Message, MessageEmbed } = require("discord.js");
-const fetch = require("node-fetch");
+
 const cooldowns = new Discord.Collection();
 
-module.exports = async (client, message, args) => {
-	
+module.exports = async (client, message) => {
 	if (message.author.bot) return;
 	const prefixesdatabase = client.settings.ensure(message.guild.id, settings);
 
@@ -14,22 +12,10 @@ module.exports = async (client, message, args) => {
 			prefix: settings.prefix
 		});
 	}
-	const input = args.join(" ");
-if (!input){
+
 	if (message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))) {
 		message.reply(`my prefix is: \`${prefixesdatabase.prefix}\``);
 	}
-}
-fetch(
-	`https://api.monkedev.com/fun/chat?msg=${encodeURIComponent(input)}&uid=${
-	  message.author.id
-	}`
-  )
-	.then((res) => res.json())
-	.then((body) => {
-	  message.reply(body.response);
-	});
-
 
 	if (!message.content.startsWith(prefixesdatabase.prefix)) return;
 	const command = message.content

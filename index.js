@@ -138,7 +138,7 @@ client.on("message", async message => {
 	fetch(`http://api.brainshop.ai/get?bid=159771&key=5RopgmgY4hFiKTEj&uid=${message.author.id}&msg=${encodeURIComponent(message.content)}`)
 		.then(res => res.json())
 		.then(data => {
-			message.reply(`${data.message}`);
+			message.reply(`${data.content}`);
 		});
 		  message.channel.stopTyping();
 	}

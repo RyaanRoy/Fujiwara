@@ -29,7 +29,7 @@ module.exports.run = async (client, message, args) => {
         body: JSON.stringify({
             max_age: 86400,
             max_uses: 0,
-            target_application_id: "7773336526917861400", // betrayal
+            target_application_id: "773336526917861400", // youtube together
             target_type: 2,
             temporary: false,
             validate: null
@@ -41,11 +41,11 @@ module.exports.run = async (client, message, args) => {
     })
         .then(res => res.json())
         .then(invite => {
-            if (invite.error || !invite.code) return message.channel.send("❌ | Could not start **Betrayal**!");
+            if (invite.error || !invite.code) return message.channel.send("❌ | Could not start **YouTube Together**!");
             const Embed = new Discord.MessageEmbed()
-    .setAuthor(`Betrayal`, client.user.displayAvatarURL({ dynamic: true }))
+    .setAuthor(`Betrayal.io`, client.user.displayAvatarURL({ dynamic: true }))
     .setTitle(`__${message.author.username}, Started Betrayal__`)
-    .setDescription(`> [**Join Betrayal**](https://discord.gg/${invite.code})`) // send ur invite code for me its invite.code
+    .setDescription(`> [**Join The Session**](https://discord.gg/${invite.code})`)
     .setColor(`RED`)
             message.channel.send(Embed);
         })
@@ -56,8 +56,8 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.help = {
 	name: "betrayal",
-	description: "This command is used for starting betrayal session.",
+	description: "This command is used for starting yt together session.",
 	usage: "b-betrayal <channelid>",
 	accessableby: "Member",
-	aliases: ["btl"]
+	aliases: ["btt"]
 };

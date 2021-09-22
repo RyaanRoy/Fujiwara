@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.addField(
 				"**🎃Fun**",
-				"`8ball`, `tictactoe`, `ship`, `animesearch`, `deaes256`, `kiss`, `meme`, `ngif`, `hug`, `pat`, `poke`, `smug`, `tickle`, `youtubetogether (ytt)`, `betrayal(btt)`"
+				"`8ball`, `akinator`, `ship`, `animesearch`, `deaes256`, `kiss`, `meme`, `ngif`, `hug`, `pat`, `poke`, `smug`, `tickle`, `youtubetogether (ytt)`, `betrayal(btt)`"
 			)
 			.addField(
 				"**:tada:Giveaways**",

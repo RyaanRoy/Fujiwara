@@ -90,7 +90,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
     name: "roblox",
     description: "Gets roblox userinfo",
-    usage: "roblox <username>",
+    usage: "b-roblox <username>",
     accessableby: "Member",
 	aliases: []
 }

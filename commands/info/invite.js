@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
 		.setAuthor(`Invite Me to your server!`, client.user.displayAvatarURL())
 		.setColor("#2A2A2A")
 		.setDescription(
-			`[Click Here (Recommended Permissions)](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=3757173863&scope=bot)\n[Click Here (Administrator Permissions)]( https://dsc.gg/fujiwara-invite)`
+			`[Click Here (Recommended Permissions)](https://discord.com/api/oauth2/authorize?client_id=874922249411518484&permissions=3757173863&scope=bot)\n[Click Here (Administrator Permissions)](https://dsc.gg/fujiwara-invite)`
 		)
 		.setImage(`https://c.tenor.com/vdquT9UOP3QAAAAC/kawaii-chika.gif`)
 		.setFooter(`${client.user.username}`);

@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
 
 	// If no message ID or giveaway name is specified
 	if (!args[0]) {
-		return message.channel.send(":x: You have to specify a valid message Ib-");
+		return message.channel.send(":x: You have to specify a valid message Id!");
 	}
 
 	// try to found the giveaway with prize then with ID
@@ -35,7 +35,7 @@ exports.run = async (client, message, args) => {
 		.reroll(giveaway.messageID)
 		.then(() => {
 			// Success message
-			message.channel.send("Giveaway rerolleb-");
+			message.channel.send("Giveaway rerolled-");
 		})
 		.catch(e => {
 			if (
@@ -43,7 +43,7 @@ exports.run = async (client, message, args) => {
 					`Giveaway with message ID ${giveaway.messageID} is not ended.`
 				)
 			) {
-				message.channel.send("This giveaway is not endeb-");
+				message.channel.send("This giveaway is not ended-");
 			} else {
 				console.error(e);
 				message.channel.send("An error occured...");

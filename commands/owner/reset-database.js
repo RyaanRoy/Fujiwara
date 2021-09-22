@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
 	if (message.author.id != process.env.OWNERID)
 		return message.channel.send("Only my developer can use this command...");
 	message.channel.send(
-		":warning: When database reset, all custom prefix and infos will be deleteb- Type `confirm` to confirm! Or being cancelled in `20` seconds."
+		":warning: When database reset, all custom prefix and infos will be deleted! Type `confirm` to confirm! Or being cancelled in `20` seconds."
 	);
 	await message.channel
 		.awaitMessages(
@@ -29,9 +29,9 @@ exports.run = async (client, message, args) => {
 };
 
 module.exports.help = {
-	name: "reseb-data",
+	name: "reset-data",
 	description: "This command is used for resetting data.",
-	usage: "b-reseb-data",
+	usage: "b-reset-data",
 	accessableby: "Bot Owners/Database Manager",
 	aliases: []
 };

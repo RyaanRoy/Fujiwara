@@ -52,7 +52,7 @@ module.exports.run = async (client, message, args) => {
 		)
 		.setColor("RED");
 	const sdfsdfsdfsssd = new Discord.MessageEmbed()
-		.setDescription(`${emojis.cross} Please Type the muting periob-`)
+		.setDescription(`${emojis.cross} Please Type the muting period!`)
 		.setColor("RED");
 	const dddfs = new Discord.MessageEmbed()
 		.setDescription(

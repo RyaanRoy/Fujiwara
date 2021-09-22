@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
 
 	const noticwsse1 = new Discord.MessageEmbed()
 		.setDescription(
-			`${emojis.cross} Failed to set slowmode in this channel, you can only type in 0 - 21600 seconb-`
+			`${emojis.cross} Failed to set slowmode in this channel, you can only type in 0 - 21600 second!`
 		)
 		.setColor("RED");
 

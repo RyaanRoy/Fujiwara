@@ -31,7 +31,7 @@ module.exports.run = async (client, message, args) => {
         }}).then(msg => msg.delete(2000));
     }
 
-    request("https://api.roblox.com/users/geb-by-username?username=" + rblxmember, function (error, response, body) {
+    request("https://api.roblox.com/users/get-by-username?username=" + rblxmember, function (error, response, body) {
         if (response.statusCode == 400) {
             message.delete();
             return message.channel.send({embed: {
@@ -51,8 +51,8 @@ module.exports.run = async (client, message, args) => {
         }
       
         let profileID = rblxdata.Id; 
-        let profileAvatar = "https://www.roblox.com/headshob-thumbnail/image?userId=" + profileID + "&width=420&height=420&format=png";
-        let profileBody = "https://www.roblox.com/outfib-thumbnail/image?userOutfitId=" + profileID + "&width=420&height=420&format=png"
+        let profileAvatar = "https://www.roblox.com/headshot-thumbnail/image?userId=" + profileID + "&width=420&height=420&format=png";
+        let profileBody = "https://www.roblox.com/outfit-thumbnail/image?userOutfitId=" + profileID + "&width=420&height=420&format=png"
         var purchasedM;
 
         if (purchasedMembership(profileID)) {

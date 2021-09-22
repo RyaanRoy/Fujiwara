@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args) => {
 	if (member.id === message.author.id) return message.channel.send(notice2);
 	const embed7 = new Discord.MessageEmbed()
 		.setTitle("Wrong Usage!")
-		.setDescription("Correct Example: b-unmute @RealKoolisw")
+		.setDescription("Correct Example: b-unmute @Ryaan")
 		.setColor("RED");
 	if (!member) {
 		message.delete();
@@ -40,7 +40,7 @@ module.exports.run = async (client, message, args) => {
 	}
 	const bruhembed = new Discord.MessageEmbed()
 		.setDescription(
-			`${emojis.cross} **${member.username}#${member.discriminator}** had not been muteb-`
+			`${emojis.cross} **${member.username}#${member.discriminator}** had not been muted!`
 		)
 		.setColor("RED");
 

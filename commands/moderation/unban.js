@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
 
 	const embed1 = new Discord.MessageEmbed()
 		.setTitle("Error")
-		.setDescription(`${emojis.tick} The user you entered has not been banneb-`)
+		.setDescription(`${emojis.tick} The user you entered has not been banned-`)
 		.setColor("RED");
 
 	const mmqembed = new Discord.MessageEmbed()

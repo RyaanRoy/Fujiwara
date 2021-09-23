@@ -22,7 +22,7 @@ module.exports.run = async (client, message, args) => {
 		.addField(`> <:mm:848450657614037002>  Roleplay`, `kiss, hug, pat, poke, smug, changemymind,tickle`, false)
 		.addField(`> <a:disk:855561346087387136> Music`, `play, pause, stop, skip, queue, autoplay, loop, volume, resume, lyrics, filter, jummpto`, false)
 		.setColor('#cc338b')
-		.setImage(`https://steamuserimages-a.akamaihd.net/ugc/812248528035547228/3D07E3596FAF1F8185765C59C99D560EA5F4960E/?imw=512&imh=287&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true`)
+		.setImage(`https://i.pinimg.com/originals/b6/b4/de/b6b4ded4bd797b093cc9b68aa6fba694.gif`)
 		.setFooter(`To set Custom prefix type: ${prefixesdatabase.prefix}setprefix`, client.user.displayAvatarURL())
 		.setThumbnail(client.user.displayAvatarURL())
 	

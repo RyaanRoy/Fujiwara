@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) => {
 		.addField(`> 🖼️ Image`, `captcha, circle, delete, think, gay, changemymind, trigger, clyde, petpet, magik, dog, cat, drake, rip, iphonex, ngif`, false)
 		.addField(`> <a:chikadance:852764676429185035>  Games`, `akinator, youtubetogether, betrayal, trivia`, false)
 		.addField(`> <:mm:848450657614037002>  Roleplay`, `kiss, hug, pat, poke, smug, changemymind,tickle`, false)
-		.addField(`> <a:disk:855561346087387136> Music`, `play, pause, stop, skip, queue, autoplay, loop, volume, resume, lyrics, filter, jummpto`, false)
+		.addField(`> <a:disk:855561346087387136> Music`, `play, pause, stop, skip, queue, autoplay, loop, volume, resume, lyrics, filter, jumpto`, false)
 		.setColor('#cc338b')
 		.setImage(`https://i.pinimg.com/originals/b6/b4/de/b6b4ded4bd797b093cc9b68aa6fba694.gif`)
 		.setFooter(`To set Custom prefix type: ${prefixesdatabase.prefix}setprefix`, client.user.displayAvatarURL())

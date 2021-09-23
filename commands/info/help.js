@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const [ CModeration, CFun, CGiveaway, CUtility, CImage, CMusic, CGames, CRp ] = require("../../commands/info/allcommands");
+const [ CModeration, CFun, CGiveaway, CUtility, CImage, CMusic, CGames, CRp ] = require("../../commands/info/allcommands.js");
 module.exports.run = async (client, message, args) => {
 	const settings = require("../../config/settings.json");
 	const prefixesdatabase = client.settings.ensure(message.guild.id, settings);

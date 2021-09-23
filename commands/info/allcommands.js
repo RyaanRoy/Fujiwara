@@ -104,4 +104,10 @@ const CMusic = [
     "\`jummpto\` ",
 ]
 
-
+module.exports.help = {
+	name: "allcmd",
+	description: "Storing .",
+	usage: "b-allcmd",
+	accessableby: "Member",
+	aliases: []
+};

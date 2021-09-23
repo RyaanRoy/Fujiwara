@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const [ CModeration, CFun, CGiveaway, CUtility, CImage, CMusic, CGames, CRp ] = require("../info/allcommands");
 module.exports.run = async (client, message, args) => {
 	const settings = require("../../config/settings.json");
 	const prefixesdatabase = client.settings.ensure(message.guild.id, settings);
@@ -10,18 +9,18 @@ module.exports.run = async (client, message, args) => {
 	if (!helpArgs[0]) {
 		let embed = new Discord.MessageEmbed()
 		.setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
-		.setTitle(`> Help commands`)
+		.setTitle(`> Help with commands`)
 		.setDescription(
 			`Yoo! **My prefix is:** \`${prefixesdatabase.prefix}\` \nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.\nTo chat with me simply mention or reply to me and ask a question.\n📱Basic: help, ping, uptime, vote`
 		)
-		.addField(`> <a:purplestar:817788092768976896> Moderation`, `${CModeration}`, true)
-		.addField(`> <a:purplestar:817788092768976896> Fun`, `${CFun} \r`, true)
-		.addField(`> <:blurpleannouncements:859068819191496734> GiveAway`, `${CGiveaway} \r`, false)
-		.addField(`> <a:dev:817788400471638016> Utility`, `${CUtility} \r`, false)
-		.addField(`> 🖼️ Image`, `${CImage} \r`, false)
-		.addField(`> <a:chikadance:852764676429185035>  Games`, `${CGames} \r`, false)
-		.addField(`> <:mm:848450657614037002>  Roleplay`, `${CRp} \r`, false)
-		.addField(`> <a:disk:855561346087387136> Music`, `${CMusic} \r`, false)
+		.addField(`> <a:purplestar:817788092768976896> Moderation`, `clear, ban, unban, warn, clearwarn, warnings, kick, createchannel, createemoji, lockchannel, unlockchannel, mute, unmute, rename, slowmode`, true)
+		.addField(`> <a:purplestar:817788092768976896> Fun`, `8ball, ship, animesearch, aes256, deaes256, meme,`, true)
+		.addField(`> <:blurpleannouncements:859068819191496734> GiveAway`, `start-giveaway , reroll, end-giveaway`, false)
+		.addField(`> <a:dev:817788400471638016> Utility`, `enlarge, reminder, wikipedia, urban, roblox, serverinfo, serverav, avatar, whois, roleinfo, channel, embed(use ;), imageembed, reverse, setafk, snipe, stats, timer, translate, weather`, false)
+		.addField(`> 🖼️ Image`, `captcha, circle, delete, think, gay, changemymind, trigger, clyde, petpet, magik, dog, cat, drake, rip, iphonex, ngif`, false)
+		.addField(`> <a:chikadance:852764676429185035>  Games`, `akinator, youtubetogether, betrayal, trivia`, false)
+		.addField(`> <:mm:848450657614037002>  Roleplay`, `kiss, hug, pat, poke, smug, changemymind,tickle`, false)
+		.addField(`> <a:disk:855561346087387136> Music`, `play, pause, stop, skip, queue, autoplay, loop, volume, resume, lyrics, filter, jummpto`, false)
 		.setColor('#cc338b')
 		.setImage(`https://steamuserimages-a.akamaihd.net/ugc/812248528035547228/3D07E3596FAF1F8185765C59C99D560EA5F4960E/?imw=512&imh=287&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true`)
 		.setFooter(`To set Custom prefix type: ${prefixesdatabase.prefix}setprefix`, client.user.displayAvatarURL())

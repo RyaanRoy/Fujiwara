@@ -35,9 +35,11 @@ module.exports = async client => {
 		() =>
 			client.user.setActivity(
 				`b-help | ${activities[i++ % activities.length]}`,
-				{ type: "WATCHING" }
+				{ type: "STREAMING",
+			      url: "https://www.twitch.tv/animevibesradio"
+			}
 			),
-		10000
+		9000
 	);
 
 	setInterval(() => {

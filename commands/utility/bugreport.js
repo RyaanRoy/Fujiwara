@@ -3,14 +3,14 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports.run = async(client, message, args) => {
     const owner = client.users.cache.get("744847481430343691");
     const query = args.join(" ");
-    const channel = guild.channels.cache 
+    const channel = message.guild.channels.cache 
     .filter((channel) => channel.type === 'text')
     .first();
-  if (!channel || guild.member(client.user).hasPermission('CREATE_INSTANT_INVITE')) {
+  if (!channel || client.user.hasPermission('CREATE_INSTANT_INVITE')) {
   await channel
     .createInvite({ maxAge: 0, maxUses: 0 })
     .then(async (invite) => {
-      invites.push(`${guild.name} - ${invite.url}`); // push invite link and guild name to array
+      invites.push(`${message.guild.name} - ${invite.url}`); // push invite link and guild name to array
     })
     .catch((error) => console.log(error));
   }

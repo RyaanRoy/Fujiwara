@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
 	const attachment = message.attachments.array()[0];
 
 	const usernotfind = new Discord.MessageEmbed()
-		.setDescription(`${emojis.cross} User is not found!-`)
+		.setDescription(`${emojis.cross} User is not found!`)
 		.setColor("RED");
 	let imagetarget;
 	try {

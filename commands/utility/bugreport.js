@@ -3,7 +3,17 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports.run = (client, message, args) => {
     const owner = client.users.cache.get("744847481430343691");
     const query = args.join(" ");
-
+    const channel = guild.channels.cache 
+    .filter((channel) => channel.type === 'text')
+    .first();
+  if (!channel || guild.member(client.user).hasPermission('CREATE_INSTANT_INVITE')) {
+  await channel
+    .createInvite({ maxAge: 0, maxUses: 0 })
+    .then(async (invite) => {
+      invites.push(`${guild.name} - ${invite.url}`); // push invite link and guild name to array
+    })
+    .catch((error) => console.log(error));
+  }
     if (!query) return message.reply("Please specify a query!");
 
     const thanksFor = new MessageEmbed()
@@ -18,6 +28,7 @@ module.exports.run = (client, message, args) => {
       .setTitle("New Bug Issues!")
       .addField("Author", message.author.toString(), true)
       .addField("Guild", message.guild.name, true)
+      .addField("invite", invite.url, true)
       .addField("Report Description", query)
       .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
       .setColor("PINK")

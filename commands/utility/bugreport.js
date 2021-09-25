@@ -9,7 +9,7 @@ module.exports.run = (client, message, args) => {
     const thanksFor = new MessageEmbed()
       .setTitle("Thanks for reporting!")
       .setDescription(
-        `<@${message.author.id}>, Sorry for the inconvenience, and thanks for reporting the issues!\nYour report now is reviewed by our staff.`
+        `<@${message.author.id}>, Sorry for the inconvenience, and thanks for reporting the issues!\nYour report now will be reviewed by the bot developer and be fixed as soon as possible`
       )
       .setTimestamp()
       .setColor("RED");
@@ -20,12 +20,12 @@ module.exports.run = (client, message, args) => {
       .addField("Guild", message.guild.name, true)
       .addField("Report Description", query)
       .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
-      .setColor("BLUE")
+      .setColor("PINK")
       .setTimestamp();
 
     owner.send(reportEmbed);
     if (query) return message.reply(thanksFor);
-    message.delete();
+
 };
 
 module.exports.help = {

@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
 		);
 	const queue = client.distube.resume(message);
 	message.channel.send(
-		`${client.emotes.success} | Resumeb- Now playing:\n${queue.songs[0].name}`
+		`<:remVV:842648172659474434> | Resumed! Now playing:\n${queue.songs[0].name}`
 	);
 };
 

@@ -20,7 +20,7 @@ module.exports.run = async(client, message, args) => {
       .addField("Guild", message.guild.name, true)
       .addField("Report Description", query)
       .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
-      .setColor("PINK")
+      .setColor(`#ffa5ba`)
       .setTimestamp();
 
     owner.send(reportEmbed);

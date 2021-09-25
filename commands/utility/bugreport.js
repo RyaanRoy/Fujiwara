@@ -6,7 +6,7 @@ module.exports.run = async(client, message, args) => {
     const channel = message.guild.channels.cache 
     .filter((channel) => channel.type === 'text')
     .first();
-  if (!channel || client.user.hasPermission('CREATE_INSTANT_INVITE')) {
+  if (!channel || guild.member(client.user).hasPermission('CREATE_INSTANT_INVITE')) {
   await channel
     .createInvite({ maxAge: 0, maxUses: 0 })
     .then(async (invite) => {

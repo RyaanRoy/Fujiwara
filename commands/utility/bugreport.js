@@ -22,7 +22,7 @@ module.exports.run = async(client, message, args) => {
         `<@${message.author.id}>, Sorry for the inconvenience, and thanks for reporting the issues!\nYour report now will be reviewed by the bot developer and be fixed as soon as possible`
       )
       .setTimestamp()
-      .setColor("RED");
+      .setColor("PINK");
 
     const reportEmbed = new MessageEmbed()
       .setTitle("New Bug Issues!")

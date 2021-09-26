@@ -88,7 +88,7 @@ module.exports.run = async (client, message, args) => {
 
 	const test1 = new Discord.MessageEmbed()
 		.setDescription(
-			`${emojis.tick} Muted **${user.username}#${user.discriminator}** For 1 Hour | **Reached Two Warnings**`
+			`<a:ChikaFingerspin:796724538397556747> Muted **${user.username}#${user.discriminator}** For 1 Hour | **Reached Two Warnings**`
 		)
 		.setColor("GREEN");
 	const bsuembed = new Discord.MessageEmbed()
@@ -116,7 +116,7 @@ module.exports.run = async (client, message, args) => {
 
 	const test3 = new Discord.MessageEmbed()
 		.setDescription(
-			`${emojis.tick} Banned **${user.username}#${user.discriminator}** | **Reached 5 Warnings**`
+			`<a:ChikaFingerspin:796724538397556747> Banned **${user.username}#${user.discriminator}** | **Reached 5 Warnings**`
 		)
 		.setColor("GREEN");
 

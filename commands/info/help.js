@@ -27,8 +27,8 @@ module.exports.run = async (client, message, args) => {
 		.setThumbnail(client.user.displayAvatarURL())
 	
 	
-	
-		message.channel.send(embed)
+		if (channel.permissionsFor(message.guild.me).has("SEND_MESSAGES")) return message.channel.send(embed);
+		
 	}
 
 	if (helpArgs[0]) {

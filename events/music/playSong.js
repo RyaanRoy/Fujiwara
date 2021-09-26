@@ -10,7 +10,7 @@ module.exports = async (client, message, queue, song) => {
        .addField(`Options`,
             `${client.status(queue)}`
     )
-    .setColor(`YELLOW`)
+    .setColor(`PINK`)
     .setThumbnail(`${song.thumbnail}`);
 	message.channel.send(Embed);
 };

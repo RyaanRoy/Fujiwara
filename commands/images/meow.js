@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
 	try {
 		const member = message.mentions.members.first();
         const { body } = await superagent.get("https://nekos.life/api/v2/img/meow");
-				if (member) {
+				
 					const embed = new Discord.MessageEmbed()
 						.setTitle(`${message.author.username} purrs`)
 						.setColor("#363942")
@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 						.setImage(body.url);
 
 					message.channel.send(embed);
-				}
+				
 			
 		
 	} catch (err) {

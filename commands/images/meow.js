@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 				
 					const embed = new Discord.MessageEmbed()
 						.setTitle(`Catz`)
-						.setColor("#363942")
+						.setColor('#cc338b')
 						.setDescription(
 							`Yes Catz`
 						)

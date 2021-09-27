@@ -9,10 +9,11 @@ module.exports.run = async (client, message, args) => {
 				
 					const embed = new Discord.MessageEmbed()
 						.setTitle(`${message.author.username}! A waifu for u!`)
-						.setColor("#363942")
+						
 						.setDescription(
 							`${message.author.username} finds a waifu!`
 						)
+                        .setColor('#cc338b')
 						.setImage(body.url);
 
 					message.channel.send(embed);

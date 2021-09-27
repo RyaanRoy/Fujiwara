@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
 		const emb = new Discord.MessageEmbed();
 		emb.setDescription("Your Cat Image Here:");
-		emb.setColor("GREEN");
+		emb.setColor('#cc338b')
 		emb.setImage(link);
 
 		message.channel.send(emb);

@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
 				if (member) {
 					const embed = new Discord.MessageEmbed()
 						.setTitle(`${message.author.username} slaps ${member.user.username}`)
-						.setColor("#363942")
+						.setColor('#cc338b')
 						.setDescription(
 							`${message.author.username} slapped ${member.user.username}!`
 						)

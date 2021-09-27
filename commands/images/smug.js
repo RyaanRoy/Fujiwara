@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
 				if (member) {
 					const embed = new Discord.MessageEmbed()
 						.setTitle(`${message.author.username} smirks`)
-						.setColor("#363942")
+						.setColor('#cc338b')
 						.setDescription(
 							`${message.author.username} kinda sus!`
 						)

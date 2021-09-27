@@ -87,6 +87,13 @@ const CRp = [
     "\`smug\` ",
     "\`changemymind\` ",
     "\`tickle\` ",
+    "\`slap\`",
+    "\`feed\`",
+    "\`cuddle\`",
+    "\`poke\`",
+    "\`meow\`",
+    "\`baka\`",
+    "\`waifu\`"
 ]
 
 const CMusic = [

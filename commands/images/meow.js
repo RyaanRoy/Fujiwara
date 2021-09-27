@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
 		const member = message.mentions.members.first();
 
 		require("request")(
-			{ url: "https://nekos.life/api/img/meow", json: true },
+			{ url: "https://nekos.life/api/v2/img/meow", json: true },
 			(req, res, json) => {
 				if (member) {
 					const embed = new Discord.MessageEmbed()

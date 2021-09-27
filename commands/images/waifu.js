@@ -1,13 +1,11 @@
 const Discord = require("discord.js");
-
+const superagent = require("superagent");
 module.exports.run = async (client, message, args) => {
 	// eslinb-disable-line no-unused-vars
 	try {
 		const member = message.mentions.members.first();
 
-		require("request")(
-			{ url: "https://nekos.life/api/v2/img/waifu", json: true },
-			(req, res, json) => {
+        const { body } = await superagent.get("https://nekos.life/api/v2/img/waifu");
 				if (member) {
 					const embed = new Discord.MessageEmbed()
 						.setTitle(`${message.author.username} waifu for u`)
@@ -15,12 +13,12 @@ module.exports.run = async (client, message, args) => {
 						.setDescription(
 							`${message.author.username} finds a waifu!`
 						)
-						.setImage(json.url);
+						.setImage(body.url);
 
 					message.channel.send(embed);
 				}
-			}
-		);
+			
+
 	} catch (err) {
 		message.channel.send(`There was an error!\n${err}`).catch();
 	}

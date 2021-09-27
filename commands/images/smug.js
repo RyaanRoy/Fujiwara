@@ -1,33 +1,35 @@
 const Discord = require("discord.js");
-const superagent = require("superagent");
+
 module.exports.run = async (client, message, args) => {
 	// eslinb-disable-line no-unused-vars
 	try {
 		const member = message.mentions.members.first();
 
-        const { body } = await superagent.get("https://nekos.life/api/v2/img/poke");
+		require("request")(
+			{ url: "https://nekos.life/api/smug", json: true },
+			(req, res, json) => {
 				if (member) {
 					const embed = new Discord.MessageEmbed()
-						.setTitle(`${message.author.username} pokes ${member.user.username}`)
+						.setTitle(`${message.author.username} smirks`)
 						.setColor("#363942")
 						.setDescription(
-							`${message.author.username} poked ${member.user.username}!`
+							`${message.author.username} kinda sus!`
 						)
-						.setImage(body.url);
+						.setImage(json.url);
 
 					message.channel.send(embed);
-				} else message.reply("You need to mention the user to poke!");
-			
-		
+				} 
+			}
+		);
 	} catch (err) {
 		message.channel.send(`There was an error!\n${err}`).catch();
 	}
 };
 
 module.exports.help = {
-	name: "poke",
-	description: "This command is used for poking.",
-	usage: "b-poke <mentions>",
+	name: "smug",
+	description: "This command is used for generating pat.",
+	usage: "b-smug <mentions>",
 	accessableby: "Members",
 	aliases: []
 };

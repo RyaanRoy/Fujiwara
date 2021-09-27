@@ -3,6 +3,7 @@ const config = require("./config/config.json");
 const Enmap = require("enmap");
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
+require('discord-reply');
 const client = new Discord.Client({
 	partials: ["MESSAGE", "USER", "REACTION"],
 	disableMentions: "everyone"
@@ -138,7 +139,7 @@ client.on("message", async message => {
 	fetch(`http://api.brainshop.ai/get?bid=159771&key=5RopgmgY4hFiKTEj&uid=${message.author.id}&msg=${encodeURIComponent(message.content)}`)
 		.then(res => res.json())
 		.then(data => {
-			message.reply(`${Discord.Util.removeMentions(data.cnt)}`);
+			message.lineReply(`${Discord.Util.removeMentions(data.cnt)}`);
 		});
 		  message.channel.stopTyping();
 	}

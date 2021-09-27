@@ -7,10 +7,10 @@ module.exports.run = async (client, message, args) => {
         const { body } = await superagent.get("https://nekos.life/api/v2/img/meow");
 				
 					const embed = new Discord.MessageEmbed()
-						.setTitle(`${message.author.username} purrs`)
+						.setTitle(`Catz`)
 						.setColor("#363942")
 						.setDescription(
-							`${message.author.username} Purrs at you!`
+							`Yes Catz`
 						)
 						.setImage(body.url);
 

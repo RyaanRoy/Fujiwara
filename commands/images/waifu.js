@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
         const { body } = await superagent.get("https://nekos.life/api/v2/img/waifu");
 				
 					const embed = new Discord.MessageEmbed()
-						.setTitle(`${message.author.username} waifu for u`)
+						.setTitle(`${message.author.username}! A waifu for u!`)
 						.setColor("#363942")
 						.setDescription(
 							`${message.author.username} finds a waifu!`

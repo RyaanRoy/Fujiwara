@@ -43,7 +43,7 @@ module.exports.run = async (client, message, args) => {
         await client.distube.setFilter(message, filterOption)
             const embed = new MessageEmbed()
                 .setDescription('Music Filter has been set to: ' + `(${filterOption})` || 'Off')
-                .setColor("BLUE")
+                .setColor("#cc338b")
 
             return message.channel.send(embed)
     } catch (error) {

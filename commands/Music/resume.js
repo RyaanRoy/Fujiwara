@@ -1,4 +1,5 @@
 module.exports.run = async (client, message, args) => {
+	const queue = client.distube.getQueue(message);
 	if (!message.member.voice.channel)
 		return message.channel.send(
 			`${client.emotes.error} | You must be in a voice channel!`

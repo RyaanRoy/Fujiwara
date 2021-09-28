@@ -56,7 +56,7 @@ module.exports.run = async (client, message, args) => {
 };
 
 module.exports.help = {
-	name: "ytt",
+	name: "youtubetogether",
 	description: "This command is used for starting yt together session.",
 	usage: "b-ytt <channelid>",
 	accessableby: "Member",

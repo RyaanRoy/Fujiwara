@@ -20,8 +20,8 @@ const ACTIVITIES = {
 };
 
 module.exports.run = async (client, message, args) => {
-    const channel = message.member.voice;
-    if (!channel) return message.channel.send("You need to be in a voice channel!");
+    const channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0]);
+    if (!channel || channel.type !== "voice") return message.channel.send("❌ | Invalid channel specified!");
     if (!channel.permissionsFor(message.guild.me).has("CREATE_INSTANT_INVITE")) return message.channel.send("❌ | I need `CREATE_INSTANT_INVITE` permission");
 
     fetch(`https://discord.com/api/v8/channels/${channel.id}/invites`, {

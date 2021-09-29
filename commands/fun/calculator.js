@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
 			embed: {
 				title: 'Calculator ',
 				color: '#5865F2',
-				footer: '©️Fujiwara Development',
+				footer: '©️Fujiwara Is Good At Math',
 				timestamp: true,
 			},
 			disabledQuery: 'Calculator is disabled!',

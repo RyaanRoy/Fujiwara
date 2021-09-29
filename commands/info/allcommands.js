@@ -53,6 +53,7 @@ const CGames = [
     "\`youtubetogether\` ",
     "\`betrayal\` ",
     "\`trivia\` ",
+    "\`calculator\` ",
     
 ]
 

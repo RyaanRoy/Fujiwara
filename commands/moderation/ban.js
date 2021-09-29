@@ -24,8 +24,10 @@ module.exports.run = async (client, msg, args) => {
 
 	const mmqembed = new Discord.MessageEmbed()
 		.setDescription(
-			`:no_entry_sign: ${msg.author.username}, Missing Permission`
+			` ${msg.author.username}, Missing Permission`
 		)
+		.setImage(`https://tenor.com/view/kaguya-sama-love-is-war-chika-fujiwara-chika-fujiwara-bedrock-gif-20615588`)
+		.setFooter(`${msg.author.username} tries to ban, but fails!`)
 		.setColor("#FFFF00");
 	if (!msg.member.hasPermission("BAN_MEMBERS")) {
 		return msg.channel

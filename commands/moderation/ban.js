@@ -26,13 +26,13 @@ module.exports.run = async (client, msg, args) => {
 		.setDescription(
 			` ${msg.author.username}, Missing Permission`
 		)
-		.setImage(`https://tenor.com/view/kaguya-sama-love-is-war-chika-fujiwara-chika-fujiwara-bedrock-gif-20615588`)
+		.setImage(`https://cdn.discordapp.com/attachments/864802141365731329/892687443772456980/ezgif-1-e947c3157d22.gif`)
 		.setFooter(`${msg.author.username} tries to ban, but fails!`)
 		.setColor("#FFFF00");
 	if (!msg.member.hasPermission("BAN_MEMBERS")) {
 		return msg.channel
 			.send(mmqembed)
-			.then(msg => msg.delete({ timeout: 5000 }));
+			
 	}
 	const kntlembed = new Discord.MessageEmbed()
 		.setTitle("Command: b-ban")

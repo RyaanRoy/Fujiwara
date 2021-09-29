@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
     .setTitle(`${message.author.username} used stop command`)
     .setDescription(`Stopped playing the Music! See you again next time!`) 
     .setColor(`YELLOW`)
-    .setThumbnail(`https://i.pinimg.com/originals/e5/8f/52/e58f521070bf76ac69d583923b499012.gif`);
+    .setImage(`https://tenor.com/view/chika-vibes-dance-chika-dance-gif-17080350`);
 	message.channel.send(stopembed);
 };
 

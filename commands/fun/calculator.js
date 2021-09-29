@@ -3,20 +3,22 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 const fetch = require("node-fetch");
 const moment = require("moment");
 const { Calculator } = require('weky');
+require('@weky/inlinereply');
+const disbut = require('discord-buttons');
 module.exports.run = async (client, message, args) => {
-    await Calculator({
-        message: message,
-        embed: {
-            title: 'Calculator',
-            color: '#5865F2',
-            footer: '©️ Fujiwara Calculator',
-            timestamp: true,
-        },
-        disabledQuery: 'Calculator is disabled!',
-        invalidQuery: 'The provided equation is invalid!',
-        othersMessage: 'Only <@{{author}}> can use the buttons!',
-    });
-};
+		await Calculator({
+			message: message,
+			embed: {
+				title: 'Calculator ',
+				color: '#5865F2',
+				footer: '©️Fujiwara Development',
+				timestamp: true,
+			},
+			disabledQuery: 'Calculator is disabled!',
+			invalidQuery: 'The provided equation is invalid!',
+			othersMessage: 'Only <@{{author}}> can use the buttons!',
+		});
+    }
 
 module.exports.help = {
 	name: "calculator",

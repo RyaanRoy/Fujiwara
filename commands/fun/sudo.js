@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const superagent = require("superagent");
 const { Client, Message, MessageEmbed } = require("discord.js");
-const { sudo } = require("weky");
+const sudo  = require("weky");
 module.exports.run = async (client, message, args) => {
 
     const user = message.mentions.members.first();

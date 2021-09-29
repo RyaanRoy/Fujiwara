@@ -8,6 +8,8 @@ const client = new Discord.Client({
 	partials: ["MESSAGE", "USER", "REACTION"],
 	disableMentions: "everyone"
 });
+const disbut = require('discord-buttons');
+disbut(client);
 const DisTube = require("distube");
 
 client.config = config;

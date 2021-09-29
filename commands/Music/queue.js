@@ -7,12 +7,12 @@ exports.run = async (client, message, args) => {
 	const q = queue.songs
 		.map(
 			(song, i) =>
-				`${i === 0 ? "Playing:" : `${i}.`} ${song.name} - \`${
+				`${i === 0 ? "Now Playing:" : `${i}.`} ${song.name} - \`${
 					song.formattedDuration
 				}\``
 		)
 		.join("\n");
-	message.channel.send(`${client.emotes.queue} | **Server Queue**\n${q}`);
+	message.channel.send(`<a:disk:855561346087387136>  | **Server Queue**\n${q}`);
 };
 
 module.exports.help = {

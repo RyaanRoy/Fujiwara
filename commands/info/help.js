@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 		)
 		.addField(`> <a:purplestar:817788092768976896> Moderation`, `clear, ban, unban, warn, clearwarn, warnings, kick, createchannel, createemoji, lockchannel, unlockchannel, mute, unmute, rename, slowmode`, true)
 		.addField(`> <:blurpleannouncements:859068819191496734> GiveAway`, `gstart , greroll, gend`, true)
-		.addField(`> <a:purplestar:817788092768976896> Fun`, `8ball, ship, animesearch, aes256, deaes256, meme`, false)
+		.addField(`> <a:purplestar:817788092768976896> Fun`, `8ball, ship, animesearch, aes256, deaes256, meme, sudo`, false)
 		.addField(`> <a:dev:817788400471638016> Utility`, `enlarge, reminder, wikipedia, urban, roblox, serverinfo, serverav, avatar, whois, roleinfo, channel, embed(use ;), imageembed, reverse, setafk, snipe, stats, timer, translate, weather`, false)
 		.addField(`> 🖼️ Image`, `captcha, circle, delete, think, gay, changemymind, trigger, clyde, petpet, magik, dog, cat, drake, rip, iphonex, ngif`, false)
 		.addField(`> <a:chikadance:852764676429185035>  Games`, `akinator, youtubetogether, betrayal, trivia, calculator`, false)

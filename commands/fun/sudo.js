@@ -3,17 +3,32 @@ const superagent = require("superagent");
 const { Client, Message, MessageEmbed } = require("discord.js");
 const sudo  = require("weky");
 module.exports.run = async (client, message, args) => {
+    let lockPermErr = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setTitle("**User Permission Error!**")
+        .setDescription("**You don't have permission to Use this command! Require: MANAGE_WEBHOOKS**")
+        if (!message.channel.permissionsFor(message.member).has("MANAGE_WEBHOOKS") ) return message.channel.send(lockPermErr);
+        
+        let lockPermErrban = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setTitle("**Bot Permission Error!**")
+        .setDescription("**I don't have permission to create Webhook! Require: MANAGE_WEBHOOKS**")
 
-    const user = message.mentions.members.first();
-    if (!user) return message.lineReply(`Mention someone pls`);
-    const msg = args.slice(1).join(" ");
-    if (!msg) return message.channel.send(`Specify a message!`);
-    const xd = new sudo({
-      message: message,
-      text: msg,
-      member: user,
+     if (!message.guild.me.hasPermission("MANAGE_WEBHOOKS")) return message.channel.send(lockPermErrban)
+     
+    
+    message.delete();
+    let user =
+      message.mentions.members.first() ||
+      message.guild.members.cache.get(args[0]);
+    if (!user) return message.channel.send("Please provide a user!");
+    const webhook = await message.channel.createWebhook(user.displayName, {
+      avatar: user.user.displayAvatarURL(),
+      channel: message.channel.id
     });
-    xd.start();
+    await webhook.send(args.slice(1).join(" ")).then(() => {
+      webhook.delete();
+    });
 };
 
 module.exports.help = {

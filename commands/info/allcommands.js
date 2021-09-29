@@ -54,6 +54,7 @@ const CGames = [
     "\`betrayal\` ",
     "\`trivia\` ",
     "\`calculator\` ",
+    "\`sudo\` "
     
 ]
 

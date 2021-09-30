@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
   
         let description =
           `Total Servers - ${client.guilds.cache.size}\n\n` +
-          bot.guilds.cache
+          client.guilds.cache
             .sort((a, b) => b.memberCount - a.memberCount)
             .map(r => r)
             .map((r, i) => `**${i + 1}** - ${r.name} | ${r.memberCount} Members\nID - ${r.id}`)

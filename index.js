@@ -144,7 +144,9 @@ client.on("message", async message => {
 			message.lineReply(`${Discord.Util.removeMentions(data.cnt)}`);
 		});
 		  message.channel.stopTyping();
-	
+	if(!data){
+		message.channel.send(`Please try using chatbot later`)
+	}
 	}
 	});
 

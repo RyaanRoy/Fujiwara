@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
 	const q = queue.songs
 		.map(
 			(song, i) =>
-				`${i === 0 ? "Now Playing:" : `[ ${i} ]`} \`${song.name}\` - \`[${
+				`${i === 0 ? "Now Playing:" : `[ ${i} ]`} *${song.name}* - \`[${
 					song.formattedDuration
 				}]\``
 		)

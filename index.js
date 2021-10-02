@@ -148,7 +148,7 @@ client.on("message", async message => {
 			  message.channel.startTyping();
 			  
 				
-				  message.lineReply(`> ${Discord.Util.removeMentions(data.cnt)}`);
+				  message.lineReply(`${Discord.Util.removeMentions(data.cnt)}`);
 				  message.channel.stopTyping();
 				 
 			 

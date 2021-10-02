@@ -133,7 +133,7 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 		});
 	}
 });
-client.on("message", async message => {
+/*client.on("message", async message => {
     try {
 
     
@@ -159,4 +159,4 @@ client.on("message", async message => {
 	  }catch(error){return};
 	  }
 	);
-
+*/

@@ -3,6 +3,7 @@ const config = require("./config/config.json");
 const Enmap = require("enmap");
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
+const Util = require('discord.js')
 require('discord-reply');
 const client = new Discord.Client({
 	partials: ["MESSAGE", "USER", "REACTION"],
@@ -138,11 +139,15 @@ client.on("message", async message => {
 		  if(message.author.bot) return
 	
 		  if (message.mentions.has(client.user.id) && !message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))){
-			fetch.default(`http://api.brainshop.ai/get?bid=159771&key=5RopgmgY4hFiKTEj&uid=${message.author.id}&msg=${encodeURIComponent(message.content)}`)
-			.then((res) => res.json())
-			.then((body) => {
-				message.lineReply(`${Discord.Util.removeMentions(body.content)}`)
-		  })
+			  message.channel.startTyping();
+			fetch(
+				`http://api.brainshop.ai/get?bid=160117&key=AmxzVOo74jyHpdxp&uid=${message.author.id}&msg=${encodeURIComponent(message.content)}`
+		)
+				.then((res) => res.json())
+				.then((body) => {
+				  message.lineReply(body.cnt);
+				  message.channel.stopTyping();
+				});
 		  }
 		
 	  

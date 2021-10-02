@@ -133,7 +133,7 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 		});
 	}
 });
-/*client.on("message", async message => {
+client.on("message", async message => {
     try {
 		  if(message.author.bot) return
 	
@@ -149,4 +149,4 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 	  }catch(error){return}
 	  }
 	);
-*/
+

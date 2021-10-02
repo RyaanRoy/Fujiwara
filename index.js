@@ -133,7 +133,7 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 		});
 	}
 });
-/*client.on("message", async message => {
+client.on("message", async message => {
     try {
 
     
@@ -142,14 +142,14 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 		  if(message.author.bot) return
 	
 		  if (message.mentions.has(client.user.id) && !message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))){
-			fetch.default(`http://api.brainshop.ai/get?bid=159771&key=5RopgmgY4hFiKTEj&uid=${message.author.id}&msg=${message.content}`)
+			fetch.default(`http://api.brainshop.ai/get?bid=159771&key=5RopgmgY4hFiKTEj&uid=${message.author.id}&msg=${encodeURIComponent(message.content)}`)
 			.then(res => res.json())
 			.then(data => {
-			  message.channel.startTyping();
+			  
 			  
 				
 				  message.lineReply(`${Discord.Util.removeMentions(data.cnt)}`);
-				  message.channel.stopTyping();
+				 
 				 
 			 
 		  })
@@ -159,4 +159,4 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 	  }catch(error){return};
 	  }
 	);
-*/
+

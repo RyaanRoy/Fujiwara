@@ -133,7 +133,7 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 		});
 	}
 });
-client.on("message", async message => {
+/*client.on("message", async message => {
 	if (message.author.bot) return;
 
 	if (message.mentions.has(client.user.id) && !message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))){
@@ -147,4 +147,5 @@ client.on("message", async message => {
 	
 	}
 	});
+	/*
 

@@ -133,7 +133,7 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 		});
 	}
 });
-client.on("message", async message => {
+/*client.on("message", async message => {
     try {
 		  if(message.author.bot) return
 	
@@ -141,12 +141,12 @@ client.on("message", async message => {
 			fetch.default(`http://api.brainshop.ai/get?bid=159771&key=5RopgmgY4hFiKTEj&uid=${message.author.id}&msg=${encodeURIComponent(message.content)}`)
 			.then((res) => res.json())
 			.then((body) => {
-				message.reply(`${Discord.Util.removeMentions(body.response)}`)
+				message.lineReply(`${Discord.Util.removeMentions(body.response)}`)
 		  })
 		  }
 		
 	  
-	  }catch(error){return};
+	  }catch(error){return}
 	  }
 	);
-
+*/

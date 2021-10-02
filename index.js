@@ -145,11 +145,11 @@ client.on("message", async message => {
 			fetch.default(`http://api.brainshop.ai/get?bid=159771&key=5RopgmgY4hFiKTEj&uid=${message.author.id}&msg=${message.content}`)
 			.then(res => res.json())
 			.then(data => {
-			  message.channel.sendTyping();
+			  message.channel.startTyping();
 			  
-				  message.channel.sendTyping();
-				  message.reply(`> ${Discord.Util.removeMentions(data.cnt)}`);
-			 
+				
+				  message.lineReply(`> ${Discord.Util.removeMentions(data.cnt)}`);
+				  message.channel.stopTyping();
 				 
 			 
 		  })

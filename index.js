@@ -148,7 +148,7 @@ client.on("message", async message => {
 			  
 			  
 				
-				  message.lineReply(`${data.content}`);
+				  message.lineReply(`${Discord.Util.removeMentions(data.content)}`);
 				 
 				 
 			 

@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
 	}
 	client.distube.setVolume(message, volume);
 	message.channel.send(
-		`${client.emotes.success} | Volume set to \`${volume}\``
+		`<a:eq:859067700780859412> | Volume set to \`${volume}\``
 	);
 };
 

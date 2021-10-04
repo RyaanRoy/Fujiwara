@@ -24,7 +24,7 @@ exports.run = async (client, message, args) => {
 			});
 		})
 		.catch(collected =>
-			message.channel.send(":x: | Time's up! Reset Database Faileb-")
+			message.channel.send(":x: | Time's up! Reset Database Failed!")
 		);
 };
 

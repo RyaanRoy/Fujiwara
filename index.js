@@ -149,7 +149,7 @@ client.on("message", async message => {
 				  message.channel.stopTyping();
 				});
 		  }
-		message.content.startsWith()
+		
 	  
 	  }catch(error){return}
 	  }

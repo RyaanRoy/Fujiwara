@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
 		);
 	const queue = client.distube.skip(message);
 	message.channel.send(
-		`<a:yup:871815263153172550>  | Skipped:\n${queue.songs[0].name}`
+		`<a:yup:871815263153172550> | Skipped:${queue.songs[0].name}`
 	);
 };
 

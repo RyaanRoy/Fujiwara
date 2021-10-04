@@ -12,10 +12,10 @@ module.exports.run = async (client, message, args) => {
 
     const {
       data: { list },
-    } = await axios.get(
+    } = (await axios.get(
       `https://api.urbandictionary.com/v0/define?term=${query}`
-    );
-
+    ))
+    
     const [answer] = list;
 
     message.channel.send(

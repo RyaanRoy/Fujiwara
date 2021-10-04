@@ -3,11 +3,7 @@ const superagent = require("superagent");
 const { Client, Message, MessageEmbed } = require("discord.js");
 const sudo  = require("weky");
 module.exports.run = async (client, message, args) => {
-    let lockPermErr = new Discord.MessageEmbed()
-        .setColor('RANDOM')
-        .setTitle("**User Permission Error!**")
-        .setDescription("**You don't have permission to Use this command! Require: MANAGE_WEBHOOKS**")
-        if (!message.channel.permissionsFor(message.member).has("MANAGE_WEBHOOKS") ) return message.channel.send(lockPermErr);
+
         
         let lockPermErrban = new Discord.MessageEmbed()
         .setColor('RANDOM')

@@ -1,5 +1,5 @@
 let CModeration = [
-    "\`clear\` ",
+    "\`purge\` ",
     "\`ban\` ",
     "\`unban\` ",
     "\`warn\` ",

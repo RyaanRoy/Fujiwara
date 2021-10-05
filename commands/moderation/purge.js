@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
 		.setColor("RED");
 	const missingn = new Discord.MessageEmbed()
 		.setDescription(
-			`${emojis.cross} Use: **\`${prefixesdatabase.prefix}clear <1 - 100>\`**`
+			`${emojis.cross} Use: **\`${prefixesdatabase.prefix}purge <1 - 100>\`**`
 		)
 		.setColor("RED");
 	if (!message.member.hasPermission("MANAGE_MESSAGES")) {
@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args) => {
 	const embedgg = new Discord.MessageEmbed()
 		.setColor("RED")
 		.setDescription(
-			`${emojis.cross} You can only clear 1 - 100 message(s) each time!`
+			`${emojis.cross} You can only purge 1 - 100 message(s) each time!`
 		);
 
 	if (args[0] > 100 || args[0] <= 0)
@@ -63,9 +63,9 @@ module.exports.run = async (client, message, args) => {
 };
 
 module.exports.help = {
-	name: "clear",
-	description: "Clear the message with amount",
-	usage: "b-clear <amount>(1-99)",
+	name: "purge",
+	description: "Purge the chat",
+	usage: "b-purge <amount>(1-99)",
 	accessableby: "Manage Message",
 	aliases: []
 };

@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
 		.setDescription(
 			`Yoo! **My prefix is:** \`${prefixesdatabase.prefix}\` \nClick [here](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.\nTo chat with me simply mention or reply to me and ask a question.\n📱**Basic**: help, ping, uptime, vote\nTo report bugs, simply type ${prefixesdatabase.prefix}bugreport and describe the issue`
 		)
-		.addField(`> <a:purplestar:817788092768976896> Moderation`, `clear, ban, unban, warn, clearwarn, warnings, kick, createchannel, createemoji, lockchannel, unlockchannel, mute, unmute, rename, slowmode`, true)
+		.addField(`> <a:panic:856054789217583104>  Moderation`, `clear, ban, unban, warn, clearwarn, warnings, kick, createchannel, createemoji, lockchannel, unlockchannel, mute, unmute, rename, slowmode`, true)
 		.addField(`> <:blurpleannouncements:859068819191496734> GiveAway`, `gstart , greroll, gend`, true)
 		.addField(`> <a:purplestar:817788092768976896> Fun`, `8ball, ship, animesearch, aes256, deaes256, meme, sudo`, false)
 		.addField(`> <a:dev:817788400471638016> Utility`, `enlarge, reminder, wikipedia, urban, roblox, serverinfo, serverav, avatar, whois, roleinfo, channel, embed(use ;), imageembed, reverse, setafk, snipe, stats, timer, translate, weather`, false)

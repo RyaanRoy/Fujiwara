@@ -3,7 +3,7 @@ const request = require("request");
 const { Client, Message, MessageEmbed } = require("discord.js");
 const fetch = require("node-fetch");
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (client, message, _args) => {
   const args = message.content.substring(1).split(" ")
 
   if (args[0] == 'meme'){

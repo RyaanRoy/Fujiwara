@@ -18,6 +18,7 @@ module.exports.run = async(client, message, args) => {
         `<@${message.author.id}>, Sorry for the inconvenience, and thanks for reporting the issues!\nYour report now will be reviewed by the bot developer and be fixed as soon as possible`
       )
       .setTimestamp()
+      .setImage(`https://c.tenor.com/k5Gy8HYMNNsAAAAC/fujiwara-shocked.gif`)
       .setColor("PINK");
 
     const reportEmbed = new MessageEmbed()

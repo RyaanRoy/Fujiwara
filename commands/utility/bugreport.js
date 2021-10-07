@@ -15,7 +15,7 @@ module.exports.run = async(client, message, args) => {
     const thanksFor = new MessageEmbed()
       .setTitle("Thanks for reporting!")
       .setDescription(
-        `<@${message.author.id}>, Sorry for the inconvenience, and thanks for reporting the issues!\nYour report now will be reviewed by the bot developer and be fixed as soon as possible`
+        `<@${message.author.id}>, Sorry for the inconvenience caused, and thanks for reporting the issues!\nYour report now will be reviewed by the bot developer and be fixed as soon as possible`
       )
       .setTimestamp()
       .setImage(`https://c.tenor.com/k5Gy8HYMNNsAAAAC/fujiwara-shocked.gif`)

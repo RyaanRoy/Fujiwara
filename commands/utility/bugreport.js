@@ -19,7 +19,7 @@ module.exports.run = async(client, message, args) => {
       )
       .setTimestamp()
       .setImage(`https://c.tenor.com/k5Gy8HYMNNsAAAAC/fujiwara-shocked.gif`)
-      .setColor("PINK");
+      .setColor("#e886db");
 
     const reportEmbed = new MessageEmbed()
       .setTitle("New Bug Issues!")

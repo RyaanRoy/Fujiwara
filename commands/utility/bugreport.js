@@ -30,7 +30,7 @@ module.exports.run = async(client, message, args) => {
       .setColor(`#ffa5ba`)
       .setTimestamp();
 
-    owner.send(reportEmbed);
+    client.channels.cache.get(`895548282468716595`).send(reportEmbed);
     if (query) return message.reply(thanksFor);
 
 };

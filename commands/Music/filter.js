@@ -45,7 +45,7 @@ module.exports.run = async (client, message, args) => {
             const embed = new MessageEmbed()
                 .setDescription('Music Filter has been set to: ' + `(${filterOption})` || 'Off ')
                 .setColor("#cc338b")
-                .setFooter("Do not panic if bot seems to be stuck while applying filter, be patient since it takes time to apply filter\nTo disable filter, reapply the same flter.")
+                .setFooter("Do not panic if bot seems to be stuck while applying filter, be patient since it takes time to apply filter and to disable filter, reapply the same flter.")
             return message.channel.send(embed)
     } catch (error) {
         return;

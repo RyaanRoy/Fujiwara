@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
         .setDescription(`Shipped ${message.author} and ${user}!`)
         .setImage(
           `https://api.popcatdev.repl.co/ship?user1=${message.author.displayAvatarURL(
-            { dynamic: false, format: "png" }
+            { dynamic: true, format: "png" }
           )}&user2=${user.displayAvatarURL({ dynamic: false, format: "png" })}`
         )
         .addField(`**Ship Meter**`, ship());
@@ -30,11 +30,11 @@ module.exports.run = async (client, message, args) => {
           `https://api.popcatdev.repl.co/ship?user1=${message.mentions.users
             .first()
             .displayAvatarURL({
-              dynamic: false,
+              dynamic: true,
               format: "png",
             })}&user2=${message.mentions.users
             .last()
-            .displayAvatarURL({ dynamic: false, format: "png" })}`
+            .displayAvatarURL({ dynamic: true, format: "png" })}`
         )
         .addField(`**Ship Meter**`, ship());
       message.channel.send(luv);

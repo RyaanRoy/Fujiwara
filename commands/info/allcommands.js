@@ -46,6 +46,7 @@ const CUtility = [
     "\`timer\` ",
     "\`translate\` ",
     "\`weather\` ",
+    "\`youtubesearch\` ",
 ]
 
 const CGames = [

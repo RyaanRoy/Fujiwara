@@ -30,9 +30,9 @@ module.exports.run = async (client, message, args) => {
 };
 
 module.exports.help = {
-	name: "youtubesearch",
+	name: "youtube-search",
 	description: "Search Youtube",
-	usage: "b-youtubesearch <query>",
+	usage: "b-youtube-search <query>",
 	accessableby: "Members",
 	aliases: ["youtube"]
 };

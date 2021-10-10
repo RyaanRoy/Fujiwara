@@ -80,8 +80,8 @@ const CImage = [
     "\`cat\` ",
     "\`drake\` ",
     "\`rip\` ",
-    "\`iphonex\` ",
-    "\`wallpaper\` ",
+    "\`iphonex\` "
+    
 ]
 const CRp = [
     "\`kiss\` ",

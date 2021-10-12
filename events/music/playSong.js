@@ -11,7 +11,6 @@ module.exports = async (client, message, queue, song) => {
             `${client.status(queue)}`
     )
     .setColor(`#f77ec6`)
-    .setImage(`https://cdn.discordapp.com/attachments/850619329628471336/897179697207730257/output-onlinegiftools_1.gif`)
     .setThumbnail(`${song.thumbnail}`);
 	message.channel.send(Embed);
 };

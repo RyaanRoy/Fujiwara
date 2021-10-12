@@ -1,8 +1,5 @@
 exports.run = async (client, message, args) => {
 	const queue = client.distube.getQueue(message);
-	
-    
-    ;
 	if (!queue)
 		return message.channel.send(
 			`${client.emotes.error} | There is nothing playing!`
@@ -15,15 +12,7 @@ exports.run = async (client, message, args) => {
 				}]\``
 		)
 		.join("\n");
-
-		const Embed = new Discord.MessageEmbed()
-    .setTitle(`Server Queue`)
-    .setDescription(`\n${q}`)
-    .setColor(`PINK`)
-    .setImage(`https://cdn.discordapp.com/attachments/850619329628471336/897182687817764904/163f072171cd10a20e99bb35d4c7b278.gif`)
-    .setThumbnail(`https://cdn.discordapp.com/attachments/850619329628471336/897183227737944194/lines.gif`);
-
-	message.channel.send(Embed);
+	message.channel.send(`<a:disk:855561346087387136>  | **Server Queue**\n${q}`);
 };
 
 module.exports.help = {

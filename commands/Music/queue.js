@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
 				}]\``
 		)
 		.join("\n");
-		
+		const Discord = require("discord.js");
 		const Embed = new Discord.MessageEmbed()
     .setTitle(`Server Music Queue`)
     .setDescription(`${q}`)

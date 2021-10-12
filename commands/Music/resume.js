@@ -1,12 +1,11 @@
 module.exports.run = async (client, message, args) => {
-	const queue = client.distube.getQueue(message);
 	if (!message.member.voice.channel)
 		return message.channel.send(
 			`${client.emotes.error} | You must be in a voice channel!`
 		);
-	client.distube.resume(message);
+	const queue = client.distube.resume(message);
 	message.channel.send(
-		`<:remVV:842648172659474434> | Resumed! Now playing:\n${queue.songs[0].name}`
+		`${client.emotes.success} | Resumed- Now playing:\n${queue.songs[0].name}`
 	);
 };
 

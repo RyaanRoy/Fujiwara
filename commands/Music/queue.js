@@ -12,6 +12,7 @@ exports.run = async (client, message, args) => {
 				}]\``
 		)
 		.join("\n");
+		
 		const Embed = new Discord.MessageEmbed()
     .setTitle(`Server Music Queue`)
     .setDescription(`${q}`)

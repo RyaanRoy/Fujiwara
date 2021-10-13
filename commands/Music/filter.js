@@ -45,6 +45,7 @@ module.exports.run = async (client, message, args) => {
             const embed = new MessageEmbed()
                 .setDescription('Music Filter has been set to: ' + `(${filterOption})` || 'Off ')
                 .setColor("#cc338b")
+                .setImage(`https://media.discordapp.net/attachments/850619329628471336/897183227737944194/lines.gif`)
                 .setFooter("Do not panic if bot seems to be stuck while applying filter, be patient since it takes time to apply filter and to disable filter, reapply the same flter.")
             return message.channel.send(embed)
     } catch (error) {

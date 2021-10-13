@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
 		.join("\n");
 		const Discord = require("discord.js");
 		const Embed = new Discord.MessageEmbed()
-    .setTitle(`<a:disk:855561346087387136> Server Music Queue`)
+    .setTitle(`Server Music Queue`)
     .setDescription(`${q}`)
     .setColor(`#cc338b`)
     .setImage(`https://cdn.discordapp.com/attachments/850619329628471336/897182687817764904/163f072171cd10a20e99bb35d4c7b278.gif`)

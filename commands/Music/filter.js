@@ -34,7 +34,7 @@ module.exports.run = async (client, message, args) => {
             phaser
             tremolo
             earwax\`` )
-            .setColor("BLUE")
+            .setColor("#cc338b")
             .setFooter("Do not panic if bot seems to be stuck while applying filter, be patient since it takes time to apply filter")
 
         return message.channel.send(filterOptions)

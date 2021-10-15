@@ -10,7 +10,7 @@ module.exports = async (client, message, queue, song) => {
        .addField(`Options`,
             `${client.status(queue)}`
     )
-    .setImage(`https://cdn.discordapp.com/attachments/850619329628471336/897773639284428810/ezgif.com-gif-maker.gif`)
+    .setImage(`https://i.imgur.com/4M7IWwP.gif`)
     .setColor(`#f77ec6`)
     .setThumbnail(`${song.thumbnail}`);
 	message.channel.send(Embed);

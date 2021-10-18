@@ -22,7 +22,7 @@ module.exports.run = async (client, message, args) => {
 	mode = client.distube.setRepeatMode(message, mode);
 	mode = mode ? (mode == 2 ? "Repeat queue" : "Repeat song") : "Off";
 	message.channel.send(
-		`<a:ASkannapls:856103658357129256>  | Set repeat mode to \`${mode}\``
+		`<:TextDontPingMe:856054784863764500>  | Set repeat mode to \`${mode}\``
 	);
 };
 

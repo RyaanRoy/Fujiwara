@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args) => {
 		.setImage(`https://i.pinimg.com/originals/b6/b4/de/b6b4ded4bd797b093cc9b68aa6fba694.gif`)
 		.setFooter(`To set Custom prefix type: ${prefixesdatabase.prefix}setprefix`, client.user.displayAvatarURL())
 		.setThumbnail(client.user.displayAvatarURL())
-	
+
 	
 		message.channel.send(embed);
 		

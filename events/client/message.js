@@ -4,6 +4,8 @@ const settings = require("../../config/settings.json");
 const cooldowns = new Discord.Collection();
 
 module.exports = async (client, message) => {
+
+
 	if (message.author.bot) return;
 	const prefixesdatabase = client.settings.ensure(message.guild.id, settings);
 
@@ -14,7 +16,13 @@ module.exports = async (client, message) => {
 	}
 	
 	if (message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))) {
-		message.reply(`my prefix is: \`${prefixesdatabase.prefix}\``);
+		const prefixEmbed= new Discord.MessageEmbed()
+		.setColor("#db76ac")
+		.setTitle("Ping for prefix")
+		.setDescription(`My prefix is: \`${prefixesdatabase.prefix}\``)
+		.setImage(`https://media.discordapp.net/attachments/864809275284914186/901710911461531699/anime-anime-girls-original-characters-short-hair-wallpaper-preview.jpg`)
+		.setTimestamp();
+		message.lineReply(prefixEmbed);
 	}
 
 

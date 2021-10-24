@@ -92,7 +92,7 @@ module.exports.run = async (client, msg, args) => {
 		.setTimestamp()
 		.setFooter("• Ban User Information"); //
 	const bsuembed = new Discord.MessageEmbed()
-	    .setThumbnail("https://media0.giphy.com/media/uktnk9GDoCgpnjHJwM/giphy.gif?cid=6c09b95265c6fd8b962adea8eabd0d4c2cdd1a444f30025a&rid=giphy.gif&ct=g")
+	    .setThumbnail("https://tenor.com/view/chika-fujiwara-angry-anime-spank-gif-13585603")
 		.setDescription(
 			`Banned **${banTaged.username}#${banTaged.discriminator}** | **Reason:${reason}**`
 		)

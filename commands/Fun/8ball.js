@@ -6,10 +6,11 @@ function doMagic8BallVoodoo() {
 		"No",
 		"Why are you even trying?",
 		"What do you think? NO",
-		"Maybe",
+		"Maybe...",
 		"Never",
 		"Yep",
-		"idk"
+		"idk",
+		"I think"
 	];
 
 	return rand[Math.floor(Math.random() * rand.length)];

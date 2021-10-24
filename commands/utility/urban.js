@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
       return message.channel.send("Please specify a word to search for!");
 
     query = encodeURIComponent(query);
-
+    try {
     const {
       data: { list },
     } = (await axios.get(
@@ -30,6 +30,9 @@ module.exports.run = async (client, message, args) => {
           `${answer.thumbs_up} 👍 || ${answer.thumbs_down} 👎`
         )
     );
+        } catch (err) {
+          return message.channel.send(`Oh no, an error occurred. That word probably doesn't exist in the urban dictionary!`);
+        }
 };
 
 module.exports.help = {

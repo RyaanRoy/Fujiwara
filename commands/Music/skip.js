@@ -9,7 +9,11 @@ module.exports.run = async (client, message, args) => {
 		);
 	const queue = client.distube.skip(message);
 	message.channel.send(
+<<<<<<< Updated upstream
 		`<:heh:844192752472555520> | Skipped:${queue.songs[0].name}`
+=======
+		`<:blurplecheck:859068688492527636> | Skipped:${queue.songs[0].name}`
+>>>>>>> Stashed changes
 	);
 };
 

@@ -10,7 +10,7 @@ module.exports = async (client, message, queue, song) => {
        .addField(`Options`,
             `${client.status(queue)}`
     )
-    .setImage(`https://i.imgur.com/4M7IWwP.gif`)
+    .setImage(`https://thumbs.gfycat.com/AromaticEmptyCoelacanth-size_restricted.gif`)
     .setColor(`#f77ec6`)
     .setThumbnail(`${song.thumbnail}`);
 	message.channel.send(Embed);

@@ -11,7 +11,7 @@
 	"email": "realkoolisw@gmail.com",
 	"url": "https://draconian.koolisw.tk/",
 	"engines": {
-		"node": ">=14.0.0"
+		
 	},
 	"repository": {
 		"url": "git+https://github.com/RealKoolisw/Draconian.git"

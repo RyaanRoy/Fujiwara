@@ -18,9 +18,9 @@ exports.run = async (client, message, args) => {
 .setTitle(`Server Music Queue`)
 .setDescription(`${q}`)
 .setColor(`#cc338b`)
-.addField(`> <:5618like:865325952866058240> **Likes**`, `**${queue.songs[0].likes}**`, true)
-.addField(`> <:dislike:865325952811401276> **Dislikes**`, `**${queue.songs[0].dislikes}**`, true)
-.addField(`> <:blurplevoicechannel:859069048963727362> **Songs in Total:**`, `**${queue.songs.length}**`, true)
+.addField(`> <:5618like:865325952866058240> **Likes**`, `   **${queue.songs[0].likes}**`, true)
+.addField(`> <:dislike:865325952811401276> **Dislikes**`, `   **${queue.songs[0].dislikes}**`, true)
+.addField(`> <:blurplevoicechannel:859069048963727362> **Songs in Total:**`, `    **${queue.songs.length}**`, true)
 
 const splitDescription = Util.splitMessage(q, {
 	maxLength: 4096,

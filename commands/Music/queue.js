@@ -4,7 +4,7 @@ exports.run = async (client, message, args) => {
 		return message.channel.send(
 			`${client.emotes.error} | There is nothing playing!`
 		);
-	const q = queue.songs
+		const q = queue.songs
 		.map(
 			(song, i) =>
 				`${i === 0 ? "Now Playing:" : `[ ${i} ]`} *${song.name}* - \`[${
@@ -12,13 +12,26 @@ exports.run = async (client, message, args) => {
 				}]\``
 		)
 		.join("\n");
-		const Discord = require("discord.js");
-		const Embed = new Discord.MessageEmbed()
-    .setTitle(`<a:disk:855561346087387136> Server Music Queue`)
-    .setDescription(`${q}`)
-    .setColor(`#cc338b`)
-    .setImage(`https://cdn.discordapp.com/attachments/850619329628471336/897182687817764904/163f072171cd10a20e99bb35d4c7b278.gif`)
-	message.channel.send(Embed);
+		const queueEmbed = new Discord.MessageEmbed()
+.setTitle(`Server Music Queue`)
+.setDescription(`${q}`)
+.setColor(`#cc338b`)
+.addField(`> <:5618like:865325952866058240> **Likes**`, `**${queue.songs[0].likes}**`, true)
+.addField(`> <:dislike:865325952811401276> **Dislikes**`, `**${queue.songs[0].dislikes}**`, true)
+.addField(`> <:blurplevoicechannel:859069048963727362> **Songs in Total:**`, `**${queue.songs.length}**`, true)
+
+const splitDescription = Util.splitMessage(q, {
+	maxLength: 4096,
+	char: "\n",
+	prepend: "",
+	append: ""
+  });
+  splitDescription.forEach(async (m) => {
+
+	queueEmbed.setDescription(m);
+	
+	message.channel.send(queueEmbed);
+  });
 };
 
 module.exports.help = {

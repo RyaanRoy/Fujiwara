@@ -1,3 +1,5 @@
+const Discord=require(`discord.js`)
+const Util=require(`discord.js`)
 exports.run = async (client, message, args) => {
 	const queue = client.distube.getQueue(message);
 	if (!queue)

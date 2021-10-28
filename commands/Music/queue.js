@@ -1,4 +1,5 @@
 const Discord=require(`discord.js`)
+var shortNumber = require('short-number');
 const Util=require(`discord.js`)
 exports.run = async (client, message, args) => {
 	const queue = client.distube.getQueue(message);
@@ -18,8 +19,8 @@ exports.run = async (client, message, args) => {
 .setTitle(`Server Music Queue`)
 .setDescription(`${q}`)
 .setColor(`#cc338b`)
-.addField(`> <:5618like:865325952866058240> **Likes**`, `   **${queue.songs[0].likes}**`, true)
-.addField(`> <:dislike:865325952811401276> **Dislikes**`, `   **${queue.songs[0].dislikes}**`, true)
+.addField(`> <:5618like:865325952866058240> **Likes**`, `   **${shortNumber(queue.songs[0].likes)}**`, true)
+.addField(`> <:dislike:865325952811401276> **Dislikes**`, `   **${shortNumber(queue.songs[0].dislikes)}**`, true)
 .addField(`> <:blurplevoicechannel:859069048963727362> **Songs in Total:**`, `    **${queue.songs.length}**`, true)
 
 const splitDescription = Util.splitMessage(q, {

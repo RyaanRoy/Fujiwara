@@ -3,12 +3,12 @@ const gifmusic="https://cdn.discordapp.com/attachments/850619329628471336/877233
 module.exports = async (client, message, queue, song) => {
 	const Embed = new Discord.MessageEmbed()
     .setAuthor(`Now Playing`, gifmusic)
-    .setTitle([`${song.name} - ${
+    .setTitle(`${song.name} - ${
         song.formattedDuration
-    }`](`${queue.songs[0].url}`))
+    }`)
     .setDescription(`Requested by: ${song.user.tag}`) 
-    .addField(`> <:5618like:865325952866058240> **Likes**`, `   **${queue.songs[0].likes}**`, true)
-.addField(`> <:dislike:865325952811401276> **Dislikes**`, `   **${queue.songs[0].dislikes}**`, true)
+    .addField(`> <:5618like:865325952866058240> **Likes**`, `   **    ${queue.songs[0].likes}**`, true)
+.addField(`> <:dislike:865325952811401276> **Dislikes**`, `   **    ${queue.songs[0].dislikes}**`, true)
        .addField(`Options`,
 `${client.status(queue)}`, false)
     .setImage(`https://media.tenor.co/videos/573252ab1b3671a492ede5e985eb3a24/mp4`)

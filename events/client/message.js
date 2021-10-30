@@ -20,7 +20,7 @@ module.exports = async (client, message) => {
 		.setColor("#db76ac")
 		.setTitle("Ping for prefix")
 		.setDescription(`My prefix is: \`${prefixesdatabase.prefix}\``)
-		.setImage(`https://media.discordapp.net/attachments/864809275284914186/901710911461531699/anime-anime-girls-original-characters-short-hair-wallpaper-preview.jpg`)
+		.setImage(`https://c4.wallpaperflare.com/wallpaper/624/130/399/kaguya-sama-love-is-war-chika-fujiwara-anime-girls-anime-purple-background-hd-wallpaper-preview.jpg`)
 		.setTimestamp();
 		message.lineReply(prefixEmbed);
 	}

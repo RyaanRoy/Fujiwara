@@ -55,7 +55,6 @@ client.distube = new DisTube(client, {
 	leaveOnStop: true,
 	youtubeDL: false,
 	updateYouTubeDL: true,
-	searchSongs: 5,
 	
 });
 

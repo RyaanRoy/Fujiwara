@@ -139,9 +139,7 @@ client.on("message", async message => {
 	
 		  if (message.mentions.has(client.user.id) && !message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))){
 			  message.channel.startTyping();
-			fetch(
-				`http://api.brainshop.ai/get?bid=160117&key=AmxzVOo74jyHpdxp&uid=${message.author.id}&msg=${encodeURIComponent(message.content)}`
-		)
+			fetch(`http://api.brainshop.ai/get?bid=160117&key=AmxzVOo74jyHpdxp&uid=${message.author.id}&msg=${encodeURIComponent(message.content)}`)
 				.then((res) => res.json())
 				.then((body) => {
 				  message.lineReply(body.cnt);

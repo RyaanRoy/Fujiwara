@@ -1,7 +1,10 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
-message.delete();
+    if(message.author.id == "874922249411518484"){
+        message.delete()
+    }
+
 };
 
 module.exports.help = {

@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "embed",
 	description: "This command is used for embedding stuff in discord",
-	usage: "b-embed <title> <desc>",
+	usage: "b-embed <title>;<desc>;<imageURL(optional)>",
 	accessableby: "Member",
 	aliases: ["ed"]
 };

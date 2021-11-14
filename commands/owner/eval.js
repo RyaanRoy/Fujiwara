@@ -13,21 +13,20 @@ module.exports.run = async (client, message, args) => {
         try {
           const result = await eval(code);
           let output = result;
-    
-          if (typeof result !== "string") {
-            output = inspect(result);
-          }
-    
           message.channel.send(
             new Discord.MessageEmbed()
               .setColor("#00FF00")
               .setTitle(`Success`)
-              .setDescription(`Results\n\`\`\`yml\n${output}\n\`\`\``)
+              .setDescription(`Result\n\`\`\`yml\n${output}\n\`\`\``)
               .setFooter(`Actioned by : ${message.author.tag}`)
           );
+          if (typeof result !== "string") {
+            inspect(result);
+          }
+
         } catch (error) {
           console.log(error);
-        };
+        }
 
 };
 

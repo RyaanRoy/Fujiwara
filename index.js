@@ -142,9 +142,9 @@ client.on("message", async message => {
 			fetch(`http://api.brainshop.ai/get?bid=160117&key=AmxzVOo74jyHpdxp&uid=${message.author.id}&msg=${encodeURIComponent(message.content)}`)
 				.then((res) => res.json())
 				.then((body) => {
-					
+					message.channel.startTyping();
 				  message.lineReply(body.cnt);
-				
+				  message.channel.stopTyping();
 				});
 			}catch(error){
 				return message.channel.send(`Chatbot is having problems at the moment`)

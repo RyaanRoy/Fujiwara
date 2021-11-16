@@ -138,15 +138,16 @@ client.on("message", async message => {
 		  if(message.author.bot) return
 	
 		  if (message.mentions.has(client.user.id) && !message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))){
-			try {
+			try {message.channel.startTyping();
 			fetch(`http://api.brainshop.ai/get?bid=160117&key=AmxzVOo74jyHpdxp&uid=${message.author.id}&msg=${encodeURIComponent(message.content)}`)
 				.then((res) => res.json())
 				.then((body) => {
-					message.channel.startTyping();
+					
 				  message.lineReply(body.cnt);
 				  message.channel.stopTyping();
 				});
 			}catch(error){
+				message.channel.stopTyping();
 				return message.channel.send(`Chatbot is having problems at the moment`)
 				}
 		  }

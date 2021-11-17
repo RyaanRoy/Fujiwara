@@ -43,6 +43,7 @@ module.exports.run = async (client, message, args) => {
 		.setColor("RED");
 
 	message.channel.send(serveddrembed).then(async message => {
+		try{
 		await fetch(
 			"https://api.hetrixtools.com/v1/f10ac71364c8b1aa149b4079fe8eafc9/uptime/report/483cfd9cb2dd306bf8c00917da1df827/"
 		)
@@ -67,6 +68,9 @@ module.exports.run = async (client, message, args) => {
 
 				message.edit(serverembedss);
 			});
+		}catch(e){
+			return;
+		}
 	});
 };
 

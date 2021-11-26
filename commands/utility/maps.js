@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
         `https://image.thum.io/get/width/1920/crop/675/noanimate/${site}`
       );
       let att = new Discord.MessageAttachment(body, `${sit}.png`);
-      return message.channel.lineReply(att);
+      return message.lineReply(att);
     } catch (err) {
       return message.lineReply(
         `Oh no, an error occurred: \`${err.message}\`. Try again later!`

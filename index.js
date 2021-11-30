@@ -5,6 +5,7 @@ const Discord = require("discord.js");
 const fetch = require("node-fetch");
 const Util = require('discord.js')
 require('discord-reply');
+require('@weky/inlinereply');
 const client = new Discord.Client({
 	partials: ["MESSAGE", "USER", "REACTION"],
 	disableMentions: "everyone"

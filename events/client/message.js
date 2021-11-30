@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const settings = require("../../config/settings.json");
-
+require('@weky/inlinereply');
 const cooldowns = new Discord.Collection();
 
 module.exports = async (client, message) => {

@@ -34,15 +34,16 @@ module.exports.run = async (client, message, args) => {
             message.author.displayAvatarURL({ dynamic: true })
           );
 
-        message.channel.send(embed);
+          message.channel.send({embeds:[embed]});
       })
       .catch((err) =>
-        message.channel.send(
+        message.channel.send({embeds:[
           new MessageEmbed()
             .setDescription(
               `That anime isn't found!\n\n\`\`\`js\n${err}\n\`\`\``
             )
             .setColor("RED")
+        ]}
         )
       );
 };

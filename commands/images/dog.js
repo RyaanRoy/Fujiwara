@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
 		emb.setColor("GREEN");
 		emb.setImage(link);
 
-		message.channel.send(emb);
+		message.channel.send({embeds:[emb]});
 	});
 };
 

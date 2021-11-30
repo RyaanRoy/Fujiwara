@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
         )
         .addField(`**Ship Meter**`, ship());
 
-      return message.channel.send(loveEmbed);
+      return message.channel.send({embeds:[loveEmbed]});
     } else if (message.mentions.users.size > 1) {
       let luv = new MessageEmbed()
         .setColor("dd2e44")
@@ -37,7 +37,7 @@ module.exports.run = async (client, message, args) => {
             .displayAvatarURL({ dynamic: true, format: "png" })}`
         )
         .addField(`**Ship Meter**`, ship());
-      message.channel.send(luv);
+        message.channel.send({embeds:[luv]});
     }
 };
 function ship() {

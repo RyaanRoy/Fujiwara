@@ -48,7 +48,7 @@ module.exports.run = async (client, message, args) => {
     .setDescription(`> [**Join The Session**](https://discord.gg/${invite.code})`) // send ur invite code for me its invite.code
     .setColor(`RED`)
     .setThumbnail(`https://media.discordapp.net/attachments/832557176492130345/841610264210046976/youtube-logo.png`);
-            message.channel.send(Embed);
+    message.channel.send({embeds:[Embed]});
         })
         .catch(e => {
             message.channel.send("❌ | Could not start **YouTube Together**!");

@@ -38,12 +38,12 @@ module.exports.run = async (client, message, args) => {
 						size: 4096
 				  }));
 	} catch (e) {
-		return message.channel.send(usernotfind);
+		return message.channel.send({embeds:[usernotfind]});
 	}
 
 	const image = await petPetGif(imagetarget);
 	const rainbow = new Discord.MessageAttachment(image, "petpet.gif");
-	return message.channel.send(rainbow);
+	return message.channel.send({files:[rainbow]});
 };
 
 module.exports.help = {

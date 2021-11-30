@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 			Date.now() - message.createdTimestamp
 		}ms**\nDiscord API Latency: **${Math.round(client.ws.ping)}ms**`
 	);
-	message.channel.send(bbb);
+	message.channel.send({embeds:[bbb]});
 };
 
 module.exports.help = {

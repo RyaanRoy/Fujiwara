@@ -54,7 +54,7 @@ module.exports.run = async (client, message) => {
 		])
 		.setTimestamp();
   
-	  message.channel.send(embed);
+		message.channel.send({embeds:[embed]});
 };
 module.exports.help = {
 	name: "stats",

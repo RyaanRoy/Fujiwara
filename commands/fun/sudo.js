@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
         .setTitle("**Bot Permission Error!**")
         .setDescription("**I don't have permission to create Webhook! Require: MANAGE_WEBHOOKS**")
 
-     if (!message.guild.me.hasPermission("MANAGE_WEBHOOKS")) return message.channel.send(lockPermErrban)
+     if (!message.guild.me.permissions.has("MANAGE_WEBHOOKS")) return message.channel.send({embeds:[lockPermErrban]})
      
     
     message.delete();

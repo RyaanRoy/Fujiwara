@@ -13,20 +13,32 @@ module.exports.run = async (client, message, args) => {
         try {
           const result = await eval(code);
           let output = result;
-          message.channel.send(
+    
+          if (typeof result !== "string") {
+            output = inspect(result);
+          }
+    
+          message.channel.send({embeds:[
             new Discord.MessageEmbed()
               .setColor("#00FF00")
               .setTitle(`Success`)
-              .setDescription(`Result\n\`\`\`yml\n${output}\n\`\`\``)
+              .setDescription(`Results\n\`\`\`yml\n${output}\n\`\`\``)
               .setFooter(`Actioned by : ${message.author.tag}`)
+          ]}
           );
-          if (typeof result !== "string") {
-            inspect(result);
-          }
-
         } catch (error) {
           console.log(error);
-        }
+          message.channel.send({embeds:[
+            new Discord.MessageEmbed()
+              .setTitle(
+                `<:tickNo:863367014092898314> | Evaluated Content too long to displayed`
+              )
+              .setDescription(`Error Logs\n\`\`\`yml\n${error}\n\`\`\``)
+              .setColor("#FF0000")
+              .setFooter(`Actioned by : ${message.author.tag}`)
+          ]}
+          );
+        };
 
 };
 

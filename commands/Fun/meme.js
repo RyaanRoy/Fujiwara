@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
     .setImage(meme.image)
     .setFooter(`👍 ${meme.upvotes} || 💬 ${meme.comments}`);
 
-  message.channel.send(embed);
+    message.channel.send({embeds:[embed]});
 };
 
 module.exports.help = {

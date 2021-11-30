@@ -4,7 +4,7 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 const translate = require("@iamtraction/google-translate");
 module.exports.run = async (client, message, args) => {
   const query = args.join(" ");
-  if (!query) return message.lineReply("Please specify a text to translate!");
+  if (!query) return message.reply("Please specify a text to translate!");
 
   const translated = await translate(query, { to: "en" });
 
@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
     .setColor("PINK")
     .setFooter(message.author.tag)
     .setTimestamp();
-  message.lineReplyNoMention(embed);
+  message.reply(embed);
 };
 
 module.exports.help = {

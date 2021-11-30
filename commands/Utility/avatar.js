@@ -11,13 +11,13 @@ module.exports.run = (client, message, args) => {
 			: message.author);
 
 	const embed = new Discord.MessageEmbed()
-		.setColor("#cc338b")
+		.setColor("GREEN")
 		.setTitle(`Avatar`)
 		.setImage(
-			imageitem.displayAvatarURL({ dynamic: true, format: "jpg", size: 4096 })
+			imageitem.displayAvatarURL({ dynamic: true, format: "png", size: 4096 })
 		);
 
-	message.channel.send({ embed });
+		message.channel.send({embeds:[embed]});
 };
 
 module.exports.help = {

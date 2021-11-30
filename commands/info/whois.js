@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
 					  ).user
 				: message.author);
 	} catch (e) {
-		return message.channel.send(usernotfind);
+		return message.channel.send({embeds:[usernotfind]});
 	}
 
 	let userguild = message.guild.member(user);
@@ -40,7 +40,7 @@ module.exports.run = async (bot, message, args) => {
 		.setDescription("<a:loading:806686528549814344> Fetching Userinfo...")
 		.setColor("RED");
 
-	message.channel.send(serveddrembed).then(async message => {
+		message.channel.send({embeds:[serveddrembed]}).then(async message => {
 		const embed = new Discord.MessageEmbed()
 			.setColor(user.displayHexColor)
 			.setAuthor(
@@ -76,7 +76,7 @@ module.exports.run = async (bot, message, args) => {
 			)
 			.setTimestamp();
 
-		await message.edit(embed);
+		await message.edit({embeds:[embed]});
 	});
 };
 

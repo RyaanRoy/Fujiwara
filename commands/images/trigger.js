@@ -38,12 +38,12 @@ module.exports.run = async (client, message, args) => {
 						size: 4096
 				  }));
 	} catch (e) {
-		return message.channel.send(usernotfind);
+		return message.channel.send({embeds:[usernotfind]});
 	}
 
 	const image = await canvacord.Canvas.trigger(imagetarget);
 	const rainbow = new Discord.MessageAttachment(image, "trigger.gif");
-	return message.channel.send(rainbow);
+	return message.channel.send({files:[rainbow]});
 };
 
 module.exports.help = {

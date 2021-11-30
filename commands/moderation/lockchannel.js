@@ -12,7 +12,7 @@ module.exports.run = (client, message, args) => {
 		.setColor("RED");
 	if (!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) {
 		return message.channel
-			.send(notice3)
+			.send({embeds:[notice3]})
 			.then(msg => msg.delete({ timeout: 5000 }));
 	}
 	if (!client.lockit) client.lockit = [];
@@ -25,7 +25,7 @@ module.exports.run = (client, message, args) => {
 		.setColor("RED");
 	if (!message.member.hasPermission("MANAGE_CHANNELS")) {
 		return message.channel
-			.send(mmqembed)
+			.send({embeds:[mmqembed]})
 			.then(msg => msg.delete({ timeout: 5000 }));
 	}
 	const ddd = new Discord.MessageEmbed()
@@ -33,7 +33,7 @@ module.exports.run = (client, message, args) => {
 			`${emojis.cross} **You must set a duration for the lockdown in either hours, minutes or seconds**`
 		)
 		.setColor("RED");
-	if (!time) return message.channel.send(ddd);
+	if (!time) return message.channel.send({embeds:[ddd]});
 
 	if (validUnlocks.includes(time)) {
 		message.channel
@@ -41,7 +41,7 @@ module.exports.run = (client, message, args) => {
 				SEND_MESSAGES: null
 			})
 			.then(() => {
-				message.channel.send(dfgrdgdfgdf);
+				message.channel.send({embeds:[dfgrdgdfgdf]});
 				clearTimeout(client.lockit[message.channel.id]);
 				delete client.lockit[message.channel.id];
 			})
@@ -63,7 +63,7 @@ module.exports.run = (client, message, args) => {
 					.setColor("GREEN");
 
 				message.channel
-					.send(bsuembed)
+					.send({embeds:[bsuembed]})
 					.then(() => {
 						client.lockit[message.channel.id] = setTimeout(() => {
 							message.channel

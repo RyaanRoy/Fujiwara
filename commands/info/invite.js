@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
 		)
 		.setImage(`https://c.tenor.com/vdquT9UOP3QAAAAC/kawaii-chika.gif`)
 		.setFooter(`© ${nowyear} ${client.user.username}`);
-	message.channel.send(embed);
+		message.channel.send({embeds:[embed]});
 };
 
 module.exports.help = {

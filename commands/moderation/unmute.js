@@ -11,10 +11,10 @@ module.exports.run = async (client, message, args) => {
 		.setDescription(`${emojis.cross} I don't have permission to unmute people!`)
 		.setColor("RED");
 	if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-		return message.channel.send(embed6).then(m => m.delete({ timeout: 5000 }));
+		return message.channel.send({embeds:[embed6]}).then(m => m.delete({ timeout: 5000 }));
 	}
 	if (!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) {
-		return message.channel.send(notice3).then(m => m.delete({ timeout: 5000 }));
+		return message.channel.send({embeds:[notice3]}).then(m => m.delete({ timeout: 5000 }));
 	}
 	const notice2 = new Discord.MessageEmbed()
 		.setDescription(`${emojis.cross} You cannot do this for you!`)
@@ -29,14 +29,14 @@ module.exports.run = async (client, message, args) => {
 				: false
 			: false);
 
-	if (member.id === message.author.id) return message.channel.send(notice2);
+	if (member.id === message.author.id) return message.channel.send({embeds:[notice2]});
 	const embed7 = new Discord.MessageEmbed()
 		.setTitle("Wrong Usage!")
 		.setDescription("Correct Example: f-unmute @Ryaan")
 		.setColor("RED");
 	if (!member) {
 		message.delete();
-		return message.channel.send(embed7).then(m => m.delete({ timeout: 5000 }));
+		return message.channel.send({embeds:[embed7]}).then(m => m.delete({ timeout: 5000 }));
 	}
 	const bruhembed = new Discord.MessageEmbed()
 		.setDescription(
@@ -48,7 +48,7 @@ module.exports.run = async (client, message, args) => {
 		.get(message.guild.id)
 		.roles.cache.find(val => val.name === "Muted");
 
-	// if (!member.roles.cache.has(muterole)) return message.channel.send(bruhembed);
+	if (!member.roles.cache.has(muterole)) return message.channel.send({embeds:[bruhembed]});
 
 	const embed = new Discord.MessageEmbed()
 		.setColor("GREEN")
@@ -85,7 +85,7 @@ module.exports.run = async (client, message, args) => {
 		0,
 		"timeMuteEnd"
 	);
-	message.channel.send(embed5);
+	message.channel.send({embeds:[embed5]});
 };
 
 module.exports.help = {

@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
                         .setColor('#cc338b')
 						.setImage(body.url);
 
-					message.channel.send(embed);
+						message.channel.send({embeds:[embed]});
 				
 			
 

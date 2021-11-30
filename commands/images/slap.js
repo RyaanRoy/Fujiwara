@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const superagent = require("superagent");
 module.exports.run = async (client, message, args) => {
-	
+	// eslinf-disable-line no-unused-vars
 	try {
 		const member = message.mentions.members.first();
 
@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
 						)
 						.setImage(body.url);
 
-					message.channel.send(embed);
+						message.channel.send({embeds:[embed]});
 				} else message.reply("You need to mention the user to slap!");
 			
 	

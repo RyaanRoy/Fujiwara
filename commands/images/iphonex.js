@@ -38,7 +38,7 @@ module.exports.run = async (client, message, args) => {
 						size: 4096
 				  }));
 	} catch (e) {
-		return message.channel.send(usernotfind);
+		return message.channel.send({embeds:[usernotfind]});
 	}
 
 	const res = await fetch(
@@ -52,7 +52,7 @@ module.exports.run = async (client, message, args) => {
 		json.message,
 		"iphonex.png"
 	);
-	message.channel.send(attachmentmsg);
+	message.channel.send({files:[attachmentmsg]});
 };
 
 module.exports.help = {

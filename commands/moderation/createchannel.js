@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 		.setColor("RED");
 	if (!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) {
 		return message.channel
-			.send(notice3)
+			.send({embeds:[notice3]})
 			.then(msg => msg.delete({ timeout: 5000 }));
 	}
 	try {
@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.setColor("RED");
 		if (!message.member.hasPermission("MANAGE_CHANNELS"))
-			return message.channel.send(embed6).then(msg => msg.delete(5000));
+			return message.channel.send({embeds:[embed6]}).then(msg => msg.delete(5000));
 		if (!args[1]) return message.reply("You need to input the channel type!");
 		if (!args[0]) return message.reply("You need to input the channel name!");
 

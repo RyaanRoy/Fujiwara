@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
-
+	return
 	const pollss = args[0];
 	const polls = args.slice(1).join(" ");
 	const regex = pollss.match(/"[^"]+"|[\\S]+"[^"]+/g);
@@ -46,7 +46,7 @@ module.exports.run = async (client, message, args) => {
 	);
 	const msg = await message.channel.send(
 		`:bar_chart: **${str1111.replace(/"/g, "")}**`,
-		embed
+		{embeds:[embed]}
 	);
 	message.delete();
 	for (let i = 0; i < regex.length; i++) {
@@ -56,7 +56,7 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.help = {
 	name: "poll",
-	description: "This command is used for polling",
+	description: "Polling",
 	usage: "f-poll <something>",
 	accessableby: "Member",
 	aliases: []

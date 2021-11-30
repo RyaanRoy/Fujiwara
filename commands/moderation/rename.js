@@ -25,12 +25,12 @@ exports.run = (client, message, args) => {
 		const embed = new Discord.MessageEmbed().setDescription(
 			`${emojis.cross} **Failed to set user's nickname!`
 		);
-		message.channel.send({embeds:[embed3]});
+		message.channel.send(embed3);
 	}
 	const embed = new Discord.MessageEmbed().setDescription(
 		`${emojis.tick} **Nickname has been set!`
 	);
-	message.channel.send({embeds:[embed]});
+	message.channel.send(embed);
 };
 
 module.exports.help = {

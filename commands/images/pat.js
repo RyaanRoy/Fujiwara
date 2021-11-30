@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
 						)
 						.setImage(json.url);
 
-						message.channel.send({embeds:[embed]});
+					message.channel.send(embed);
 				} else message.reply("You need to mention the user to pat!");
 			}
 		);

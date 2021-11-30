@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
         `${message.author.tag}`,
         message.author.displayAvatarURL({ dynamic: true })
       );
-    message.channel.send({embeds:[e]});
+    message.channel.send({ embed: e });
 };
 
 module.exports.help = {

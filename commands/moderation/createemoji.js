@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 		.setColor("RED");
 	if (!message.guild.member(client.user).hasPermission("MANAGE_EMOJIS"))
 		return message.channel
-			.send({embeds:[notice3]})
+			.send(notice3)
 			.then(msg => msg.delete({ timeout: 5000 }));
 	try {
 		const embed6 = new Discord.MessageEmbed()
@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.setColor("RED");
 		if (!message.member.hasPermission("MANAGE_EMOJIS"))
-			return message.channel.send({embeds:[embed6]}).then(msg => msg.delete(5000));
+			return message.channel.send(embed6).then(msg => msg.delete(5000));
 		const emoji = message.attachments.array()[0] || args[0];
 
 		if (emoji) {

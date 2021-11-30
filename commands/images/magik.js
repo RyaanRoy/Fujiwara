@@ -39,7 +39,7 @@ module.exports.run = async (client, message, args) => {
 						size: 4096
 				  }));
 	} catch (e) {
-		return message.channel.send({embeds:[usernotfind]});
+		return message.channel.send(usernotfind);
 	}
 
 	const intensity = 0;
@@ -48,7 +48,7 @@ module.exports.run = async (client, message, args) => {
 		.setDescription("<a:loading:806686528549814344> Generating Image...")
 		.setColor("GREEN");
 
-		message.channel.send({embeds:[serveddrembed]}).then(async message => {
+	message.channel.send(serveddrembed).then(async message => {
 		await fetch(
 			encodeURI(
 				`https://nekobot.xyz/api/imagegen?type=magik&image=${imagetarget}&intensity=${intensity}`
@@ -60,7 +60,7 @@ module.exports.run = async (client, message, args) => {
 				const embed2 = new Discord.MessageEmbed()
 					.setImage(attachmentmsg)
 					.setColor("GREEN");
-				message.edit({embeds:[embed2]});
+				message.edit(embed2);
 			});
 	});
 };

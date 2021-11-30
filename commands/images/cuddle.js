@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 						)
 						.setImage(body.url);
 
-						message.channel.send({embeds:[embed]});
+					message.channel.send(embed);
 				} else message.reply("You need to mention the user to cuddle");
 
 	} catch (err) {

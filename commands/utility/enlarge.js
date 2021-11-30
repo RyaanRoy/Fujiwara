@@ -16,13 +16,13 @@ module.exports.run = async (client, message, args) => {
 				custom.animated ? "gif" : "png"
 			}`
 		);
-		return message.channel.send({embeds:[embed]});
+		return message.channel.send(embed);
 	}
 	const parsed = parse(emoji, { assetType: "png" });
 	if (!parsed[0]) return message.channel.send("Invalid emoji!");
 
 	embed.setImage(parsed[0].url);
-	return message.channel.send({embeds:[embed]});
+	return message.channel.send(embed);
 };
 
 module.exports.help = {

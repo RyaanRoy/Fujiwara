@@ -22,7 +22,7 @@ module.exports = async (client, message) => {
 		.setDescription(`My prefix is: \`${prefixesdatabase.prefix}\``)
 		.setImage(`https://c4.wallpaperflare.com/wallpaper/624/130/399/kaguya-sama-love-is-war-chika-fujiwara-anime-girls-anime-purple-background-hd-wallpaper-preview.jpg`)
 		.setTimestamp();
-		message.reply({embeds:[prefixEmbed]});
+		message.lineReply(prefixEmbed);
 	}
 
 

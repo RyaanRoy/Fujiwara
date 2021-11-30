@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) => {
       .addField("👥 Reminder 👥", `${reminder}`)
       .setTimestamp();
 
-      message.channel.send({embeds:[setreminderembed]});
+    message.channel.send(setreminderembed);
 
     // Pake arrow function () => {} biar keren :v
     setTimeout(async () => {
@@ -36,7 +36,7 @@ module.exports.run = async (client, message, args) => {
         .addField("⌛ Reminder ⌛", `\`${reminder}\``)
         .setTimestamp();
 
-        message.channel.send({embeds:[alertembed]});
+      message.channel.send(alertembed);
     }, ms(time));
 };
 

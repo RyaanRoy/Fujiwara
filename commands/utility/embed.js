@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
 	.setDescription("Usage: f-embed [title], [description], [image link]")
 	.setColor(0xff0000);
 	if (!split){
-	return message.channel.send({embeds:[embed50]});
+	return message.channel.send(embed50);
 	}
 	const embed1 = new Discord.MessageEmbed()
 		.setTitle(`${title}`)
@@ -21,13 +21,13 @@ module.exports.run = async (client, message, args) => {
 		
 
 	message.delete();
-	message.channel.send({embeds:[embed1]});
+	message.channel.send(embed1);
 };
 
 module.exports.help = {
 	name: "embed",
 	description: "This command is used for embedding stuff in discord",
-	usage: "f-embed <title>;<desc>;<image(optional )>",
+	usage: "f-embed <title>;<desc>;<imageURL(optional)>",
 	accessableby: "Member",
 	aliases: ["ed"]
 };

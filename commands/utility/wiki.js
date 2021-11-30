@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
       .setColor("BLUE");
 
     if (body.thumbnail) embed.setThumbnail(body.thumbnail.source);
-    message.channel.send({embeds:[embed]});
+    message.channel.send(embed);
 };
 
 module.exports.help = {

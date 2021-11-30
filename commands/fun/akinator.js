@@ -1,12 +1,10 @@
 const { Client, Message, MessageEmbed } = require("discord.js");
 const akinator = require("discord.js-akinator");
-const useButtons = true;
+
 module.exports.run = async (client, message, args) => {
-   
-	akinator(message, {
-		useButtons: useButtons, 
-	});
-    
+    message.channel.startTyping();
+    akinator(message, client);
+    message.channel.stopTyping();
   };
 
 

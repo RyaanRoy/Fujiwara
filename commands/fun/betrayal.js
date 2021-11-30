@@ -47,7 +47,7 @@ module.exports.run = async (client, message, args) => {
     .setTitle(`__${message.author.username}, Started Betrayal__`)
     .setDescription(`> [**Join The Session**](https://discord.gg/${invite.code})`)
     .setColor(`RED`)
-    message.channel.send({embeds:[Embed]});
+            message.channel.send(Embed);
         })
         .catch(e => {
             message.channel.send("❌ | Could not start **Betrayal**!");

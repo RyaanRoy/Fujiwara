@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
 
 	if (!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) {
 		return message.channel
-			.send({embeds:[notice3]})
+			.send(notice3)
 			.then(msg => msg.delete({ timeout: 5000 }));
 	}
 	const mmqembed = new Discord.MessageEmbed()
@@ -22,7 +22,7 @@ exports.run = (client, message, args) => {
 		.setColor("RED");
 	if (!message.member.hasPermission("MANAGE_CHANNELS")) {
 		return message.channel
-			.send({embeds:[mmqembed]})
+			.send(mmqembed)
 			.then(msg => msg.delete({ timeout: 5000 }));
 	}
 
@@ -33,7 +33,7 @@ exports.run = (client, message, args) => {
 			SEND_MESSAGES: true
 		})
 		.then(() => {
-			message.channel.send({embeds:[dfgrdgdfgdf]});
+			message.channel.send(dfgrdgdfgdf);
 			delete client.lockit[message.channel.id];
 		})
 		.catch(error => {

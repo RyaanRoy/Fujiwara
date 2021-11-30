@@ -32,17 +32,17 @@ module.exports.run = async (client, message, args) => {
 			.hasPermission(["MANAGE_ROLES", "KICK_MEMBERS", "BAN_MEMBERS"])
 	) {
 		return message.channel
-			.send({embeds:[notice3]})
+			.send(notice3)
 			.then(m => m.delete({ timeout: 15000 }));
 	}
 	if (!message.member.hasPermission("KICK_MEMBERS")) {
 		return message.channel
-			.send({embeds:[notice1]})
+			.send(notice1)
 			.then(m => m.delete({ timeout: 15000 }));
 	}
 
 	if (!user) {
-		return message.channel.send({embeds:[notice333]}).catch(console.error);
+		return message.channel.send(notice333).catch(console.error);
 	}
 
 	const notice2 = new Discord.MessageEmbed()
@@ -51,7 +51,7 @@ module.exports.run = async (client, message, args) => {
 
 	if (user.id === message.author.id) {
 		return message.channel
-			.send({embeds:[notice2]})
+			.send(notice2)
 			.then(m => m.delete({ timeout: 15000 }));
 	}
 
@@ -75,7 +75,7 @@ module.exports.run = async (client, message, args) => {
 	const userRolePossition = message.member.roles.highest.position;
 	if (userRolePossition <= rolePosition) return message.channel.send(dsfdsfsdf);
 	if (botRolePossition <= rolePosition)
-		return message.channel.send({embeds:[sdfsdfsdfsd]});
+		return message.channel.send(sdfsdfsdfsd);
 
 	client.moderationdb.ensure(key, {
 		guildid: message.guild.id,
@@ -98,7 +98,7 @@ module.exports.run = async (client, message, args) => {
 		.setColor("GREEN");
 
 	message.delete();
-	message.channel.send({embeds:[bsuembed]});
+	message.channel.send(bsuembed);
 	user.send(
 		`You are warned in **${
 			message.guild.name
@@ -127,7 +127,7 @@ module.exports.run = async (client, message, args) => {
 
 		const mutetime = "60s";
 		message.guild.members.cache.get(user.id).roles.add(muteRole.id);
-		message.channel.send({embeds:[test1]});
+		message.channel.send(test1);
 
 		setTimeout(() => {
 			message.guild.members.cache.get(user.id).roles.remove(muteRole.id);
@@ -136,12 +136,12 @@ module.exports.run = async (client, message, args) => {
 
 	if (client.moderationdb.get(key, "warns") == 3) {
 		message.guild.member(user).kick(reason);
-		message.channel.send({embeds:[test2]});
+		message.channel.send(test2);
 	}
 
 	if (client.moderationdb.get(key, "warns") >= 5) {
 		message.guild.member(user).ban(reason);
-		message.channel.send({embeds:[test3]});
+		message.channel.send(test3);
 	}
 };
 

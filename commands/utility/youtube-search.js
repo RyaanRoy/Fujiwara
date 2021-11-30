@@ -5,10 +5,10 @@ const ytsr = require("ytsr");
 module.exports.run = async (client, message, args) => {
     const query = args.join(" ");
     if (!query)
-      return message.reply("Provide a search for me to search YouTube!");
+      return message.lineReply("Provide a search for me to search YouTube!");
 
     const res = await ytsr(query).catch((e) =>
-      message.replyNoMention(`No results found for ${query}`)
+      message.lineReplyNoMention(`No results found for ${query}`)
     );
     const video = res.items.filter((i) => i.type === "video")[0];
     const embed = new MessageEmbed()
@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args) => {
 **Views**: ${video.views.toLocaleString()}`
       )
       .setThumbnail(video.author.bestAvatar.url);
-    message.reply(embed);
+    message.lineReplyNoMention(embed);
 };
 
 module.exports.help = {

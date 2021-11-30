@@ -8,7 +8,7 @@ module.exports.run = (client, message, args) => {
 		.setTitle(`${message.author.username} is thinking of ${message.mentions.users.first().username}:`)
 		.setImage("https://cdn.discordapp.com/attachments/850619329628471336/877193191336579122/ezgif-3-a88d072ee22a.gif");
 
-		message.channel.send({embeds:[embed]});
+	message.channel.send(embed);
 };
 
 module.exports.help = {

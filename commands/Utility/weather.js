@@ -34,7 +34,7 @@ module.exports.run = async (bot, message, args) => {
 			);
 
 		// Display when it's called
-		message.channel.send({embeds:[embed]});
+		message.channel.send(embed);
 	});
 
 	message.delete();

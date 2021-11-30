@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args) => {
           .setTitle(`Page - ${page}/${Math.ceil(client.guilds.cache.size / 10)}`)
           .setDescription(description);
   
-        let msg = await message.channel.send({embeds:[embed]});
+        let msg = await message.channel.send(embed);
   
         await msg.react("⬅");
         await msg.react("➡");
@@ -38,7 +38,7 @@ module.exports.run = async (client, message, args) => {
   
         collector.on("collect", async (reaction, user) => {
           if (reaction._emoji.name === "⬅") {
-            
+            // Updates variables
             i0 = i0 - 10;
             i1 = i1 - 10;
             page = page - 1;
@@ -71,7 +71,7 @@ module.exports.run = async (client, message, args) => {
               .setDescription(description);
   
             // Edit the message
-            msg.edit({embeds:[embed]});
+            msg.edit(embed);
           }
   
           if (reaction._emoji.name === "➡") {
@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args) => {
               .setDescription(description);
   
             // Edit the message
-            msg.edit({embeds:[embed]});
+            msg.edit(embed);
           }
   
           if (reaction._emoji.name === "❌") {

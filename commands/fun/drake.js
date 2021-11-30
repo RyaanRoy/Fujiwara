@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
     );
     let Image = await res.buffer();
     const drakememe = new Discord.MessageAttachment(Image);
-    message.channel.send({embeds:[drakememe]});
+    message.channel.send(drakememe);
 };
 
 module.exports.help = {

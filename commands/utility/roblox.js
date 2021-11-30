@@ -74,7 +74,7 @@ module.exports.run = async (client, message, args) => {
             .addField("BC Member", purchasedM)
             .setTimestamp()
 
-            message.channel.send({embeds:[embed]})
+          message.channel.send(embed)
           .catch (function (err) {
               message.delete();
               return message.channel.send({embed: {

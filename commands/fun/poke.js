@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args) => {
 		)
 		.setImage(body.url)
 		.setFooter("©Fujiwara");
-		message.channel.send({embeds:[embed]});
+	message.channel.send({ embed });
 };
 
 module.exports.help = {

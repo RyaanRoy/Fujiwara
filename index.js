@@ -3,21 +3,14 @@ const config = require("./config/config.json");
 const Enmap = require("enmap");
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
-const { Util }= require('discord.js')
-const { SoundCloudPlugin } = require('@distube/soundcloud')
-const { SpotifyPlugin } = require('@distube/spotify')
+const Util = require('discord.js')
 require('discord-reply');
 const client = new Discord.Client({
 	partials: ["MESSAGE", "USER", "REACTION"],
-	disableMentions: "everyone",
-	intents: [
-		'GUILDS',
-		'GUILD_VOICE_STATES',
-		'GUILD_MESSAGES',
-	],
+	disableMentions: "everyone"
 });
-
-
+const disbut = require('discord-buttons');
+disbut(client);
 const DisTube = require("distube");
 
 client.config = config;
@@ -42,7 +35,7 @@ client.snipes = new Map();
 client.mapss = new Map();
 client.mapss.set("uptimedate", nz_date_string);
 
-["command", "event"].forEach(x =>
+["command", "event", "music"].forEach(x =>
 	require(`./handlers/${x}.js`)(client)
 );
 ["alwaysOn", "http"].forEach(x => require(`./server/${x}`)());
@@ -56,7 +49,14 @@ client.settings = new Enmap({
 
 client.moderationdb = new Enmap("moderation");
 
-
+client.distube = new DisTube(client, {
+	leaveOnFinish: true,
+	leaveOnEmpty: true,
+	leaveOnStop: true,
+	youtubeDL: false,
+	updateYouTubeDL: true,
+	
+});
 
 if (!db.get("giveaways")) db.set("giveaways", []);
 
@@ -103,7 +103,16 @@ client.giveawaysManager = new GiveawayManagerWithOwnDatabase(client, {
 	}
 });
 
-
+client.status = queue =>
+	`Volume: \`${queue.volume}%\` | Filter: \`${
+		queue.filter || "Off"
+	}\` | Loop: \`${
+		queue.repeatMode
+			? queue.repeatMode == 2
+				? "All Queue"
+				: "This Song"
+			: "Off"
+	}\` | Autoplay: \`${queue.autoplay ? "On" : "Off"}\``;
 
 client.ws.on("INTERACTION_CREATE", async interaction => {
 	if (!client.slcommands.has(interaction.data.name)) return;
@@ -124,27 +133,30 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 		});
 	}
 });
-client.on("messageCreate", async message => {
-    try {
-		  if(message.author.bot) return;
+client.on("message", async message => {
+   
+		  if(message.author.bot) return
 		  if(message.content.includes("@everyone")){return}
 		  if(message.content.includes("@here")){return}
+		  
 		  if (message.mentions.has(client.user.id) && !message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))){
-			message.channel.sendTyping();
-			fetch(
-				`http://api.brainshop.ai/get?bid=160117&key=AmxzVOo74jyHpdxp&uid=${message.author.id}&msg=${encodeURIComponent(message.content)}`
-		)
-		
+			try {message.channel.startTyping();
+			fetch(`http://api.brainshop.ai/get?bid=160117&key=AmxzVOo74jyHpdxp&uid=${message.author.id}&msg=${encodeURIComponent(message.content)}`)
 				.then((res) => res.json())
 				.then((body) => {
 					
-				  message.reply(body.cnt);
-				  
+				  message.lineReply(body.cnt);
+				  message.channel.stopTyping();
 				});
+			}catch(error){
+				message.channel.stopTyping();
+				return message.channel.send(`Chatbot is having problems at the moment`)
+				}
 		  }
 		
 	  
-	  }catch(error){return}
+
+
 	  }
 	);
 

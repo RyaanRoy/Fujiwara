@@ -17,7 +17,7 @@ module.exports.run = (client, message, args) => {
 		)
 		.setColor("GREEN");
 
-	return message.channel.send({embeds:[embed]});
+	return message.channel.send(embed);
 };
 
 module.exports.help = {

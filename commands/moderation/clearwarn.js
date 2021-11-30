@@ -21,12 +21,12 @@ module.exports.run = async (client, message, args) => {
 		.setColor("RED");
 	if (!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) {
 		return message.channel
-			.send({embeds:[notice3]})
+			.send(notice3)
 			.then(m => m.delete({ timeout: 15000 }));
 	}
 	if (!message.member.hasPermission("KICK_MEMBERS")) {
 		return message.channel
-			.send({embeds:[notice1]})
+			.send(notice1)
 			.then(m => m.delete({ timeout: 15000 }));
 	}
 
@@ -39,7 +39,7 @@ module.exports.run = async (client, message, args) => {
 				: false
 			: false);
 
-	if (!user) return message.channel.send({embeds:[noticEEEe2]});
+	if (!user) return message.channel.send(noticEEEe2);
 	const key = `${message.guild.id}-${user.id}`;
 	client.moderationdb.ensure(key, {
 		guildid: message.guild.id,
@@ -49,7 +49,7 @@ module.exports.run = async (client, message, args) => {
 		timeMuteEnd: 0
 	});
 	if (client.moderationdb.get(key, "warns") == 0)
-		return message.channel.send({embeds:[noticEffEEe2]});
+		return message.channel.send(noticEffEEe2);
 
 	const embed = new Discord.MessageEmbed()
 		.setColor("GREEN")
@@ -64,7 +64,7 @@ module.exports.run = async (client, message, args) => {
 	await client.moderationdb.set(key, {
 		warns: 0
 	});
-	message.channel.send({embeds:[embed]});
+	message.channel.send({ embed });
 };
 
 module.exports.help = {

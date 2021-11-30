@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
     
     const [answer] = list;
 
-    message.channel.send({embeds:[
+    message.channel.send(
       new MessageEmbed()
         .setTitle(answer.word)
         .setURL(answer.permalink)
@@ -29,7 +29,6 @@ module.exports.run = async (client, message, args) => {
           "RATINGS",
           `${answer.thumbs_up} 👍 || ${answer.thumbs_down} 👎`
         )
-    ]}
     );
         } catch (err) {
           return message.channel.send(`Oh no, an error occurred. That word probably doesn't exist in the urban dictionary!`);

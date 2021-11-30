@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
 			`USER: \`${dbss.userid}\`\nWarnings: \`${dbss.warns}\`\nisMuted: \`${dbss.isMuted}\`\nTight Now: \`${rightNow}\`\ntimeMuteEnd: \`${dbss.timeMuteEnd}\``
 		)
 		.setColor("GREEN");
-		message.channel.send({embeds:[notice2]});
+	message.channel.send(notice2);
 };
 
 module.exports.help = {

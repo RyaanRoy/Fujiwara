@@ -63,7 +63,7 @@ module.exports.run = async (client, message, args) => {
 
 		// premiumSubscriptionCount
 		.setColor(Math.floor(Math.random() * 16777215));
-		message.channel.send({embeds:[embed]});
+	message.channel.send({ embed });
 };
 
 module.exports.help = {

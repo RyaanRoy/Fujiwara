@@ -17,8 +17,8 @@ module.exports.run = async (client, message, args) => {
 			.get(message.guild.id)
 			.roles.cache.find(val => val.name === role);
 
-	if (!role) return message.channel.send({embeds:[missingargs]});
-	if (!gRole) return message.channel.send({embeds:[missingrole]});
+	if (!role) return message.channel.send(missingargs);
+	if (!gRole) return message.channel.send(missingrole);
 
 	const status = {
 		false: "No",
@@ -36,7 +36,7 @@ module.exports.run = async (client, message, args) => {
 	//	.addField("Hoisted", status[gRole.hoist], inline)
 	//	.addField("Managed", status[gRole.managed], inline);
 
-	message.channel.send({embeds:[roleemebed]});
+	message.channel.send(roleemebed);
 };
 
 module.exports.help = {

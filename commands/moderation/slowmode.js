@@ -27,7 +27,7 @@ exports.run = (client, message, args) => {
 
 	if (!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) {
 		return message.channel
-			.send({embeds:[notice3]})
+			.send(notice3)
 			.then(msg => msg.delete({ timeout: 5000 }));
 	}
 	const duration = parseInt(args[0]);
@@ -38,17 +38,17 @@ exports.run = (client, message, args) => {
 		.setColor("#FFFF00");
 	if (!message.member.hasPermission("MANAGE_CHANNELS")) {
 		return message.channel
-			.send({embeds:[mmsssqembed]})
+			.send(mmsssqembed)
 			.then(msg => msg.delete({ timeout: 5000 }));
 	}
 	if (isNaN(duration)) {
-		return message.channel.send({embeds:[notice1]});
+		return message.channel.send(notice1);
 	}
 	if (duration < 0 || duration > 21601) {
-		return message.channel.send({embeds:[noticwsse1]});
+		return message.channel.send(noticwsse1);
 	}
 	message.channel.setRateLimitPerUser(duration).catch(() => {
-		message.channel.send({embeds:[notice3]});
+		message.channel.send(notice3);
 	});
 	const bsuembed = new Discord.MessageEmbed()
 		.setDescription(
@@ -56,7 +56,7 @@ exports.run = (client, message, args) => {
 		)
 		.setColor("GREEN");
 
-		message.channel.send({embeds:[bsuembed]});
+	message.channel.send(bsuembed);
 };
 
 module.exports.help = {

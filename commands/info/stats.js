@@ -14,7 +14,7 @@ const {
   const ms = require("ms");
   const pretty = require("pretty-ms");
 module.exports.run = async (client, message) => {
-    // Capitalize Func
+   
     function capitalizeFirst(string) {
 		return string.charAt(0).toUpperCase() + string.slice(1);
 	  }
@@ -24,41 +24,41 @@ module.exports.run = async (client, message) => {
 		.setURL(client.web)
 		.setThumbnail(client.user.displayAvatarURL())
 		.setColor(message.guild.me.displayHexColor || client.color)
-		.addField("General", [
-		  `**❯ Client :** ${client.user.tag}`,
-		  `**❯ Commands Total :** ${client.commands.size}`,
-		  `**❯ Server :** ${client.guilds.cache.size.toLocaleString()} Servers`,
-		  `**❯ Users :** ${client.guilds.cache
+		.addField("General", 
+		  `**❯ Client :** ${client.user.tag}
+		  **❯ Commands Total :** ${client.commands.size}
+		  **❯ Server :** ${client.guilds.cache.size.toLocaleString()} Servers
+		  **❯ Users :** ${client.guilds.cache
 			.reduce((a, b) => a + b.memberCount, 0)
-			.toLocaleString()} Users`,
-		  `**❯ Channels :** ${client.channels.cache.size.toLocaleString()} Channels`,
-		  `**❯ Creation Date :** ${utc(client.user.createdTimestamp).format(
+			.toLocaleString()} Users
+		  **❯ Channels :** ${client.channels.cache.size.toLocaleString()} Channels
+		  **❯ Creation Date :** ${utc(client.user.createdTimestamp).format(
 			"Do MMMM YYYY HH:mm:ss"
-		  )}`,
-		  `**❯ Node.js :** ${process.version}`,
-		  `**❯ Version :** v${version}`,
-		  `**❯ Discord.js :** v${djsversion}`,
-		  `**❯ Bot Uptime :** ${pretty(client.uptime)}`,
+		  )}
+		  **❯ Node.js :** ${process.version}
+		  **❯ Version :** v${version}
+		  **❯ Discord.js :** v${djsversion}
+		  **❯ Bot Uptime :** ${pretty(client.uptime)}`,
 		  "\u200b",
-		])
-		.addField("System", [
-		  `**❯ OS Platform :** ${capitalizeFirst(process.platform)}`,
-		  `**❯ OS Uptime :** ${ms(os.uptime() * 1000, { long: true })}`,
-		  `**❯ CPU :**`,
-		  `\u3000 Cores : ${os.cpus().length}`,
-		  `\u3000 Model : ${core.model}`,
-		  `\u3000 Speed : ${core.speed} MHz`,
-		])
-		.addField("Network", [
+		)
+		.addField("System", 
+		  `**❯ OS Platform :** ${capitalizeFirst(process.platform)}
+		  **❯ OS Uptime :** ${ms(os.uptime() * 1000, { long: true })}
+		  **❯ CPU :**
+		  \u3000 Cores : ${os.cpus().length}
+		  \u3000 Model : ${core.model}
+		  \u3000 Speed : ${core.speed} MHz`,
+		)
+		.addField("Network", 
 		  `**❯ Latency :** ${Math.round(client.ws.ping)} ms`,
-		])
+		)
 		.setTimestamp();
   
 		message.channel.send({embeds:[embed]});
 };
 module.exports.help = {
 	name: "stats",
-	description: "This command is used for monitoring stats of bot.",
+	description: "This command is used for monitoring stats of Fujiwara.",
 	usage: "f-stats",
 	accessableby: "Member",
 	aliases: []

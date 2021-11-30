@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 
 						.setImage(json.url);
 
-					message.channel.send(embed);
+						message.channel.send({embeds:[embed]});
 				} else message.reply("You need to mention the user to kiss!");
 			}
 		);
@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "kiss",
 	description: "This command is used for kiss someone u loVe.",
-	usage: "b-kiss <mentions>",
+	usage: "f-kiss <mentions>",
 	accessableby: "Member",
 	aliases: []
 };

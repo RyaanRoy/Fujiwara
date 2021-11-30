@@ -38,20 +38,20 @@ module.exports.run = async (client, message, args) => {
 						size: 4096
 				  }));
 	} catch (e) {
-		return message.channel.send(usernotfind);
+		return message.channel.send({embeds:[usernotfind]});
 	}
 
 	const image = await canvacord.Canvas.rip(imagetarget);
 
 	const triggered = new Discord.MessageAttachment(image, "rip.png");
 
-	message.channel.send(triggered);
+	message.channel.send({embeds:[triggered]});
 };
 
 module.exports.help = {
 	name: "rip",
 	description: "This command is used for generating people IN RiP.",
-	usage: "b-rip <mentions>",
+	usage: "f-rip <mentions>",
 	accessableby: "Member",
 	aliases: []
 };

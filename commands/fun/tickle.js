@@ -19,13 +19,13 @@ module.exports.run = async (client, message, args) => {
 		)
 		.setImage(body.url)
 		.setFooter("©Fujiwara");
-	message.channel.send({ embed });
+		message.channel.send({embeds:[embed]});
 };
 
 module.exports.help = {
 	name: "tickle",
 	description: "This command is used for generating tickle image.",
-	usage: "b-tickle <mention>",
+	usage: "f-tickle <mention>",
 	accessableby: "Member",
 	aliases: []
 };

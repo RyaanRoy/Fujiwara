@@ -34,7 +34,7 @@ module.exports.run = async (bot, message, args) => {
 			);
 
 		// Display when it's called
-		message.channel.send(embed);
+		message.channel.send({embeds:[embed]});
 	});
 
 	message.delete();
@@ -43,7 +43,7 @@ module.exports.help = {
 	name: "weather",
 	description:
 		"Check the weather in your location or area within newest climate/weather status",
-	usage: "b-weather <location/area>",
+	usage: "f-weather <location/area>",
 	accessableby: "Members",
 	aliases: []
 };

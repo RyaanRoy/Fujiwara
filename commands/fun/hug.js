@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
     if (ment.id == message.author.id)
       return message.channel.send("How Is That Possible?");
     if (ment.id == client.user.id)
-      return message.channel.send("B-BAKA!");
+      return message.channel.send("f-BAKA!");
     const { body } = await request.get("https://api.waifu.pics/sfw/hug");
 
     let e = new MessageEmbed()
@@ -18,13 +18,13 @@ module.exports.run = async (client, message, args) => {
         `${message.author.tag}`,
         message.author.displayAvatarURL({ dynamic: true })
       );
-    message.channel.send({ embed: e });
+    message.channel.send({embeds:[e]});
 };
 
 module.exports.help = {
 	name: "hug",
 	description: "This command is used to hug someone",
-	usage: "b-hug <mention>",
+	usage: "f-hug <mention>",
 	accessableby: "Members",
 	aliases: []
 };

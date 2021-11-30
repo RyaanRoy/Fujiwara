@@ -37,19 +37,19 @@ module.exports.run = async (client, message, args) => {
 						size: 4096
 				  }));
 	} catch (e) {
-		return message.channel.send(usernotfind);
+		return message.channel.send({embeds:[usernotfind]});
 	}
 
 	const image = await canvacord.Canvas.delete(imagetarget);
 	const rainbow = new Discord.MessageAttachment(image, "delete.png");
-	return message.channel.send(rainbow);
+	return message.channel.send({files:[rainbow]});
 };
 
 module.exports.help = {
 	name: "delete",
 	description:
 		"This command is used for delete someone u hates with windows trash bin",
-	usage: "b-delete [<mention> or <attachments>]",
+	usage: "f-delete [<mention> or <attachments>]",
 	accessableby: "Member",
 	aliases: []
 };

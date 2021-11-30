@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
     
     const [answer] = list;
 
-    message.channel.send(
+    message.channel.send({embeds:[
       new MessageEmbed()
         .setTitle(answer.word)
         .setURL(answer.permalink)
@@ -29,6 +29,7 @@ module.exports.run = async (client, message, args) => {
           "RATINGS",
           `${answer.thumbs_up} 👍 || ${answer.thumbs_down} 👎`
         )
+    ]}
     );
         } catch (err) {
           return message.channel.send(`Oh no, an error occurred. That word probably doesn't exist in the urban dictionary!`);
@@ -39,7 +40,7 @@ module.exports.help = {
 	name: "urban",
 	description:
 		"Searching urban",
-	usage: "b-urban <query>",
+	usage: "f-urban <query>",
 	accessableby: "Member",
 	aliases: ["ub"]
 };

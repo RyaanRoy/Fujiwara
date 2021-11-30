@@ -15,7 +15,7 @@ shard.on("launch", shard => {
 	);
 });
 
-shard.on("message", (shard, msg) => {
+shard.on("messageCreate", (shard, msg) => {
 	console.log(
 		`[${new Date().toString().split(" ", 5).join(" ")}] #${shard.id} | ${
 			msg._eval

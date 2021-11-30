@@ -8,13 +8,13 @@ module.exports.run = async (client, message, args) => {
 			Date.now() - message.createdTimestamp
 		}ms**\nDiscord API Latency: **${Math.round(client.ws.ping)}ms**`
 	);
-	message.channel.send(bbb);
+	message.channel.send({embeds:[bbb]});
 };
 
 module.exports.help = {
 	name: "ping",
 	description: "This command is used for pinging the bot.",
-	usage: "b-ping",
+	usage: "f-ping",
 	accessableby: "Members",
 	aliases: []
 };

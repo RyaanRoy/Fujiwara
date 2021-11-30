@@ -54,12 +54,12 @@ module.exports.run = async (client, message) => {
 		])
 		.setTimestamp();
   
-	  message.channel.send(embed);
+		message.channel.send({embeds:[embed]});
 };
 module.exports.help = {
 	name: "stats",
 	description: "This command is used for monitoring stats of bot.",
-	usage: "b-stats",
+	usage: "f-stats",
 	accessableby: "Member",
 	aliases: []
 };

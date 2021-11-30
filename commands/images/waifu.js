@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
                         .setColor('#cc338b')
 						.setImage(body.url);
 
-					message.channel.send(embed);
+						message.channel.send({embeds:[embed]});
 				
 			
 
@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "waifu",
 	description: "This command is used for waifu hunting.",
-	usage: "b-waifu",
+	usage: "f-waifu",
 	accessableby: "Members",
 	aliases: []
 };

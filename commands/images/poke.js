@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const superagent = require("superagent");
 module.exports.run = async (client, message, args) => {
-	// eslinb-disable-line no-unused-vars
+	// eslinf-disable-line no-unused-vars
 	try {
 		const member = message.mentions.members.first();
 
@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 						)
 						.setImage(body.url);
 
-					message.channel.send(embed);
+						message.channel.send({embeds:[embed]});
 				} else message.reply("You need to mention the user to poke!");
 			
 		
@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "poke",
 	description: "This command is used for poking.",
-	usage: "b-poke <mentions>",
+	usage: "f-poke <mentions>",
 	accessableby: "Members",
 	aliases: []
 };

@@ -24,8 +24,8 @@ module.exports.run = async (client, msg, args) => {
 	if (!msg.member.hasPermission("KICK_MEMBERS"))
 		return msg.channel.send(embed6).then(m => m.delete({ timeout: 5000 }));
 	const mmqembed = new Discord.MessageEmbed()
-		.setTitle("Command: b-kick")
-		.setDescription("Usage: b-kick @user reason")
+		.setTitle("Command: f-kick")
+		.setDescription("Usage: f-kick @user reason")
 		.setColor("RED");
 	if (!kickTaged) {
 		return msg.channel.send(mmqembed).then(m => m.delete({ timeout: 5000 }));
@@ -88,7 +88,7 @@ module.exports.help = {
 	name: "kick",
 	description:
 		"This command is used for kicking people u hate or againsting your server rules.",
-	usage: "b-kick <mentions> <reason>",
+	usage: "f-kick <mentions> <reason>",
 	accessableby: "Kick Members",
 	aliases: []
 };

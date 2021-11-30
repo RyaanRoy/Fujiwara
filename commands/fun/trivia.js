@@ -168,8 +168,8 @@ module.exports.run = async (client, message, args) => {
                 atob(this.question.results[0].difficulty)
             );
         }
-        this.question_message = await this.message.channel.send(
-          this.question_embed
+        this.question_message = await this.message.channel.send({embeds:[
+          this.question_embed]}
         );
         let step = -1;
         while (step < this.question_length) {
@@ -208,7 +208,7 @@ module.exports.run = async (client, message, args) => {
                     ", Difficulty - " +
                     atob(this.question.results[0].difficulty)
                 );
-              this.question_message.edit(this.question_embed);
+              this.question_message.edit({embeds:[this.question_embed]});
               this.question_message.edit("You got it correct! :smile:");
               this.end_game();
             } else {
@@ -224,7 +224,7 @@ module.exports.run = async (client, message, args) => {
                     ", Difficulty - " +
                     atob(this.question.results[0].difficulty)
                 );
-              this.question_message.edit(this.question_embed);
+              this.question_message.edit({embeds:[this.question_embed]});
               this.question_message.edit(
                 "You got it wrong. The correct answer was " +
                   this.reactions[this.correct_answer - 1]
@@ -252,7 +252,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "trivia",
 	description: "Trivia questions.",
-	usage: "b-trivia",
+	usage: "f-trivia",
 	accessableby: "Member",
 	aliases: []
 };

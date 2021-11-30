@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
 	const mindtxt = args.slice(0).join(" ");
 	if (!mindtxt) {
 		return message.channel
-			.send(notice3)
+			.send({embeds:[notice3]})
 			.then(msg => msg.delete({ timeout: 10000 }));
 	}
 
@@ -18,13 +18,13 @@ module.exports.run = async (client, message, args) => {
 
 	const triggered = new Discord.MessageAttachment(image, "changemymind.png");
 
-	message.channel.send(triggered);
+	message.channel.send({files:[triggered]});
 };
 
 module.exports.help = {
 	name: "changemymind",
 	description: "Changemymind please.",
-	usage: "b-changemymind <text>(optional)",
+	usage: "f-changemymind <text>(optional)",
 	accessableby: "Member",
 	aliases: []
 };

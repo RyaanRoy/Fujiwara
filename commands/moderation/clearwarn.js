@@ -21,12 +21,12 @@ module.exports.run = async (client, message, args) => {
 		.setColor("RED");
 	if (!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) {
 		return message.channel
-			.send(notice3)
+			.send({embeds:[notice3]})
 			.then(m => m.delete({ timeout: 15000 }));
 	}
 	if (!message.member.hasPermission("KICK_MEMBERS")) {
 		return message.channel
-			.send(notice1)
+			.send({embeds:[notice1]})
 			.then(m => m.delete({ timeout: 15000 }));
 	}
 
@@ -39,7 +39,7 @@ module.exports.run = async (client, message, args) => {
 				: false
 			: false);
 
-	if (!user) return message.channel.send(noticEEEe2);
+	if (!user) return message.channel.send({embeds:[noticEEEe2]});
 	const key = `${message.guild.id}-${user.id}`;
 	client.moderationdb.ensure(key, {
 		guildid: message.guild.id,
@@ -49,7 +49,7 @@ module.exports.run = async (client, message, args) => {
 		timeMuteEnd: 0
 	});
 	if (client.moderationdb.get(key, "warns") == 0)
-		return message.channel.send(noticEffEEe2);
+		return message.channel.send({embeds:[noticEffEEe2]});
 
 	const embed = new Discord.MessageEmbed()
 		.setColor("GREEN")
@@ -64,13 +64,13 @@ module.exports.run = async (client, message, args) => {
 	await client.moderationdb.set(key, {
 		warns: 0
 	});
-	message.channel.send({ embed });
+	message.channel.send({embeds:[embed]});
 };
 
 module.exports.help = {
 	name: "clearwarn",
 	description: "Clear the warnings",
-	usage: "b-clearwarn <mention>",
+	usage: "f-clearwarn <mention>",
 	accessableby: "Manage Roles",
 	aliases: []
 };

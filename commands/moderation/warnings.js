@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
 				: message.author
 			: message.author);
 	// client.moderationdb
-	if (!user) return message.channel.send(emddd);
+	if (!user) return message.channel.send({embeds:[emddd]});
 	const key = `${message.guild.id}-${user.id}`;
 
 	client.moderationdb.ensure(key, {
@@ -37,13 +37,13 @@ module.exports.run = async (client, message, args) => {
 		.setDescription(
 			`Number of warnings: ${client.moderationdb.get(key, "warns")}`
 		);
-	message.channel.send({ embed });
+		message.channel.send({embeds:[embed]});
 };
 
 module.exports.help = {
 	name: "warnings",
 	description: "Check the people you mentioned who has warnings or not",
-	usage: "b-warnings <mention>",
+	usage: "f-warnings <mention>",
 	accessableby: "Members",
 	aliases: []
 };

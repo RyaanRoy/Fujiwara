@@ -31,15 +31,15 @@ module.exports.run = async(client, message, args) => {
       .setColor(`#ffa5ba`)
       .setTimestamp();
 
-    client.channels.cache.get(`895548282468716595`).send(reportEmbed);
-    if (query) return message.reply(thanksFor);
+    client.channels.cache.get(`895548282468716595`).send({embeds:[reportEmbed]});
+    if (query) return message.reply({embeds:[thanksFor]});
 
 };
 
 module.exports.help = {
 	name: "bugreport",
 	description: "This command is used for reporting bugs",
-	usage: "b-bugreport <bug>",
+	usage: "f-bugreport <bug>",
 	accessableby: "Member",
 	aliases: ["br"]
 };

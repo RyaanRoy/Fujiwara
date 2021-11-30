@@ -3,8 +3,8 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 const fetch = require("node-fetch");
 const moment = require("moment");
 const { Calculator } = require('weky');
-require('@weky/inlinereply');
-const disbut = require('discord-buttons');
+
+
 
 module.exports.run = async (client, message, args) => {
 		await Calculator({
@@ -25,7 +25,7 @@ module.exports.help = {
 	name: "calculator",
 	description:
 		"calculator on discord",
-	usage: "b-calculator",
+	usage: "f-calculator",
 	accessableby: "Member",
 	aliases: ["clt"]
 };

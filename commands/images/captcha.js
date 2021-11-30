@@ -55,13 +55,13 @@ module.exports.run = async (client, message, args) => {
 
 	const json = await res.json();
 	const attachment = new Discord.MessageAttachment(json.message, "captcha.png");
-	message.channel.send(attachment);
+	message.channel.send({files:[attachment]});
 };
 
 module.exports.help = {
 	name: "captcha",
 	description: "This command is used for posting dog's images randomly.",
-	usage: "b-captcha",
+	usage: "f-captcha",
 	accessableby: "Members",
 	aliases: []
 };

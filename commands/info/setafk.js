@@ -17,7 +17,7 @@ module.exports.run = (client, message, args) => {
 module.exports.help = {
 	name: "setafk",
 	description: "This command is used for setting yourself as afk.",
-	usage: "b-setafk {afk}/{notafk}",
+	usage: "f-setafk {afk}/{notafk}",
 	accessableby: "Member",
 	aliases: ["afk"]
 };

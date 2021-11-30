@@ -82,7 +82,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "gstart",
 	description: "This command is used for creating a giveawya for events.",
-	usage: "b-gstart <channel> <duration> <winner> <prize>",
+	usage: "f-gstart <channel> <duration> <winner> <prize>",
 	accessableby: "Member",
 	aliases: []
 };

@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "say",
 	description: "N/A",
-	usage: "b-say [Message]",
+	usage: "f-say [Message]",
 	accessableby: "Bot Owners",
 	aliases: ["say"]
 };

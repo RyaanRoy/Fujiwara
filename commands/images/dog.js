@@ -11,14 +11,14 @@ module.exports.run = async (bot, message, args) => {
 		emb.setColor("GREEN");
 		emb.setImage(link);
 
-		message.channel.send(emb);
+		message.channel.send({embeds:[emb]});
 	});
 };
 
 module.exports.help = {
 	name: "dog",
 	description: "This command is used for posting dog's images randomly.",
-	usage: "b-dog",
+	usage: "f-dog",
 	accessableby: "Members",
 	aliases: []
 };

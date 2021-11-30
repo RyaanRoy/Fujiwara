@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
 
 	if (!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) {
 		return message.channel
-			.send(notice3)
+			.send({embeds:[notice3]})
 			.then(msg => msg.delete({ timeout: 5000 }));
 	}
 	const mmqembed = new Discord.MessageEmbed()
@@ -22,7 +22,7 @@ exports.run = (client, message, args) => {
 		.setColor("RED");
 	if (!message.member.hasPermission("MANAGE_CHANNELS")) {
 		return message.channel
-			.send(mmqembed)
+			.send({embeds:[mmqembed]})
 			.then(msg => msg.delete({ timeout: 5000 }));
 	}
 
@@ -33,7 +33,7 @@ exports.run = (client, message, args) => {
 			SEND_MESSAGES: true
 		})
 		.then(() => {
-			message.channel.send(dfgrdgdfgdf);
+			message.channel.send({embeds:[dfgrdgdfgdf]});
 			delete client.lockit[message.channel.id];
 		})
 		.catch(error => {
@@ -44,7 +44,7 @@ exports.run = (client, message, args) => {
 module.exports.help = {
 	name: "unlockchannel",
 	description: "This command is used for unlockchanneling",
-	usage: "b-unlockchannel",
+	usage: "f-unlockchannel",
 	accessableby: "Manage Channels",
 	aliases: []
 };

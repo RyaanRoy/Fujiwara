@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
-	// eslinb-disable-line no-unused-vars
+	// eslinf-disable-line no-unused-vars
 	try {
 		const member = message.mentions.members.first();
 
@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
 						)
 						.setImage(json.url);
 
-					message.channel.send(embed);
+						message.channel.send({embeds:[embed]});
 				} else message.reply("You need to mention the user to pat!");
 			}
 		);
@@ -29,7 +29,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "pat",
 	description: "This command is used for generating pat.",
-	usage: "b-pat <mentions>",
+	usage: "f-pat <mentions>",
 	accessableby: "Members",
 	aliases: []
 };

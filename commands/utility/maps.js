@@ -3,10 +3,10 @@ const fetch = require("node-fetch");
 
 module.exports.run = async (client, message, args) => {
     const sit = args.join(" ");
-    if (!args.length) return message.lineReply("Provide a valid location");
+    if (!args.length) return message.reply("Provide a valid location");
     const site = `https://maps.google.com/?q=${args.join("+")}`;
     try {
-      const msg = await message.lineReplyNoMention(
+      const msg = await message.reply(
         "**Please wait...** This may take up to 10 seconds."
       );
       msg.delete({ timeout: 5000 });
@@ -14,9 +14,9 @@ module.exports.run = async (client, message, args) => {
         `https://image.thum.io/get/width/1920/crop/675/noanimate/${site}`
       );
       let att = new Discord.MessageAttachment(body, `${sit}.png`);
-      return message.lineReply(att);
+      return message.reply({files:[att]});
     } catch (err) {
-      return message.lineReply(
+      return message.reply(
         `Oh no, an error occurred: \`${err.message}\`. Try again later!`
       );
     }
@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "maps",
 	description: "This command is used for getting info on google maps.",
-	usage: "b-maps <query>",
+	usage: "f-maps <query>",
 	accessableby: "Member",
-	aliases: ["gmaps"]
+	aliases: ["gmaps","map"]
 };

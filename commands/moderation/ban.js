@@ -35,9 +35,9 @@ module.exports.run = async (client, msg, args) => {
 			
 	}
 	const kntlembed = new Discord.MessageEmbed()
-		.setTitle("Command: b-ban")
+		.setTitle("Command: f-ban")
 		.setDescription(
-			"Wrong Usage!。\n\n**Function:** Ban a member\n**Usage:** b-ban [User] [Reason]\n**Example:** b-ban @Ryaan Noob"
+			"Wrong Usage!。\n\n**Function:** Ban a member\n**Usage:** f-ban [User] [Reason]\n**Example:** f-ban @Ryaan Noob"
 		)
 		.setColor("RED");
 	if (!banTaged) {
@@ -110,7 +110,7 @@ module.exports.run = async (client, msg, args) => {
 module.exports.help = {
 	name: "ban",
 	description: "This command is used for banning the members you dont like.",
-	usage: "b-ban <mentions> <reason>(optional)",
+	usage: "f-ban <mentions> <reason>(optional)",
 	accessableby: "Ban Members",
 	aliases: []
 };

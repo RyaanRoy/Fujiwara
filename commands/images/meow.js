@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const superagent = require("superagent");
 module.exports.run = async (client, message, args) => {
-	// eslinb-disable-line no-unused-vars
+	// eslinf-disable-line no-unused-vars
 	try {
 		const member = message.mentions.members.first();
         const { body } = await superagent.get("https://nekos.life/api/v2/img/meow");
@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
 						)
 						.setImage(body.url);
 
-					message.channel.send(embed);
+						message.channel.send({embeds:[embed]});
 				
 			
 		
@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "meow",
 	description: "This command is used for meow.",
-	usage: "b-meow",
+	usage: "f-meow",
 	accessableby: "Members",
 	aliases: []
 };

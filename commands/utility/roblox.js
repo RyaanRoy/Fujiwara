@@ -74,7 +74,7 @@ module.exports.run = async (client, message, args) => {
             .addField("BC Member", purchasedM)
             .setTimestamp()
 
-          message.channel.send(embed)
+            message.channel.send({embeds:[embed]})
           .catch (function (err) {
               message.delete();
               return message.channel.send({embed: {
@@ -90,7 +90,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
     name: "roblox",
     description: "Gets roblox userinfo",
-    usage: "b-roblox <username>",
+    usage: "f-roblox <username>",
     accessableby: "Member",
 	aliases: []
 }

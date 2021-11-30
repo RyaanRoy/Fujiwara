@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
 		.setDescription(`${emojis.cross} I don't have permission to mute people!`)
 		.setColor("RED");
 	if (!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) {
-		return message.channel.send(notice3).then(m => m.delete({ timeout: 5000 }));
+		return message.channel.send({embeds:[notice3]}).then(m => m.delete({ timeout: 5000 }));
 	}
 
 	//! tempmute @user 1s/m/h/d
@@ -27,19 +27,19 @@ module.exports.run = async (client, message, args) => {
 		)
 		.setColor("RED");
 	if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-		return message.channel.send(embed6).then(m => m.delete({ timeout: 5000 }));
+		return message.channel.send({embeds:[embed6]}).then(m => m.delete({ timeout: 5000 }));
 	}
 	const embed50 = new Discord.MessageEmbed()
-		.setTitle("Command: b-mute")
-		.setDescription("Usage: b-mute @user [length] [reason]")
+		.setTitle("Command: f-mute")
+		.setDescription("Usage: f-mute @user [length] [reason]")
 		.setColor(0xff0000);
 
-	if (!tomute) return message.channel.send(embed50);
+	if (!tomute) return message.channel.send({embeds:[embed50]});
 
 	const notice2 = new Discord.MessageEmbed()
 		.setDescription(`${emojis.cross} You cannot mute yourself!`)
 		.setColor("RED");
-	if (tomute.id === message.author.id) return message.channel.send(notice2);
+	if (tomute.id === message.author.id) return message.channel.send({embeds:[notice2]});
 
 	const dsfdsfsdf = new Discord.MessageEmbed()
 		.setDescription(
@@ -63,9 +63,9 @@ module.exports.run = async (client, message, args) => {
 		.position;
 	const rolePosition = message.guild.member(tomute).roles.highest.position;
 	const userRolePossition = message.member.roles.highest.position;
-	if (userRolePossition <= rolePosition) return message.channel.send(dsfdsfsdf);
+	if (userRolePossition <= rolePosition) return message.channel.send({embeds:[dsfdsfsdf]});
 	if (botRolePossition <= rolePosition)
-		return message.channel.send(sdfsdfsdfsd);
+		return message.channel.send({embeds:[sdfsdfsdfsd]});
 
 	let muterole = client.guilds.cache
 		.get(message.guild.id)
@@ -92,9 +92,9 @@ module.exports.run = async (client, message, args) => {
 
 	// end of create role
 	const mutetime = args[1];
-	if (!mutetime) return message.channel.send(embed50);
-	if (isNaN(ms(mutetime))) return message.channel.send(sdfsdfsdfsssd);
-	if (ms(mutetime) > 1209600000) return message.channel.send(dddfs);
+	if (!mutetime) return message.channel.send({embeds:[embed50]});
+	if (isNaN(ms(mutetime))) return message.channel.send({embeds:[sdfsdfsdfsssd]});
+	if (ms(mutetime) > 1209600000) return message.channel.send({embeds:[dddfs]});
 	let reason = args.slice(2).join(" ");
 	if (reason.length < 1) reason = "No reason given.";
 
@@ -113,7 +113,7 @@ module.exports.run = async (client, message, args) => {
 		isMuted: false,
 		timeMuteEnd: 0
 	});
-	// if (tomute.roles.cache.has(muterole)) return message.channel.send(bruhembed);
+	 if (tomute.roles.cache.has(muterole)) return message.channel.send({embeds:[bruhembed]});
 
 	const embed = new Discord.MessageEmbed()
 		.setTitle("Action Mute")
@@ -144,7 +144,7 @@ module.exports.run = async (client, message, args) => {
 	);
 	await message.guild.member(tomute).roles.add(muterole);
 	message.delete();
-	message.channel.send(embed10);
+	message.channel.send({embeds:[embed10]});
 	tomute.send(
 		`You had been muted for **${ms(ms(mutetime))}** in **${
 			message.guild.name
@@ -155,7 +155,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "mute",
 	description: "This command is used for muting some people really annoying.",
-	usage: "b-mute <mention> <duration> <reason>",
+	usage: "f-mute <mention> <duration> <reason>",
 	accessableby: "Manage Roles",
 	aliases: []
 };

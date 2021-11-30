@@ -118,7 +118,7 @@ const CMusic = [
 module.exports.help = {
 	name: "allcmd",
 	description: "Storing .",
-	usage: "b-allcmd",
+	usage: "f-allcmd",
 	accessableby: "Member",
 	aliases: []
 };

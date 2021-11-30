@@ -17,18 +17,18 @@ module.exports.run = async (client, message, args) => {
 		.addField(`> <a:panic:856054789217583104>  Moderation`, `purge, ban, unban, warn, clearwarn, warnings, kick, createchannel, createemoji, lockchannel, unlockchannel, mute, unmute, rename, slowmode`, true)
 		.addField(`> <:blurpleannouncements:859068819191496734> GiveAway`, `gstart , greroll, gend`, true)
 		.addField(`> <a:purplestar:817788092768976896> Fun`, `8ball, ship, animesearch, aes256, deaes256, meme, sudo`, false)
-		.addField(`> <a:dev:817788400471638016> Utility`, `enlarge, reminder, wikipedia, urban, roblox, serverinfo, serverav, avatar, whois, roleinfo, channel, embed(use ;), imageembed, reverse, setafk, snipe, stats, timer, translate, weather, youtube-search`, false)
-		.addField(`> 🖼️ Image`, `captcha, circle, delete, maps, think, gay, changemymind, trigger, clyde, petpet, magik, dog, cat, drake, rip, iphonex`, false)
+		.addField(`> <a:dev:817788400471638016> Utility`, `enlarge, reminder, maps, wikipedia, urban, roblox, serverinfo, serverav, avatar, whois, roleinfo, channel, embed(use ;), imageembed, reverse, setafk, snipe, stats, timer, translate, weather, youtube-search`, false)
+		.addField(`> 🖼️ Image`, `captcha, circle, delete, think, gay, changemymind, trigger, clyde, petpet, magik, dog, cat, drake, rip, iphonex`, false)
 		.addField(`> <a:chikadance:852764676429185035>  Games`, `akinator, youtubetogether, betrayal, trivia, calculator`, false)
 		.addField(`> <:mm:848450657614037002>  Roleplay`, `kiss, hug, pat, poke, smug, tickle, slap, feed, cuddle, poke, meow, baka, waifu `, false)
 		.addField(`> <a:dance:897022592559484968> Music`, `play, pause, stop, skip, queue, autoplay, loop, volume, resume, lyrics, filter, jumpto`, false)
 		.setColor('#cc338b')
 		.setImage(`https://i.pinimg.com/originals/b6/b4/de/b6b4ded4bd797b093cc9b68aa6fba694.gif`)
-		.setFooter(`To set Custom prefix type: ${prefixesdatabase.prefix}setprefix`, client.user.displayAvatarURL())
+		.setFooter(`Custom Prefixes are removed`, client.user.displayAvatarURL())
 		.setThumbnail(client.user.displayAvatarURL())
 
 	
-		message.channel.send(embed);
+		message.channel.send({embeds:[embed]});
 		
 	}
 
@@ -61,12 +61,12 @@ module.exports.run = async (client, message, args) => {
 					`© ${nowyear} ${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
 				);
 
-			message.channel.send(embed);
+				message.channel.send({embeds:[embed]});
 		} else {
 			const embeds = new Discord.MessageEmbed()
 				.setDescription(`${emojis.cross} Command is not found!`)
 				.setColor("RED");
- message.channel.send(embeds);
+				message.channel.send({embeds:[embeds]});
 		}
 	}
 };
@@ -74,7 +74,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "help",
 	description: "This command is used for displaying all commands.",
-	usage: "b-help",
+	usage: "f-help",
 	accessableby: "Members",
 	aliases: []
 };

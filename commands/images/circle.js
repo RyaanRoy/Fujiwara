@@ -38,19 +38,19 @@ module.exports.run = async (client, message, args) => {
 						size: 4096
 				  }));
 	} catch (e) {
-		return message.channel.send(usernotfind);
+		return message.channel.send({embeds:[usernotfind]});
 	}
 
 	//	const avatar = message.attachments.array()[0];
 	const image = await canvacord.Canvas.circle(imagetarget);
 	const rainbow = new Discord.MessageAttachment(image, "circle.png");
-	return message.channel.send(rainbow);
+	return message.channel.send({files:[rainbow]});
 };
 
 module.exports.help = {
 	name: "circle",
 	description: "Circle the images or avatar",
-	usage: "b-circle <mentions>(optional)",
+	usage: "f-circle <mentions>(optional)",
 	accessableby: "Member",
 	aliases: []
 };

@@ -25,18 +25,18 @@ exports.run = (client, message, args) => {
 		const embed = new Discord.MessageEmbed().setDescription(
 			`${emojis.cross} **Failed to set user's nickname!`
 		);
-		message.channel.send(embed3);
+		message.channel.send({embeds:[embed3]});
 	}
 	const embed = new Discord.MessageEmbed().setDescription(
 		`${emojis.tick} **Nickname has been set!`
 	);
-	message.channel.send(embed);
+	message.channel.send({embeds:[embed]});
 };
 
 module.exports.help = {
 	name: "rename",
 	description: "This command is used for renaming someone's nickname.",
-	usage: "b-rename <mentions> <nickname>",
+	usage: "f-rename <mentions> <nickname>",
 	accessableby: "Manage Nicknames",
 	aliases: []
 };

@@ -17,8 +17,8 @@ module.exports.run = async (client, message, args) => {
 			.get(message.guild.id)
 			.roles.cache.find(val => val.name === role);
 
-	if (!role) return message.channel.send(missingargs);
-	if (!gRole) return message.channel.send(missingrole);
+	if (!role) return message.channel.send({embeds:[missingargs]});
+	if (!gRole) return message.channel.send({embeds:[missingrole]});
 
 	const status = {
 		false: "No",
@@ -36,13 +36,13 @@ module.exports.run = async (client, message, args) => {
 	//	.addField("Hoisted", status[gRole.hoist], inline)
 	//	.addField("Managed", status[gRole.managed], inline);
 
-	message.channel.send(roleemebed);
+	message.channel.send({embeds:[roleemebed]});
 };
 
 module.exports.help = {
 	name: "roleinfo",
 	description: "This command is used for generating people IN RiP.",
-	usage: "b-roleinfo <roles-ID>",
+	usage: "f-roleinfo <roles-ID>",
 	accessableby: "Member",
 	aliases: []
 };

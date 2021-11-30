@@ -17,13 +17,13 @@ module.exports.run = (client, message, args) => {
 		)
 		.setColor("GREEN");
 
-	return message.channel.send(embed);
+	return message.channel.send({embeds:[embed]});
 };
 
 module.exports.help = {
 	name: "channel",
 	description: "Checking channel status.",
-	usage: "b-channel <channel-mentions>(optional)",
+	usage: "f-channel <channel-mentions>(optional)",
 	accessableby: "Member",
 	aliases: []
 };

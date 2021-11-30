@@ -11,7 +11,7 @@ module.exports.help = {
 	name: "vote",
 	description:
 		"Vote us in https://top.gg/bot/874922249411518484#/vote every 12 hours",
-	usage: "b-vote",
+	usage: "f-vote",
 	accessableby: "Everyone",
 	aliases: []
 };

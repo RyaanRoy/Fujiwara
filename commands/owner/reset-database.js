@@ -31,7 +31,7 @@ exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "reset-data",
 	description: "This command is used for resetting data.",
-	usage: "b-reset-data",
+	usage: "f-reset-data",
 	accessableby: "Bot Owners/Database Manager",
 	aliases: []
 };

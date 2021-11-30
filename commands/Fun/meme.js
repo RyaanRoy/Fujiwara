@@ -13,13 +13,13 @@ module.exports.run = async (client, message, args) => {
     .setImage(meme.image)
     .setFooter(`👍 ${meme.upvotes} || 💬 ${meme.comments}`);
 
-  message.channel.send(embed);
+    message.channel.send({embeds:[embed]});
 };
 
 module.exports.help = {
 	name: "meme",
 	description: "This command is used for generating some cool memes.",
-	usage: "b-meme",
+	usage: "f-meme",
 	accessableby: "Member",
 	aliases: []
 };

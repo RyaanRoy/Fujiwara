@@ -16,11 +16,11 @@ module.exports.run = async (client, message, args) => {
 		)
 		.setColor("RED");
 	if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-		return message.channel.send(embed6).then(m => m.delete({ timeout: 5000 }));
+		return message.channel.send({embeds:[embed6]}).then(m => m.delete({ timeout: 5000 }));
 	}
 	if (!args[0]) {
 		return message.channel
-			.send(missingn)
+			.send({embeds:[missingn]})
 			.then(m => m.delete({ timeout: 7000 }));
 	}
 
@@ -31,7 +31,7 @@ module.exports.run = async (client, message, args) => {
 		);
 
 	if (args[0] > 100 || args[0] <= 0)
-		return message.channel.send(embedgg).then(m => m.delete({ timeout: 5000 }));
+		return message.channel.send({embeds:[embedgg]}).then(m => m.delete({ timeout: 5000 }));
 
 	const embed = new Discord.MessageEmbed()
 		.setColor("GREEN")
@@ -47,7 +47,7 @@ module.exports.run = async (client, message, args) => {
 	try {
 		message.delete();
 		message.channel.bulkDelete(args[0]).then(() => {
-			message.channel.send(kntlembed).then(m => m.delete({ timeout: 4000 }));
+			message.channel.send({embeds:[kntlembed]}).then(m => m.delete({ timeout: 4000 }));
 		});
 	} catch (e) {
 		const embedssss = new Discord.MessageEmbed()
@@ -57,7 +57,7 @@ module.exports.run = async (client, message, args) => {
 
 		message.delete();
 		return message.channel
-			.send(embedssss)
+			.send({embeds:[embedssss]})
 			.then(m => m.delete({ timeout: 7000 }));
 	}
 };
@@ -65,8 +65,8 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "purge",
 	description: "Purge the chat",
-	usage: "b-purge <amount>(1-99)",
-	accessableby: "Manage Message",
+	usage: "f-purge <amount>(1-99)",
+	accessableby: "Manage Messages",
 	aliases: []
 };
 

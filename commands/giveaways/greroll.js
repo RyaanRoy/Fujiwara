@@ -54,7 +54,7 @@ exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "greroll",
 	description: "This command is used for rerolling giveaways.",
-	usage: "b-greroll <giveaway-message-ID>",
+	usage: "f-greroll <giveaway-message-ID>",
 	accessableby: "Manage Messages",
 	aliases: []
 };

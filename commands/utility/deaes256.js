@@ -6,7 +6,7 @@ const decrypt = (text, key) => {
 };
 
 module.exports.run = async (client, message, args) => {
-	// eslinb-disable-line no-unused-vars
+	// eslinf-disable-line no-unused-vars
 	try {
 		if (!args[0])
 			return message.channel.send(
@@ -25,7 +25,7 @@ module.exports.help = {
 	name: "dae256",
 	description:
 		"This command is used for dencrypting your text data with AES256 dencryption",
-	usage: "b-dae256 <encrypted-data>",
+	usage: "f-dae256 <encrypted-data>",
 	accessableby: "Member",
 	aliases: []
 };

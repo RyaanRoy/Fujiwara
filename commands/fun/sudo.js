@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
         .setTitle("**Bot Permission Error!**")
         .setDescription("**I don't have permission to create Webhook! Require: MANAGE_WEBHOOKS**")
 
-     if (!message.guild.me.hasPermission("MANAGE_WEBHOOKS")) return message.channel.send(lockPermErrban)
+     if (!message.guild.me.hasPermission("MANAGE_WEBHOOKS")) return message.channel.send({embeds:[lockPermErrban]})
      
     
     message.delete();
@@ -30,7 +30,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "sudo",
 	description: "This command is used for sudoing as someone",
-	usage: "b-sudo<user-mention> <message>",
+	usage: "f-sudo<user-mention> <message>",
 	accessableby: "Member",
 	aliases: []
 };

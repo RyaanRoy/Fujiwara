@@ -12,13 +12,13 @@ module.exports.run = async (client, message, args) => {
     );
     let Image = await res.buffer();
     const drakememe = new Discord.MessageAttachment(Image);
-    message.channel.send(drakememe);
+    message.channel.send({embeds:[drakememe]});
 };
 
 module.exports.help = {
 	name: "drake",
 	description: "This command is used to hug someone",
-	usage: "b-hug <text_1>, <text_2>",
+	usage: "f-hug <text_1>, <text_2>",
 	accessableby: "Members",
 	aliases: []
 };

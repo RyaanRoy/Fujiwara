@@ -26,13 +26,13 @@ module.exports.run = async (client, message, args) => {
 		)
 		.setImage(body.url)
 		.setFooter("©Fujiwara");
-	message.channel.send({ embed });
+		message.channel.send({embeds:[embed]});
 };
 
 module.exports.help = {
 	name: "poke",
 	description: "This command is used for poke someone",
-	usage: "b-poke <mention>",
+	usage: "f-poke <mention>",
 	accessableby: "Members",
 	aliases: []
 };

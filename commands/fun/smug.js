@@ -8,13 +8,13 @@ module.exports.run = async (client, message, args) => {
 		.setColor("#ff9900")
 		.setImage(body.url)
 		.setFooter("©Fujiwara");
-	message.channel.send({ embed });
+		message.channel.send({embeds:[embed]});
 };
 
 module.exports.help = {
 	name: "smug",
 	description: "This command is used for generating smug.",
-	usage: "b-smug",
+	usage: "f-smug",
 	accessableby: "Member",
 	aliases: []
 };

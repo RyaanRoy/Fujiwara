@@ -61,7 +61,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "gend",
 	description: "This command is used for endding the currents giveaway section",
-	usage: "b-gend <giveaway-message-id>",
+	usage: "f-gend <giveaway-message-id>",
 	accessableby: "Manage Messages",
 	aliases: []
 };

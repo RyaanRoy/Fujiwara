@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const superagent = require("superagent");
 module.exports.run = async (client, message, args) => {
-	// eslinb-disable-line no-unused-vars
+	// eslinf-disable-line no-unused-vars
 	try {
 		const member = message.mentions.members.first();
         const { body } = await superagent.get("https://nekos.life/api/v2/img/feed");
@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "feed",
 	description: "This command is used for generating pat.",
-	usage: "b-feed <mentions>",
+	usage: "f-feed <mentions>",
 	accessableby: "Members",
 	aliases: []
 };

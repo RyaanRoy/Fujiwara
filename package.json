@@ -12,7 +12,7 @@
 	"url": "https://draconian.koolisw.tk/",
 	"engines": {
 		"node": "16.6.x"
-	  },
+	},
 	"repository": {
 		"url": "git+https://github.com/RealKoolisw/Draconian.git"
 	},
@@ -60,6 +60,7 @@
 		"request": "^2.88.2",
 		"roblox-js": "^4.0.4",
 		"short-number": "^1.0.7",
+		"simply-djs": "^2.2.0",
 		"superagent": "^6.1.0",
 		"tweetnacl": "^1.0.3",
 		"twemoji-parser": "^13.1.0",

@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
 		.addField(`> <a:purplestar:817788092768976896> Fun`, `8ball, ship, animesearch, aes256, deaes256, meme, sudo`, false)
 		.addField(`> <a:dev:817788400471638016> Utility`, `enlarge, reminder, maps, wikipedia, urban, google, roblox, serverinfo, serverav, avatar, whois, roleinfo, channel, embed(use ;), imageembed, reverse, setafk, snipe, stats, timer, translate, weather, youtube-search`, false)
 		.addField(`> 🖼️ Image`, `captcha, circle, delete, think, gay, changemymind, trigger, clyde, petpet, magik, dog, cat, drake, rip, iphonex`, false)
-		.addField(`> <a:chikadance:852764676429185035>  Games`, `akinator, youtubetogether, betrayal, trivia, calculator`, false)
+		.addField(`> <a:chikadance:852764676429185035>  Games`, `akinator, tictactoe, youtubetogether, betrayal, trivia, calculator`, false)
 		.addField(`> <:mm:848450657614037002>  Roleplay`, `kiss, hug, pat, poke, smug, tickle, slap, feed, cuddle, poke, meow, baka, waifu `, false)
 		.addField(`> <a:dance:897022592559484968> Music`, `play, pause, stop, skip, queue, autoplay, loop, volume, resume, lyrics, filter, jumpto`, false)
 		.setColor('#cc338b')

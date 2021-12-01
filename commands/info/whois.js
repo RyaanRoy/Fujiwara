@@ -51,7 +51,7 @@ module.exports.run = async (bot, message, args) => {
 	.addField(`Overview`, `Badges: \`${flags[mention.user.flags.toArray().join(", ")]}\`\nIs Bot: \`${bot[mention.user.bot]}\``,true)
 	.addField(`Server Related Info`, `Roles: <@&${mention._roles.join(">  <@&")}>\nNickname: \`${nick}\``)
 	.addField(`Key Permissions`,`${finalPermissions.join(', ')}`)
-	.addField(`Misc Info`, `Acc Created on: \n\`${moment(mention.user.createdAt).format("dddd, MMMM Do YYYY, h:mm:ss A")}\` \nJoined This Server on: \n\`${moment(mention.joinedAt).format("dddd, MMMM Do YYYY, h:mm:ss A")}\``)
+	.addField(`Other Information`, `Acc Created on: \n\`${moment(mention.user.createdAt).format("dddd, MMMM Do YYYY, h:mm:ss A")}\` \nJoined This Server on: \n\`${moment(mention.joinedAt).format("dddd, MMMM Do YYYY, h:mm:ss A")}\``)
 	.setThumbnail(mention.user.avatarURL())
 	.setFooter(`ID: ${mention.user.id}`, mention.user.avatarURL())
 	.setTimestamp()

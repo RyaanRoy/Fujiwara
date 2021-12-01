@@ -80,8 +80,8 @@ module.exports.run = async (client, message, args) => {
       .setThumbnail(message.guild.iconURL())
       .setFooter(`ID: ${message.guild.id}`, message.guild.iconURL())
       .setColor("#cc338b")
-      .setTimestamp()
-	  .setImage(message.guild.iconURL({ dynamic: true, size: 2048 }));
+      .setTimestamp();
+	 
     message.channel.send({ embeds: [serverembed] });
 };
 

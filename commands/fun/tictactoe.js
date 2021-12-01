@@ -1,7 +1,8 @@
 const Discord = require("discord.js");
-const simplydjs = require("simply-djs")
+const _ttt = require('discord.tictactoegame');
+const ttt = new _ttt();
 module.exports.run = async (client, message, args) => {
-	simplydjs.tictactoe(message)
+	ttt.duo(message,player2);
 };
 
 module.exports.help = {

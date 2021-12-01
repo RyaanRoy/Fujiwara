@@ -1,14 +1,14 @@
 const Discord = require("discord.js");
 const superagent = require("superagent");
 module.exports.run = async (client, message, args) => {
-	// eslinf-disable-line no-unused-vars
+	
 	try {
 		const member = message.mentions.members.first();
         const { body } = await superagent.get("https://nekos.life/api/v2/img/cuddle");
 
 				if (member) {
 					const embed = new Discord.MessageEmbed()
-						.setTitle(`${message.author.username} cuddle ${member.user.username}`)
+						.setTitle(`${message.author.username} cuddles ${member.user.username}`)
 						.setColor('#cc338b')
 						.setDescription(
 							`${message.author.username} cuddled ${member.user.username}!`

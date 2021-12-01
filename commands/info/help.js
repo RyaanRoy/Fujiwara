@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
 	if (!helpArgs[0]) {
 		let embed = new Discord.MessageEmbed()
 		.setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
-		.setTitle(`> Help with commands`)
+		.setTitle(`> Help with all commands`)
 		.setDescription(
 			`Yoo! **My prefix is:** \`${prefixesdatabase.prefix}\` \nClick [here](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.\nTo chat with me simply mention or reply to me and ask a question.\n📱**Basic**: help, ping, uptime, vote\nTo report bugs, simply type ${prefixesdatabase.prefix}bugreport and describe the issue\nTo get more info about a command type ${prefixesdatabase.prefix}help <command>`
 		)

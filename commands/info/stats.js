@@ -26,7 +26,7 @@ module.exports.run = async (client, message) => {
 		.setColor(message.guild.me.displayHexColor || client.color)
 		.addField("General", 
 		  `**❯ Client :** ${client.user.tag}
-		  **❯ Commands Total :** ${client.commands.size}
+		  **❯ Commands Total :** ${client.commands.size+12}
 		  **❯ Server :** ${client.guilds.cache.size.toLocaleString()} Servers
 		  **❯ Users :** ${client.guilds.cache
 			.reduce((a, b) => a + b.memberCount, 0)

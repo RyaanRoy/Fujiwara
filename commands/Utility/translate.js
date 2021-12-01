@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
     .addField("Query", query)
     .addField("Result", translated.text)
     .addField("Translated to", "English")
-    .setColor("PINK")
+    .setColor("#cc338b")
     .setFooter(message.author.tag)
     .setTimestamp();
   message.reply(embed);

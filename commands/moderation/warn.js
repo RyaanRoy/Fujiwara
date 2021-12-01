@@ -29,13 +29,13 @@ module.exports.run = async (client, message, args) => {
 	if (
 		!message.guild
 			.member(client.user)
-			.hasPermission(["MANAGE_ROLES", "KICK_MEMBERS", "BAN_MEMBERS"])
+			.permissions.has(["MANAGE_ROLES", "KICK_MEMBERS", "BAN_MEMBERS"])
 	) {
 		return message.channel
 			.send({embeds:[notice3]})
 			.then(m => m.delete({ timeout: 15000 }));
 	}
-	if (!message.member.hasPermission("KICK_MEMBERS")) {
+	if (!message.member.permissions.has("KICK_MEMBERS")) {
 		return message.channel
 			.send({embeds:[notice1]})
 			.then(m => m.delete({ timeout: 15000 }));

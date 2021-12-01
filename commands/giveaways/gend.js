@@ -3,7 +3,7 @@ const ms = require("ms");
 module.exports.run = async (client, message, args) => {
 	// If the member doesn't have enough permissions
 	if (
-		!message.member.hasPermission("MANAGE_MESSAGES") &&
+		!message.member.permissions.has("MANAGE_MESSAGES") &&
 		!message.member.roles.cache.some(r => r.name === "Giveaways")
 	) {
 		return message.channel.send(

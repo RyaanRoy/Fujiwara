@@ -3,7 +3,7 @@ const ms = require("ms");
 module.exports.run = async (client, message, args) => {
 	// If the member doesn't have enough permissions
 	if (
-		!message.member.hasPermission("MANAGE_MESSAGES")
+		!message.member.permissions.has("MANAGE_MESSAGES")
 	) {
 		return message.channel.send(
 			":x: You need to have the manage messages permissions to start giveaways."

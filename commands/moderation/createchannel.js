@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
 			"<:cross1:747728200691482746> **I don't have permission to manage channel!**"
 		)
 		.setColor("RED");
-	if (!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) {
+	if (!message.guild.member(client.user).permissions.has("MANAGE_CHANNELS")) {
 		return message.channel
 			.send({embeds:[notice3]})
 			.then(msg => msg.delete({ timeout: 5000 }));
@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
 				`:no_entry_sign: ${message.author.username}, Missing Permission`
 			)
 			.setColor("RED");
-		if (!message.member.hasPermission("MANAGE_CHANNELS"))
+		if (!message.member.permissions.has("MANAGE_CHANNELS"))
 			return message.channel.send({embeds:[embed6]}).then(msg => msg.delete(5000));
 		if (!args[1]) return message.reply("You need to input the channel type!");
 		if (!args[0]) return message.reply("You need to input the channel name!");

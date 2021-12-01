@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 			`${emojis.cross} Use: **\`${prefixesdatabase.prefix}purge <1 - 100>\`**`
 		)
 		.setColor("RED");
-	if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+	if (!message.member.permissions.has("MANAGE_MESSAGES")) {
 		return message.channel.send({embeds:[embed6]}).then(m => m.delete({ timeout: 5000 }));
 	}
 	if (!args[0]) {

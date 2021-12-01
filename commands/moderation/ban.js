@@ -6,7 +6,7 @@ module.exports.run = async (client, msg, args) => {
 	const notice3 = new Discord.MessageEmbed()
 		.setDescription(`${emojis.cross} I don't have permission to ban people!`)
 		.setColor("RED");
-	if (!msg.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
+	if (!msg.guild.member(client.user).permissions.has("BAN_MEMBERS")) {
 		return msg.channel.send(notice3).then(msg => msg.delete({ timeout: 5000 }));
 	}
 
@@ -29,7 +29,7 @@ module.exports.run = async (client, msg, args) => {
 		.setImage(`https://cdn.discordapp.com/attachments/864802141365731329/892687443772456980/ezgif-1-e947c3157d22.gif`)
 		.setFooter(`${msg.author.username} tries to ban, but fails!`)
 		.setColor("#FFFF00");
-	if (!msg.member.hasPermission("BAN_MEMBERS")) {
+	if (!msg.member.permissions.has("BAN_MEMBERS")) {
 		return msg.channel
 			.send(mmqembed)
 			

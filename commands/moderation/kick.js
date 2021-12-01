@@ -5,7 +5,7 @@ module.exports.run = async (client, msg, args) => {
 	const notice3 = new Discord.MessageEmbed()
 		.setDescription(`${emojis.cross} I don't have permission to kick people!`)
 		.setColor("RED");
-	if (!msg.guild.member(client.user).hasPermission("KICK_MEMBERS"))
+	if (!msg.guild.member(client.user).permissions.has("KICK_MEMBERS"))
 		return msg.channel.send(notice3).then(m => m.delete({ timeout: 5000 }));
 	const kickusermentioned = msg.mentions.users.first();
 	const kickTaged =
@@ -21,7 +21,7 @@ module.exports.run = async (client, msg, args) => {
 			`${emojis.cross} ${msg.author.username}, Missing Permission`
 		)
 		.setColor("RED");
-	if (!msg.member.hasPermission("KICK_MEMBERS"))
+	if (!msg.member.permissions.has("KICK_MEMBERS"))
 		return msg.channel.send(embed6).then(m => m.delete({ timeout: 5000 }));
 	const mmqembed = new Discord.MessageEmbed()
 		.setTitle("Command: f-kick")

@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
 	const notice3 = new Discord.MessageEmbed()
 		.setDescription(`${emojis.cross} I don't have permission to mute people!`)
 		.setColor("RED");
-	if (!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) {
+	if (!message.guild.member(client.user).permissions.has("MANAGE_ROLES")) {
 		return message.channel.send({embeds:[notice3]}).then(m => m.delete({ timeout: 5000 }));
 	}
 
@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args) => {
 			`${emojis.cross} ${message.author.username}, Missing Permission`
 		)
 		.setColor("RED");
-	if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+	if (!message.member.permissions.has("MANAGE_MESSAGES")) {
 		return message.channel.send({embeds:[embed6]}).then(m => m.delete({ timeout: 5000 }));
 	}
 	const embed50 = new Discord.MessageEmbed()

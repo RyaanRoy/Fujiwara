@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
 		)
 		.setColor(0xff0000);
 
-	if (!message.member.hasPermission("MANAGE_MESSAGES"))
+	if (!message.member.permissions.has("MANAGE_MESSAGES"))
 		return message.channel.send({embeds:[noPerms]}).then(msg => msg.delete(5000));
 
 	if (!shoutinfo) {

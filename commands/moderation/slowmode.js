@@ -25,7 +25,7 @@ exports.run = (client, message, args) => {
 		)
 		.setColor("RED");
 
-	if (!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) {
+	if (!message.guild.member(client.user).permissions.has("MANAGE_CHANNELS")) {
 		return message.channel
 			.send({embeds:[notice3]})
 			.then(msg => msg.delete({ timeout: 5000 }));
@@ -36,7 +36,7 @@ exports.run = (client, message, args) => {
 			`${emojis.cross} ${message.author.username}, Missing Permission`
 		)
 		.setColor("#FFFF00");
-	if (!message.member.hasPermission("MANAGE_CHANNELS")) {
+	if (!message.member.permissions.has("MANAGE_CHANNELS")) {
 		return message.channel
 			.send({embeds:[mmsssqembed]})
 			.then(msg => msg.delete({ timeout: 5000 }));

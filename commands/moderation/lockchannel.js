@@ -10,7 +10,7 @@ module.exports.run = (client, message, args) => {
 			`${emojis.cross} I don't have permission to manage channel!`
 		)
 		.setColor("RED");
-	if (!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) {
+	if (!message.guild.member(client.user).permissions.has("MANAGE_CHANNELS")) {
 		return message.channel
 			.send({embeds:[notice3]})
 			.then(msg => msg.delete({ timeout: 5000 }));
@@ -23,7 +23,7 @@ module.exports.run = (client, message, args) => {
 			`${emojis.cross} ${message.author.username}, Missing Permission`
 		)
 		.setColor("RED");
-	if (!message.member.hasPermission("MANAGE_CHANNELS")) {
+	if (!message.member.permissions.has("MANAGE_CHANNELS")) {
 		return message.channel
 			.send({embeds:[mmqembed]})
 			.then(msg => msg.delete({ timeout: 5000 }));

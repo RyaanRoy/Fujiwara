@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
 			"<:cross1:747728200691482746> **I don't have permission to create emoji!**"
 		)
 		.setColor("RED");
-	if (!message.guild.member(client.user).hasPermission("MANAGE_EMOJIS"))
+	if (!message.guild.member(client.user).permissions.has("MANAGE_EMOJIS"))
 		return message.channel
 			.send({embeds:[notice3]})
 			.then(msg => msg.delete({ timeout: 5000 }));
@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
 				`:no_entry_sign: ${message.author.username}, Missing Permission`
 			)
 			.setColor("RED");
-		if (!message.member.hasPermission("MANAGE_EMOJIS"))
+		if (!message.member.permissions.has("MANAGE_EMOJIS"))
 			return message.channel.send({embeds:[embed6]}).then(msg => msg.delete(5000));
 		const emoji = message.attachments.array()[0] || args[0];
 

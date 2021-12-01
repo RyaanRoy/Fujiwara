@@ -2,87 +2,66 @@ const Discord = require("discord.js");
 const moment = require("moment");
 
 module.exports.run = async (bot, message, args) => {
-	const trufal = {
-		true: "Robot",
-		false: "Human"
-	};
-
-	// let user;
-
-	const usernotfind = new Discord.MessageEmbed()
-		.setDescription(`${emojis.cross} User is not found!`)
-		.setColor("RED");
-
-	const rankuser = message.mentions.users.first();
-	let user;
-	try {
-		user =
-			rankuser ||
-			(message.mentions.users.first()
-				? message.mentions.users.first()
-				: args[0]
-				? args[0].length == 18
-					? message.guild.members.cache.get(args[0]).user
-					: message.guild.members.cache.find(
-							r =>
-								r.user.username.toLowerCase() ===
-								args.join(" ").toLocaleLowerCase()
-					  ).user
-				: message.author);
-	} catch (e) {
-		return message.channel.send({embeds:[usernotfind]});
+	const permissions = {
+		"ADMINISTRATOR": "Administrator",
+		"MANAGE_GUILD": "Manage Server",
+		"MANAGE_ROLES": "Manage Roles",
+		"MANAGE_CHANNELS": "Manage Channels",
+		"KICK_MEMBERS": "Kick Members",
+		"BAN_MEMBERS": "Ban Members",
+		"MANAGE_NICKNAMES": "Manage Nicknames",
+		"MANAGE_EMOJIS": "Manage Emojis",
+		"MANAGE_WEBHOOKS": "Manage Webhooks",
+		"MANAGE_MESSAGES": "Manage Messages",
+		"MENTION_EVERYONE": "Mention Everyone"
 	}
+	const mention = message.mentions.members.first() || message.member;
+	const nick = mention.nickname === null ? "None" : mention.nickname;
+	const roles = mention.roles.cache.get === "" ? "None" : mention.roles.cache.get;
+	const usericon = mention.user.avatarURL;
+	const mentionPermissions = mention.permissions.toArray() === null ? "None" : mention.permissions.toArray();
+	const finalPermissions = [];
+	for (const permission in permissions) {
+		if (mentionPermissions.includes(permission)) finalPermissions.push(`${permissions[permission]}`);
+		else;
+	}
+	var flags = {
+		"": "None",
+		"DISCORD_EMPLOYEE": "Discord Employee",
+		"DISCORD_PARTNER": "Discord Partner",
+		"BUGHUNTER_LEVEL_1": "Bug Hunter (Level 1)",
+		"BUGHUNTER_LEVEL_2": "Bug Hunter (Level 2)",
+		"HYPESQUAD_EVENTS": "Hypesquad Events",
+		"HOUSE_BRILLIANCE": "HypeSquad Brilliance",
+		"HOUSE_BRAVERY": "HypeSquad Bravery",
+		"HOUSE_BALANCE": "HypeSquad Balance",
+		"EARLY_SUPPORTER": "Early Supporter",
+		"TEAM_USER": "Team User",
+		"VERIFIED_BOT": "Verified Bot",
+		"EARLY_VERIFIED_DEVELOPER": "Early Verified Bot Developer"
+	};
+	var bot = {
+		"true": "Yes, The User is a Bot",
+		"false": "No, The User is a Human"
+	};
+	const userlol = new Discord.MessageEmbed()
+	.setAuthor(`User Info`, mention.user.avatarURL())
+	.setThumbnail(usericon)
+	.addField(`General Info`, `Name: \`${mention.user.username}\` \nTag: \`${mention.user.discriminator}\` \nNickname: \`${nick}\``)
+	.addField(`Overview`, `Badges: \`${flags[mention.user.flags.toArray().join(", ")]}\`\nIs Bot: \`${bot[mention.user.bot]}\``)
+	.addField(`Server Relating Info`, `Roles: <@&${mention._roles.join(">  <@&")}> \nKey Permissions: \`${finalPermissions.join(', ')}\``)
+	.addField(`Misc Info`, `Acc Created on: \n\`${moment(mention.user.createdAt).format("dddd, MMMM Do YYYY, h:mm:ss A")}\` \nJoined This Server on: \n\`${moment(mention.joinedAt).format("dddd, MMMM Do YYYY, h:mm:ss A")}\``)
+	.setThumbnail(mention.user.avatarURL())
+	.setFooter(`ID: ${mention.user.id}`, mention.user.avatarURL())
+	.setTimestamp()
+	.setColor("RANDOM");
+	message.channel.send({ embeds: [userlol] })
 
-	let userguild = message.guild.member(user);
-	const member = message.guild.member(user);
-	const roles = member.roles.cache.map(r => `${r}`).join(", ");
-	const serveddrembed = new Discord.MessageEmbed()
-		.setDescription("<a:loading:806686528549814344> Fetching Userinfo...")
-		.setColor("RED");
-
-		message.channel.send({embeds:[serveddrembed]}).then(async message => {
-		const embed = new Discord.MessageEmbed()
-			.setColor(user.displayHexColor)
-			.setAuthor(
-				`${user.tag} User Information`,
-				user.displayAvatarURL({ dynamic: true, format: "png", size: 4096 })
-			)
-			.setDescription(
-				`**Name: **${user.tag}\n**ID: **${
-					user.id
-				}\n**Status: **${user.presence.status.toUpperCase()}\n**• Game: **${
-					user.presence.game
-						? user.presence.game.name
-						: "I do not see him/her playing anything!"
-				}\n**Account Type: **${trufal[user.bot]}\n**Joined At: **${moment(
-					userguild.joinedAt
-				).format("DD-MM-YYYY")}\n**Created at: ** ${moment(
-					user.createdAt
-				).format(
-					"DD-MM-YYYY"
-				)}\n**Avatar**: [Click here](${user.displayAvatarURL({
-					dynamic: true,
-					format: "png",
-					size: 4096
-				})})\n**Roles: **${roles}`
-			)
-
-			.setThumbnail(
-				`${user.displayAvatarURL({
-					dynamic: true,
-					format: "png",
-					size: 4096
-				})}`
-			)
-			.setTimestamp();
-
-		await message.edit({embeds:[embed]});
-	});
 };
 
 module.exports.help = {
 	name: "whois",
-	description: "Check who is him/her",
+	description: "Checks User Info",
 	usage: "f-whois <mention or keep blank>",
 	accessableby: "Members",
 	aliases: []

@@ -14,16 +14,15 @@ module.exports.run = async (client, message, args) => {
     )
     .addField(`<a:duckdance:859068191871598592>   Support Server`, `To join the support server: [Invite to support server](https://discord.gg/qXDyWEesW6)`, false)
     .addField(`Annoying Bugs`,`See a bug? Use f-bugreport and describe the bug. It will be reviewed by the bot dev immediately!`, false)
-    .addField(`Command Sections`,`
-     <:arrow:904250175822889010>Moderation
+    .addField(`Command Sections`,
+    `<:arrow:904250175822889010>Moderation
     <:arrow:904250175822889010>Fun
     <:arrow:904250175822889010>Utility
     <:arrow:904250175822889010>Giveaways
     <:arrow:904250175822889010>Image Generation
     <:arrow:904250175822889010>Games
     <:arrow:904250175822889010>Roleplay
-    <:arrow:904250175822889010>Music
-    `)
+    <:arrow:904250175822889010>Music`)
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp()
@@ -33,8 +32,8 @@ module.exports.run = async (client, message, args) => {
     let embed2 = new Discord.MessageEmbed()
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **Moderation Commands** `)
-    .addField(`Total Moderation Commands: 15`,`
-     <:arrow:904250175822889010>Purge
+    .addField(`Total Moderation Commands: 15`,
+    `<:arrow:904250175822889010>Purge
     <:arrow:904250175822889010>Mute
     <:arrow:904250175822889010>Unmute
     <:arrow:904250175822889010>Kick

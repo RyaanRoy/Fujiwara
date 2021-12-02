@@ -68,7 +68,7 @@ module.exports.run = async (client, message, args) => {
       skipcolor: "SUCCESS",
     
       skipBtn: true,
-      delBtn: true
+      delBtn: false
     });
 
 };

@@ -15,14 +15,14 @@ module.exports.run = async (client, message, args) => {
     .addField(`<a:duckdance:859068191871598592>   Support Server`, `To join the support server: [Invite to support server](https://discord.gg/qXDyWEesW6)`, false)
     .addField(`🐛   Annoying Bugs`,`See a bug? Use f-bugreport and describe the bug. It will be reviewed by the bot dev immediately!`, false)
     .addField(`Command Sections`,
-    `<:arrow:904250175822889010>Moderation
-<:arrow:904250175822889010>Fun
-<:arrow:904250175822889010>Utility
-<:arrow:904250175822889010>Giveaways
-<:arrow:904250175822889010>Image Generation
-<:arrow:904250175822889010>Games
-<:arrow:904250175822889010>Roleplay
-<:arrow:904250175822889010>Music`)
+    `<a:852804232453160990:915861525263183922>Moderation
+<a:852804232453160990:915861525263183922>Fun
+<a:852804232453160990:915861525263183922>Utility
+<a:852804232453160990:915861525263183922>Giveaways
+<a:852804232453160990:915861525263183922>Image Generation
+<a:852804232453160990:915861525263183922>Games
+<a:852804232453160990:915861525263183922>Roleplay
+<a:852804232453160990:915861525263183922>Music`)
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp()

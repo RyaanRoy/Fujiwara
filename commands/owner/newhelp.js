@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp()
     .setImage(`https://i.pinimg.com/originals/b6/b4/de/b6b4ded4bd797b093cc9b68aa6fba694.gif`)
-    .setFooter(`For more info about each command, use f-help followed by command-name`, client.user.displayAvatarURL());
+    .setFooter(`Custom Prefixes have been removed`, client.user.displayAvatarURL());
     let embed2 = new Discord.MessageEmbed()
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(`**Moderation Commands**`)

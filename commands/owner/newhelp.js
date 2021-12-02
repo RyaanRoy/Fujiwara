@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(`**Help with all commands**`)
     .setDescription(
-        `Yoo! **My prefix is:** f- \nClick [here](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.\nTo chat with me simply mention or reply to me and ask a question.\n📱**Basic**: help, ping, uptime, vote\nTo report bugs, simply type ${prefixesdatabase.prefix}bugreport and describe the issue\nTo get more info about a command type ${prefixesdatabase.prefix}help <command>`
+        `Yoo! **My prefix is:** f- \nClick [here](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.\nTo chat with me simply mention or reply to me and ask a question.\n📱**Basic**: help, ping, uptime, vote\nTo report bugs, simply type f-bugreport and describe the issue\nTo get more info about a command type f-help <command>`
     )
     .addField(`<a:duckdance:859068191871598592>   Support Server`, `To join the support server: [Invite to support server](https://discord.gg/qXDyWEesW6)`, false)
     .addField(`Annoying Bugs`,`See a bug? Use f-bugreport and describe the bug. It will be reviewed by the bot dev immediately!`, false)
@@ -29,6 +29,7 @@ module.exports.run = async (client, message, args) => {
     .setTimestamp()
     .setImage(`https://i.pinimg.com/originals/b6/b4/de/b6b4ded4bd797b093cc9b68aa6fba694.gif`)
     .setFooter(`Custom Prefixes have been removed`, client.user.displayAvatarURL());
+    
     let embed2 = new Discord.MessageEmbed()
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(`**Moderation Commands**`)

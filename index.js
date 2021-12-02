@@ -4,7 +4,7 @@ const Enmap = require("enmap");
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
 const { Util }= require('discord.js')
-const simplydjs = require("simply-djs");
+
 
 require('discord-reply');
 const client = new Discord.Client({
@@ -150,8 +150,5 @@ client.on("messageCreate", async message => {
 	  }
 	);
 
-	client.on("messageCreate", async message => {
-		simplydjs.nqn(message);
-	}
-  );
+
 

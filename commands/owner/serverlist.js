@@ -19,10 +19,10 @@ module.exports.run = async (client, message, args) => {
         data = "[No server found]";
       }
     } catch (err) {
-      const errorlogs = client.channels.cache.get(ERROR_LOGS_CHANNEL);
+      const errorlogs = client.channels.cache.get("895548282468716595");
 
       message.channel.send(
-        `Whoops, We got a error right now! This error has been reported to Support center!`
+        `We got a error right now! This error has been reported to the bot devs!`
       );
 
       errorlogs.send(`Error on bs commands!\n\nError:\n\n ${err}`);

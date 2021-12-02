@@ -52,7 +52,7 @@ module.exports.run = async (bot, message, args) => {
 	.addField(`Server Related Info`, `Roles: <@&${mention._roles.join(">  <@&")}>\nNickname: \`${nick}\``)
 	.addField(`Key Permissions`,`${finalPermissions.join(', ')}`)
 	.addField(`Other Information`, `Acc Created on: \n\`${moment(mention.user.createdAt).format("dddd, MMMM Do YYYY, h:mm:ss A")}\` \nJoined This Server on: \n\`${moment(mention.joinedAt).format("dddd, MMMM Do YYYY, h:mm:ss A")}\``)
-	.setThumbnail(mention.user.avatarURL({ dynamic: true, format: "jpg"}))
+	.setThumbnail(mention.user.avatarURL({ dynamic: true, format: "webp"}))
 	.setFooter(`ID: ${mention.user.id}`, mention.user.avatarURL())
 	.setTimestamp()
 	.setColor("#cc338b");

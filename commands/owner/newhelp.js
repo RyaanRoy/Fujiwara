@@ -57,7 +57,20 @@ module.exports.run = async (client, message, args) => {
     
 
     
-    simplydjs.embedPages(client, message, pages)
+    simplydjs.embedPages(client, message, pages, {
+      firstEmoji: "<a:left_arrow:882976561345736764>",
+      backEmoji: "<a:left:860483547251867671>",
+      delEmoji: "<:blurplecross:859068750589460533>",
+      forwardEmoji: "<a:right:860483602172739604>",
+      lastEmoji: "<a:right_arrow:882976449085181952>",
+    
+      btncolor: "PRIMARY",
+      delcolor: "DANGER",
+      skipcolor: "PRIMARY",
+    
+      skipBtn: true,
+      delBtn: true
+    });
 
 };
 

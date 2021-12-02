@@ -4,8 +4,8 @@ const Enmap = require("enmap");
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
 const { Util }= require('discord.js')
-const { SoundCloudPlugin } = require('@distube/soundcloud')
-const { SpotifyPlugin } = require('@distube/spotify')
+
+
 require('discord-reply');
 const client = new Discord.Client({
 	partials: ["MESSAGE", "USER", "REACTION"],
@@ -18,7 +18,7 @@ const client = new Discord.Client({
 });
 
 
-const DisTube = require("distube");
+
 
 client.config = config;
 global.client = client;
@@ -125,12 +125,13 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 	}
 });
 client.on("messageCreate", async message => {
-    try {
+    
 		  if(message.author.bot) return;
 		  if(message.content.includes("@everyone")){return}
 		  if(message.content.includes("@here")){return}
 		  if (message.mentions.has(client.user.id) && !message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))){
 			message.channel.sendTyping();
+			try {
 			fetch(
 				`http://api.brainshop.ai/get?bid=160117&key=AmxzVOo74jyHpdxp&uid=${message.author.id}&msg=${encodeURIComponent(message.content)}`
 		)
@@ -141,10 +142,11 @@ client.on("messageCreate", async message => {
 				  message.reply(body.cnt);
 				  
 				});
+			}catch(error){return}
 		  }
 		
 	  
-	  }catch(error){return}
+	  
 	  }
 	);
 

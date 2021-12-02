@@ -65,7 +65,24 @@ module.exports.run = async (client, message, args) => {
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp();
-    let pages = [embed1, embed2, embed3]; 
+
+    let embed4 = new Discord.MessageEmbed()
+    .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
+    .setTitle(` **Fun Commands** `)
+    .addField(`Total Funny Commands: 7`,
+    `<:arrow:904250175822889010>8ball
+<:arrow:904250175822889010>Ship
+<:arrow:904250175822889010>AnimeSearch
+<:arrow:904250175822889010>Aes256
+<:arrow:904250175822889010>Deaes256
+<:arrow:904250175822889010>Meme
+<:arrow:904250175822889010>Sudo
+
+`)
+    .setColor(`#cc338b`)
+    .setThumbnail(client.user.displayAvatarURL())
+    .setTimestamp();
+    let pages = [embed1, embed2, embed3, embed4]; 
     
 
     

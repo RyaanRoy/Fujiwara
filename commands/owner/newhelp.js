@@ -172,7 +172,7 @@ module.exports.run = async (client, message, args) => {
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp();
-    let pages = [embed1, embed2, embed3, embed4, embed5, embed6, embed7, embed8]; 
+    let pages = [embed1,embed2, embed3, embed4, embed5, embed6, embed7, embed8]; 
     
 
     

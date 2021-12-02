@@ -96,7 +96,7 @@ module.exports.run = async (client, message, args) => {
       delcolor: "DANGER",
       skipcolor: "SUCCESS",
       pgCount: true,
-      timeout: 30000,
+      timeout: 300000,
       skipBtn: true,
       delBtn: false
     });

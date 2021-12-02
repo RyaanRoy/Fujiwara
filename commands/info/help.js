@@ -8,10 +8,10 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(`**Help with all commands**`)
     .setDescription(
-        `Yoo! **My prefix is:** f- \nClick [here](https://dsc.gg/fujiwara-recommended) to invite me to your server.\nTo chat with me simply mention or reply to me and ask a question.\n📱**Basic**: help, ping, uptime, vote\n\nTo get more info about a command type f-help <command>`
+        `Yoo! **My prefix is:** f- \nClick [here](https://dsc.gg/fujiwara-recommended) to invite me to your server.\nTo chat with me simply mention or reply to me and ask a question.\n📱**Basic**: help, ping, uptime, vote\nTo get more info about a command type f-help <command>`
     )
-    .addField(`<a:duckdance:859068191871598592>   Support Server`, `To join the support server: [Invite to support server](https://discord.gg/qXDyWEesW6)`,true)
-    .addField(`🐛   Annoying Bugs`,`See a bug? Use f-bugreport and describe the bug. It will be reviewed by the bot dev immediately!`, true)
+    .addField(`<a:duckdance:859068191871598592>   Support Server`, `To join the support server: [Invite to support server](https://discord.gg/qXDyWEesW6)`,false)
+    .addField(`🐛   Annoying Bugs`,`See a bug? Use f-bugreport and describe the bug. It will be reviewed by the bot dev immediately!`, false)
     .addField(`Command Sections`,
     `<:arrow:904250175822889010> Moderation
 <:arrow:904250175822889010> Fun

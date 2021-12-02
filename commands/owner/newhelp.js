@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args) => {
     
     let embed2 = new Discord.MessageEmbed()
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
-    .setTitle(`**Moderation Commands**`)
+    .setTitle(` **Moderation Commands** `)
     .addField(`Total Moderation Commands: 15`,`
     <:arrow:904250175822889010>Purge
     <:arrow:904250175822889010>Mute

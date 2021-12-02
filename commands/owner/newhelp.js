@@ -81,7 +81,98 @@ module.exports.run = async (client, message, args) => {
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp();
-    let pages = [embed1, embed2, embed3, embed4]; 
+
+    let embed5 = new Discord.MessageEmbed()
+    .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
+    .setTitle(` **Utility Commands** `)
+    .addField(`Total Utility Commands: 22`,
+    `<:arrow:904250175822889010>Enlarge
+<:arrow:904250175822889010>Reminder
+<:arrow:904250175822889010>Maps
+<:arrow:904250175822889010>Wikipedia
+<:arrow:904250175822889010>Urban
+<:arrow:904250175822889010>Google
+<:arrow:904250175822889010>Roblox
+<:arrow:904250175822889010>Serverinfo
+<:arrow:904250175822889010>Serveravatar
+<:arrow:904250175822889010>Avatar
+<:arrow:904250175822889010>Whois
+<:arrow:904250175822889010>Roleinfo
+<:arrow:904250175822889010>Channel
+<:arrow:904250175822889010>Embed (separate arguments with ;)
+<:arrow:904250175822889010>Imageembed
+<:arrow:904250175822889010>Reverse
+<:arrow:904250175822889010>Setafk
+<:arrow:904250175822889010>Stats
+<:arrow:904250175822889010>Timer
+<:arrow:904250175822889010>Translate
+<:arrow:904250175822889010>Weather
+<:arrow:904250175822889010>Youtube-search
+`)
+    .setColor(`#cc338b`)
+    .setThumbnail(client.user.displayAvatarURL())
+    .setTimestamp();
+
+    let embed6 = new Discord.MessageEmbed()
+    .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
+    .setTitle(` **Image Commands** `)
+    .addField(`Total Image Commands: 14`,
+    `<:arrow:904250175822889010>Captcha
+<:arrow:904250175822889010>Circle
+<:arrow:904250175822889010>Delete
+<:arrow:904250175822889010>Gay
+<:arrow:904250175822889010>Changemymind
+<:arrow:904250175822889010>Trigger
+<:arrow:904250175822889010>Clyde
+<:arrow:904250175822889010>Petpet
+<:arrow:904250175822889010>Magik
+<:arrow:904250175822889010>Dog
+<:arrow:904250175822889010>Cat
+<:arrow:904250175822889010>Drake
+<:arrow:904250175822889010>Rip
+<:arrow:904250175822889010>Iphonex
+`)
+    .setColor(`#cc338b`)
+    .setThumbnail(client.user.displayAvatarURL())
+    .setTimestamp();
+
+    
+    let embed7 = new Discord.MessageEmbed()
+    .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
+    .setTitle(` **Game Commands** `)
+    .addField(`Total Game Commands: 6`,
+    `<:arrow:904250175822889010>Akinator
+<:arrow:904250175822889010>Tictactoe
+<:arrow:904250175822889010>Youtubetogether
+<:arrow:904250175822889010>Betrayal
+<:arrow:904250175822889010>Trivia
+<:arrow:904250175822889010>Calculator
+`)
+    .setColor(`#cc338b`)
+    .setThumbnail(client.user.displayAvatarURL())
+    .setTimestamp();
+
+    let embed8 = new Discord.MessageEmbed()
+    .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
+    .setTitle(` **Music Commands** `)
+    .addField(`Total Music Commands: 12`,
+    `<:arrow:904250175822889010>Play
+<:arrow:904250175822889010>Stop    
+<:arrow:904250175822889010>Pause
+<:arrow:904250175822889010>Resume
+<:arrow:904250175822889010>Queue
+<:arrow:904250175822889010>Autoplay
+<:arrow:904250175822889010>Loop
+<:arrow:904250175822889010>Volume
+<:arrow:904250175822889010>Skip
+<:arrow:904250175822889010>Lyrics
+<:arrow:904250175822889010>Filter
+<:arrow:904250175822889010>Jumpto
+`)
+    .setColor(`#cc338b`)
+    .setThumbnail(client.user.displayAvatarURL())
+    .setTimestamp();
+    let pages = [embed1, embed2, embed3, embed4, embed5, embed6, embed7, embed8]; 
     
 
     

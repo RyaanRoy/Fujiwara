@@ -11,9 +11,9 @@ module.exports.run = async (client, message, args) => {
 };
 
 module.exports.help = {
-	name: "serverav",
+	name: "serveravatar",
 	description: "This command is used for checking the server avatar.",
-	usage: "f-serverav",
+	usage: "f-serveravatar",
 	accessableby: "Member",
-	aliases: []
+	aliases: ["serverav"]
 };

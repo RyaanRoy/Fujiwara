@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
             message.author.tag,
             message.author.displayAvatarURL({ dynamic: true })
           )
-          .setColor("PINK")
+          .setColor("#cc338b")
           .setFooter(client.user.username)
           .setTitle(`Page - ${page}/${Math.ceil(client.guilds.cache.size / 10)}`)
           .setDescription(description);

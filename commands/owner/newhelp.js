@@ -10,19 +10,19 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(`**Help with all commands**`)
     .setDescription(
-        `Yoo! **My prefix is:** f- \nClick [here](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.\nTo chat with me simply mention or reply to me and ask a question.\n📱**Basic**: help, ping, uptime, vote\n\nTo get more info about a command type f-help <command>`
+        `Yoo! **My prefix is:** f- \nClick [here](https://dsc.gg/fujiwara-recommended) to invite me to your server.\nTo chat with me simply mention or reply to me and ask a question.\n📱**Basic**: help, ping, uptime, vote\n\nTo get more info about a command type f-help <command>`
     )
     .addField(`<a:duckdance:859068191871598592>   Support Server`, `To join the support server: [Invite to support server](https://discord.gg/qXDyWEesW6)`, false)
     .addField(`🐛   Annoying Bugs`,`See a bug? Use f-bugreport and describe the bug. It will be reviewed by the bot dev immediately!`, false)
     .addField(`Command Sections`,
-    `<a:852804232453160990:915861525263183922>Moderation
-<a:852804232453160990:915861525263183922>Fun
-<a:852804232453160990:915861525263183922>Utility
-<a:852804232453160990:915861525263183922>Giveaways
-<a:852804232453160990:915861525263183922>Image Generation
-<a:852804232453160990:915861525263183922>Games
-<a:852804232453160990:915861525263183922>Roleplay
-<a:852804232453160990:915861525263183922>Music`)
+    `<a:852804232453160990:915861525263183922> Moderation
+<a:852804232453160990:915861525263183922> Fun
+<a:852804232453160990:915861525263183922> Utility
+<a:852804232453160990:915861525263183922> Giveaways
+<a:852804232453160990:915861525263183922> Image Generation
+<a:852804232453160990:915861525263183922> Games
+<a:852804232453160990:915861525263183922> Roleplay
+<a:852804232453160990:915861525263183922> Music`)
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp()
@@ -52,7 +52,20 @@ module.exports.run = async (client, message, args) => {
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp();
-    let pages = [embed1, embed2]; 
+
+    let embed3 = new Discord.MessageEmbed()
+    .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
+    .setTitle(` **Giveaway Commands** `)
+    .addField(`Total Giveaway Commands: 3`,
+    `<:arrow:904250175822889010>Gstart
+<:arrow:904250175822889010>Gend
+<:arrow:904250175822889010>Greroll
+
+`)
+    .setColor(`#cc338b`)
+    .setThumbnail(client.user.displayAvatarURL())
+    .setTimestamp();
+    let pages = [embed1, embed2, embed3]; 
     
 
     

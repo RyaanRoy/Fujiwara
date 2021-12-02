@@ -41,8 +41,8 @@ module.exports.run = async (client, message, args) => {
       .setThumbnail(servericon)
       .addField(
         `General Info`,
-        `Owner: ${message.guild.owner.user.username}#${
-          message.guild.owner.user.discriminator
+        `Owner: ${message.guild.owner.username}#${
+          message.guild.owner.discriminator
         } \nRegion: \`${
           region[message.guild.region]
         }\` \nVerification Lvl: \`${

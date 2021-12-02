@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
     .addField(`<a:duckdance:859068191871598592>   Support Server`, `To join the support server: [Invite to support server](https://discord.gg/qXDyWEesW6)`, false)
     .addField(`Annoying Bugs`,`See a bug? Use f-bugreport and describe the bug. It will be reviewed by the bot dev immediately!`, false)
     .addField(`Command Sections`,`
-    <:arrow:904250175822889010>Moderation
+     <:arrow:904250175822889010>Moderation
     <:arrow:904250175822889010>Fun
     <:arrow:904250175822889010>Utility
     <:arrow:904250175822889010>Giveaways
@@ -34,7 +34,7 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **Moderation Commands** `)
     .addField(`Total Moderation Commands: 15`,`
-    <:arrow:904250175822889010>Purge
+     <:arrow:904250175822889010>Purge
     <:arrow:904250175822889010>Mute
     <:arrow:904250175822889010>Unmute
     <:arrow:904250175822889010>Kick

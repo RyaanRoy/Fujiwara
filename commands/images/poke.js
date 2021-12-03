@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
 						.setTitle(`${message.author.username} pokes ${member.user.username}`)
 						.setColor('#cc338b')
 						.setDescription(
-							`${message.author.username} poked ${member.user.username}!`
+							`Teehee!`
 						)
 						.setImage(body.url);
 

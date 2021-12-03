@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
 						.setTitle(`${message.author.username} pats ${member.user.username}`)
 						.setColor("#363942")
 						.setDescription(
-							`${message.author.username} patted ${member.user.username}!`
+							`They deserved it!`
 						)
 						.setImage(json.url);
 

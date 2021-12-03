@@ -134,6 +134,24 @@ module.exports.run = async (client, message, args) => {
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp();
 
+    let embed9 = new Discord.MessageEmbed()
+    .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
+    .setTitle(` **Roleplay Commands** `)
+    .addField(`Total Roleplay Commands: 10`,
+    `<:arrow:904250175822889010>Baka
+<:arrow:904250175822889010>Cuddle
+<:arrow:904250175822889010>Feed
+<:arrow:904250175822889010>Kiss
+<:arrow:904250175822889010>Meow
+<:arrow:904250175822889010>Poke
+<:arrow:904250175822889010>Pat
+<:arrow:904250175822889010>Slap
+<:arrow:904250175822889010>Smug
+<:arrow:904250175822889010>Waifu
+`)
+    .setColor(`#cc338b`)
+    .setThumbnail(client.user.displayAvatarURL())
+    .setTimestamp();
     
     let embed7 = new Discord.MessageEmbed()
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
@@ -170,7 +188,7 @@ module.exports.run = async (client, message, args) => {
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp();
-    let pages = [embed1,embed2, embed3, embed4, embed5, embed6, embed7, embed8]; 
+    let pages = [embed1,embed2, embed3, embed4, embed5, embed6, embed7, embed9, embed8]; 
     
 
     

@@ -31,7 +31,7 @@ module.exports.run = async (client, message, args) => {
           .setDescription(synopsis);
          
           
-          message.channel.send({ embeds: [malEmbed] });
+          message.reply({ embeds: [malEmbed] });
 
         })
       })

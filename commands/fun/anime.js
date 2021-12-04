@@ -21,14 +21,17 @@ module.exports.run = async (client, message, args) => {
           .addField('English Title', data.englishTitle, true)
           .addField('Japanese Title', data.japaneseTitle, true)
           .addField('Type', data.type, true)
+          .addField('Genre', data.genres, true)
+          .addField('Studios', data.studios, true)
           .addField('Episodes', data.episodes, true)
           .addField('Rating', data.rating, true)
           .addField('Aired', data.aired, true)
+          .addField('Status', data.status, true)
           .addField('Score', data.score, true)
           .addField('Score Stats', data.scoreStats, true)
           .addField('Link', `[MyAnimeList link to ${search}](${data.url})`,true)
-          .setImage(imgae)
-          .setDescription(synopsis);
+          .setImage(data.picture)
+          .setDescription(data.synopsis);
          
           
           message.reply({ embeds: [malEmbed] });

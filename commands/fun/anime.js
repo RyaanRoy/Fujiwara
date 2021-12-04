@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
   const search = `${args}`;
   if(!search){
   return message.reply('Please add a search query if invalid command will not work.');}
-    fetch(`https://api.jikan.moe/v3/search/anime?q=${query}`)
+    fetch(`https://api.jikan.moe/v3/search/anime?q=${search}`)
       .then((res) => res.json())
       .then((body) => {
         const title = body.results[0].title;

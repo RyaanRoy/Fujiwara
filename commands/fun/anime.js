@@ -10,8 +10,7 @@ module.exports.run = async (client, message, args) => {
     fetch(`https://api.jikan.moe/v3/search/anime?q=${search}`)
       .then((res) => res.json())
       .then((body) => {
-        const imgae = body.results[0].image_url;
-        const synopsis = body.results[0].synopsis;
+
         malScraper.getInfoFromName(search)
         .then((data) => {
         const malEmbed = new Discord.MessageEmbed()

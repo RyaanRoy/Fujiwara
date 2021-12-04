@@ -30,7 +30,7 @@ module.exports.run = async (client, message, args) => {
           .addField('Score', data.score, true)
           .addField('Score Stats', data.scoreStats, true)
           .addField('Link', `[MyAnimeList link to ${search}](${data.url})`,true)
-          .setImage(data.picture)
+          .setImage(imgae)
           .setDescription(data.synopsis);
          
           

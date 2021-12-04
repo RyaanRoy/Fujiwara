@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
       return message.channel.send("Max Reminder Length Is 500 Characters");
 
     const setreminderembed = new MessageEmbed()
-      .setColor("PINK")
+      .setColor("#cc338b")
       .setTitle("Reminder Set!")
       .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
       .setDescription(`Successfully set <@${message.author.id}> a reminder!`)

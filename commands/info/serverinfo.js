@@ -50,7 +50,7 @@ module.exports.run = async (client, message, args) => {
           region[message.guild.region]
         }\` \nVerification Lvl: \`${
           verifLevels[message.guild.verificationLevel]
-        }\``,true
+        }\``
       )
       .addField(
         `Overview`,
@@ -64,7 +64,7 @@ module.exports.run = async (client, message, args) => {
           message.guild.afkTimeout
         } sec\` \nTotal Roles: \`${
           message.guild.roles.cache.size
-        }\` \nTotal Emojis: \`${message.guild.emojis.cache.size}\``,true
+        }\` \nTotal Emojis: \`${message.guild.emojis.cache.size}\``
       )
       .addField(
         `Member Info`,
@@ -72,7 +72,7 @@ module.exports.run = async (client, message, args) => {
           message.guild.members.cache.filter((member) => !member.user.bot).size
         }\` \nBots: \`${
           message.guild.members.cache.filter((member) => member.user.bot).size
-        }\``,false
+        }\``
       )
       .addField(
         `Misc. Info`,
@@ -80,9 +80,9 @@ module.exports.run = async (client, message, args) => {
           "dddd, MMMM Do YYYY, h:mm:ss A"
         )}\` \nCreated On: \n\`${moment(message.guild.createdAt).format(
           "dddd, MMMM Do YYYY, h:mm:ss A"
-        )}\``,true
+        )}\``
       )
-      .setThumbnail(message.guild.iconURL())
+      .setImage(servericon)
       .setFooter(`ID: ${message.guild.id}`, message.guild.iconURL())
       .setColor("#cc338b")
       .setTimestamp();

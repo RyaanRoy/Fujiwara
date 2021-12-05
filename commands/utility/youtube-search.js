@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
       .setImage(video.bestThumbnail.url)
       .setDescription(video.description ? !video.description : "No Description")
       .addField(
-        `Song Information`,
+        `**Video Information**`,
         `**Creator**: [${video.author.name}](${video.author.url}) ${
           video.author.verified ? ":white_check_mark: (Verified)" : "\u200b"
         }

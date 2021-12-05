@@ -21,11 +21,7 @@ const ACTIVITIES = {
 
 module.exports.run = async (client, message, args) => {
     const channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0]);
-<<<<<<< Updated upstream
-    if (!channel || channel.isVoice()===false) return message.channel.send("❌ | Invalid channel specified!");
-=======
     if (!channel || channel.isVoice() === false) return message.channel.send("❌ | Invalid channel specified!");
->>>>>>> Stashed changes
     if (!channel.permissionsFor(message.guild.me).has("CREATE_INSTANT_INVITE")) return message.channel.send("❌ | I need `CREATE_INSTANT_INVITE` permission");
 
     fetch(`https://discord.com/api/v8/channels/${channel.id}/invites`, {
@@ -63,18 +59,9 @@ module.exports.run = async (client, message, args) => {
 };
 
 module.exports.help = {
-<<<<<<< Updated upstream
 	name: "betrayal",
-	description: "This command is used for starting yt together session.",
+	description: "This command is used for starting betrayal.",
 	usage: "f-betrayal <channelid>",
 	accessableby: "Member",
 	aliases: ["btt"]
 };
-=======
-    name: "betrayal",
-    description: "This command is used for starting yt together session.",
-    usage: "f-betrayal <channelid>",
-    accessableby: "Member",
-    aliases: ["btt"]
-};
->>>>>>> Stashed changes

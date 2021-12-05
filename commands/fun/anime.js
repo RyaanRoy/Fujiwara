@@ -10,7 +10,6 @@ module.exports.run = async (client, message, args) => {
     fetch(`https://api.jikan.moe/v3/search/anime?q=${search}`)
       .then((res) => res.json())
       .then((body) => {
-<<<<<<< Updated upstream
 
         malScraper.getInfoFromName(search)
         .then((data) => {
@@ -33,30 +32,6 @@ module.exports.run = async (client, message, args) => {
           
           message.reply({ embeds: [malEmbed] });
 
-=======
- 
-        malScraper.getInfoFromName(search)
-        .then((data) => {
-        const malEmbed = new Discord.MessageEmbed()
-          .setAuthor(`My Anime List search result for ${args}`.split(',').join(' '))
-          .setThumbnail(data.picture)
-          .setColor('#ffc1cc') //I personally use bubblegum pink!
-          .addField('English Title', data.englishTitle, true)
-          .addField('Japanese Title', data.japaneseTitle, true)
-          .addField('Type', data.type, true)
-          .addField('Episodes', data.episodes, true)
-          .addField('Rating', data.rating, true)
-          .addField('Aired', data.aired, true)
-          .addField('Score', data.score, true)
-          .addField('Score Stats', data.scoreStats, true)
-          .addField('Link', `[MyAnimeList link to ${search}](${data.url})`,true)
-          .setImage(data.picture)
-          .setDescription(data.synopsis);
-         
-          
-          message.reply({ embeds: [malEmbed] });
-
->>>>>>> Stashed changes
         })
       })
 

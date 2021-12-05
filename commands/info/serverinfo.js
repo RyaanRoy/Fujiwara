@@ -43,7 +43,6 @@ module.exports.run = async (client, message, args) => {
   
     const serverembed = new Discord.MessageEmbed()
       .setAuthor(`${message.guild.name}`, message.guild.iconURL())
-      .setThumbnail(servericon)
       .addField(
         `General Info`,
         `Owner: ${owner.user.tag} \nRegion: \`${
@@ -82,7 +81,8 @@ module.exports.run = async (client, message, args) => {
           "dddd, MMMM Do YYYY, h:mm:ss A"
         )}\``
       )
-      .setImage(servericon)
+      .setThumbnail(message.guild.iconURL())
+      .setImage(message.guild.iconURL())
       .setFooter(`ID: ${message.guild.id}`, message.guild.iconURL())
       .setColor("#cc338b")
       .setTimestamp();

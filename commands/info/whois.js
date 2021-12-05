@@ -40,15 +40,14 @@ module.exports.run = async (bot, message, args) => {
 		"VERIFIED_BOT": "Verified Bot",
 		"EARLY_VERIFIED_DEVELOPER": "Early Verified Bot Developer"
 	};
-	var bot = {
+	var botcheck = {
 		"true": "Yes, The User is a Bot",
 		"false": "No, The User is a Human"
 	};
 	const userlol = new Discord.MessageEmbed()
 	.setAuthor(`User Info`, mention.user.avatarURL({ dynamic: true, format: "jpg"}))
-	.setThumbnail(usericon)
 	.addField(`General Info`, `Name: \`${mention.user.username}\` \nTag: \`${mention.user.discriminator}\` \nNickname: \`${nick}\``,true)
-	.addField(`Overview`, `Badges: \`${flags[mention.user.flags.toArray().join(", ")]}\`\nIs Bot: \`${bot[mention.user.bot]}\``,true)
+	.addField(`Overview`, `Badges: \`${flags[mention.user.flags.toArray().join(", ")]}\`\nIs Bot: \`${botcheck[mention.user.bot]}\``,true)
 	.addField(`Server Related Info`, `Roles: <@&${mention._roles.join(">  <@&")}>\nNickname: \`${nick}\``)
 	.addField(`Key Permissions`,`${finalPermissions.join(', ')}`)
 	.addField(`Other Information`, `Acc Created on: \n\`${moment(mention.user.createdAt).format("dddd, MMMM Do YYYY, h:mm:ss A")}\` \nJoined This Server on: \n\`${moment(mention.joinedAt).format("dddd, MMMM Do YYYY, h:mm:ss A")}\``)

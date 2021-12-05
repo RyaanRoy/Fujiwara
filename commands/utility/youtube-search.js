@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args) => {
 **Views**: ${video.views.toLocaleString()}`
       )
       .setThumbnail(video.author.bestAvatar.url);
-    message.reply(embed);
+    message.reply({embeds:[embed]});
 };
 
 module.exports.help = {

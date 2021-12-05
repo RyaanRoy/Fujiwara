@@ -45,14 +45,14 @@ module.exports.run = async (bot, message, args) => {
 		"false": "No, The User is a Human"
 	};
 	const userlol = new Discord.MessageEmbed()
-	.setAuthor(`User Info`, mention.user.avatarURL({ dynamic: true, format: "jpg"}))
+	.setAuthor(`User Info`, mention.user.avatarURL({ dynamic: false, format: "jpg"}))
 	.addField(`General Info`, `Name: \`${mention.user.username}\` \nTag: \`${mention.user.discriminator}\` \nNickname: \`${nick}\``,true)
 	.addField(`Overview`, `Badges: \`${flags[mention.user.flags.toArray().join(", ")]}\`\nIs Bot: \`${botcheck[mention.user.bot]}\``,true)
 	.addField(`Server Related Info`, `Roles: <@&${mention._roles.join(">  <@&")}>\nNickname: \`${nick}\``)
 	.addField(`Key Permissions`,`${finalPermissions.join(', ')}`)
 	.addField(`Other Information`, `Acc Created on: \n\`${moment(mention.user.createdAt).format("dddd, MMMM Do YYYY, h:mm:ss A")}\` \nJoined This Server on: \n\`${moment(mention.joinedAt).format("dddd, MMMM Do YYYY, h:mm:ss A")}\``)
-	.setThumbnail(mention.user.avatarURL({ dynamic: true, format: "jpg", size:4096}))
-	.setFooter(`ID: ${mention.user.id}`, mention.user.avatarURL({ dynamic: true, format: "jpg"}))
+	.setThumbnail(mention.user.avatarURL({ dynamic: false, format: "jpg"}))
+	.setFooter(`ID: ${mention.user.id}`, mention.user.avatarURL({ dynamic: false, format: "jpg"}))
 	.setTimestamp()
 	.setColor("#cc338b");
 	message.channel.send({ embeds: [userlol] })

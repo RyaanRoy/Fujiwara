@@ -82,7 +82,6 @@ module.exports.run = async (client, message, args) => {
         )}\``
       )
       .setThumbnail(message.guild.iconURL())
-      .setImage(message.guild.iconURL())
       .setFooter(`ID: ${message.guild.id}`, message.guild.iconURL())
       .setColor("#cc338b")
       .setTimestamp();

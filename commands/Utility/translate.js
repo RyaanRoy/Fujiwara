@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
     .setColor("#cc338b")
     .setFooter(message.author.tag)
     .setTimestamp();
-  message.reply(embed);
+  message.reply({embeds:[embed]});
 };
 
 module.exports.help = {

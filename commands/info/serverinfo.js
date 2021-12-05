@@ -37,6 +37,7 @@ module.exports.run = async (client, message, args) => {
       india: "India",
     };
     const owner = await message.guild.fetchOwner()    
+    
 
 
   

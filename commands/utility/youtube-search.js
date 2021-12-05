@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
     const embed = new MessageEmbed()
       .setTitle(video.title)
       .setURL(video.url)
-      .setImage(video.ur)
+      .setImage(video.url)
       .setDescription(video.description ? !video.description : "No Description")
       .addField(
         `**Video Information**`,

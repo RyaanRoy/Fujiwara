@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
         images_api.sfw.punch().then(response => {
 				
 					const embed = new Discord.MessageEmbed()
-						.setTitle(`${message.author.username} punches ${member}`)
+						.setTitle(`${message.author.username} punches ${member.user.username}`)
 						.setColor('#cc338b')
 						.setDescription(
 							`${message.author.username} gets violent!`

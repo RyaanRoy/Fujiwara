@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
 				
 					const embed = new Discord.MessageEmbed()
 						.setTitle(`${message.author.username} kills ${member.user.username}`)
-						.setColor('#cc338b')
+						.setColor(`#cc338b`)
 						.setDescription(
 							`${message.author.username} decides to murder ${member.user.username}!`
 						)

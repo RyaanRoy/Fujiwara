@@ -138,7 +138,7 @@ module.exports.run = async (client, message, args) => {
     let embed9 = new Discord.MessageEmbed()
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **Roleplay Commands** `)
-    .addField(`Total Roleplay Commands: 10`,
+    .addField(`Total Roleplay Commands: 13`,
     `<:arrow:904250175822889010>Baka
 <:arrow:904250175822889010>Cuddle
 <:arrow:904250175822889010>Hug

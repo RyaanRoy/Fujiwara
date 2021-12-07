@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
 		images_api.sfw.kill().then(response => {
 				
 					const embed = new Discord.MessageEmbed()
-						.setTitle(`${message.author.username} kills ${member.user.username}`)
+						.setTitle(`Damn`)
 						.setColor(`#cc338b`)
 						.setDescription(
 							`${message.author.username} decides to murder ${member.user.username}!`

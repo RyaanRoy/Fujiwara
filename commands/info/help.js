@@ -141,12 +141,15 @@ module.exports.run = async (client, message, args) => {
     .addField(`Total Roleplay Commands: 10`,
     `<:arrow:904250175822889010>Baka
 <:arrow:904250175822889010>Cuddle
+<:arrow:904250175822889010>Hug
 <:arrow:904250175822889010>Feed
 <:arrow:904250175822889010>Kiss
 <:arrow:904250175822889010>Meow
 <:arrow:904250175822889010>Poke
 <:arrow:904250175822889010>Pat
 <:arrow:904250175822889010>Slap
+<:arrow:904250175822889010>Punch
+<:arrow:904250175822889010>Kill
 <:arrow:904250175822889010>Smug
 <:arrow:904250175822889010>Waifu
 `)

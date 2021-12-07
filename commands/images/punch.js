@@ -1,13 +1,13 @@
 const Discord = require("discord.js");
 const superagent = require("superagent");
-const Anime_Images = require('anime-images-api')
-const API = new Anime_Images()
+const API = require('anime-images-api')
+const images_api = new API() 
 module.exports.run = async (client, message, args) => {
-	// eslinf-disable-line no-unused-vars
+	
 	try {
 		const member = message.mentions.members.first();
 
-		let { image } = await API.sfw.punch()
+        images_api.sfw.punch().then(response => {
 				
 					const embed = new Discord.MessageEmbed()
 						.setTitle(`${message.author.username} punches ${member}`)
@@ -15,9 +15,10 @@ module.exports.run = async (client, message, args) => {
 						.setDescription(
 							`${message.author.username} gets violent!`
 						)
-						.setImage(image);
+						.setImage(response.image);
 
 						message.channel.send({embeds:[embed]});
+                        })
 				
 
 	} catch (err) {

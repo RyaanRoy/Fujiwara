@@ -154,7 +154,7 @@ client.on("messageCreate", async message => {
 	client.on('ready', () => {
 		// replace src/commands to the path with your commands folder.
 		// if your commands folder contain files then use commandType: "file". otherwise commandType: "folder"
-		const handler = new Handler(client, { commandFolder: "../commands",commandType: "folder"});
+		const handler = new Handler(client, {guilds: ["909710855355125760"],commandFolder: "../commands",commandType: "folder"});
 	
 		console.log("bot is up!");
 	});

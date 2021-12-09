@@ -4,9 +4,9 @@ const Enmap = require("enmap");
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
 const { Util }= require('discord.js')
-const { Handler } = require('discord-slash-command-handler');
 
-require('discord-reply');
+
+
 const client = new Discord.Client({
 	partials: ["MESSAGE", "USER", "REACTION"],
 	disableMentions: "everyone",
@@ -151,13 +151,7 @@ client.on("messageCreate", async message => {
 	  }
 	);
 
-	client.on('ready', () => {
-		// replace src/commands to the path with your commands folder.
-		// if your commands folder contain files then use commandType: "file". otherwise commandType: "folder"
-		const handler = new Handler(client, {guilds: ["909710855355125760"],commandFolder: "/commands",commandType: "folder"});
-	
-		console.log("bot is up!");
-	});
+
 
 
 

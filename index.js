@@ -4,7 +4,7 @@ const Enmap = require("enmap");
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
 const { Util }= require('discord.js')
-
+const { Handler } = require('discord-slash-command-handler');
 
 require('discord-reply');
 const client = new Discord.Client({

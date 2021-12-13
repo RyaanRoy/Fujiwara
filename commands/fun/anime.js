@@ -31,7 +31,7 @@ module.exports.run = async (client, message, args) => {
           .setColor(`#800080`)
           .setFooter(
             `Requested by : ${message.author.tag}`,
-            message.author.displayAvatarURL({ dynamic: true })
+            message.author.displayAvatarURL()
           );
 
           message.channel.send({embeds:[embed]});

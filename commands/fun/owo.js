@@ -4,7 +4,7 @@ const request = require("superagent");
 const owoify = require('owoify-js').default
 module.exports.run = async (client, message, args) => {
     const query = args.join(" ");
-message.reply(`${owoify(query, 'uwu')}`);
+message.reply(`${owoify(query, 'uvu')}`);
 };
 
 module.exports.help = {

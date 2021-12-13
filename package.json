@@ -54,6 +54,7 @@
 		"node-fetch": "^2.6.1",
 		"opusscript": "^0.0.8",
 		"os": "^0.1.1",
+		"owoify-js": "^1.0.7",
 		"pet-pet-gif": "^1.0.8",
 		"pretty-ms": "^7.0.1",
 		"quick.db": "^7.1.3",

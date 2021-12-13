@@ -70,6 +70,7 @@ module.exports.run = async (client, message, args) => {
     .setTitle(` **Fun Commands** `)
     .addField(`Total Funny Commands: 7`,
     `<:arrow:904250175822889010>8ball
+<:arrow:904250175822889010>Owo
 <:arrow:904250175822889010>Ship
 <:arrow:904250175822889010>AnimeSearch
 <:arrow:904250175822889010>Aes256

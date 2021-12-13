@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 const { Client, Message, MessageEmbed } = require("discord.js");
 const request = require("superagent");
-const owoify = require('owoify-js').default
+const owoify = require('owoifyx')
 module.exports.run = async (client, message, args) => {
     const query = args.join(" ");
-message.reply(`${owoify(query, 'uwu')}`);
+message.reply(`${owoify(query)}`);
 };
 
 module.exports.help = {

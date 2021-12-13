@@ -13,6 +13,7 @@ module.exports.run = async (client, message, args) => {
     const malEmbed = new Discord.MessageEmbed()
       .setAuthor(`My Anime List search result for ${args}`.split(',').join(' '))
       .setThumbnail(data.picture)
+      .setDescription(data.synopsis)
       .setColor('#ffc1cc') //I personally use bubblegum pink!
       .addField('English Title', data.englishTitle, true)
       .addField('Japanese Title', data.japaneseTitle, true)

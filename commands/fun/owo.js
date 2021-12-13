@@ -3,7 +3,8 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 const request = require("superagent");
 const owoify = require('owoify-js').default
 module.exports.run = async (client, message, args) => {
-message.channel.send(`${owoify(args[0])}`);
+    const query = args.join(" ");
+message.channel.send(`${owoify(query, 'uwu')}`);
 };
 
 module.exports.help = {

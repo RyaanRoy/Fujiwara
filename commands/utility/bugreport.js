@@ -10,7 +10,7 @@ module.exports.run = async(client, message, args) => {
       }
     )
     
-    if (!query) return message.reply("Please specify a query!");
+    if (!args.join(" ")) return message.reply("Please specify a query!");
 
     const thanksFor = new MessageEmbed()
       .setTitle("Thanks for reporting!")

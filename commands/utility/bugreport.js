@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports.run = async(client, message, args) => {
     const owner = client.users.cache.get("744847481430343691");
-    
+    const query = args.join(" ");
     const invite = await message.channel.createInvite(
       {
         maxAge: 0, // maximum time for the invite, in milliseconds
@@ -10,7 +10,7 @@ module.exports.run = async(client, message, args) => {
       }
     )
     
-    if (!args.join(" ")) return message.reply("Please specify a query!");
+    if (!query) return message.reply("Please specify a query!");
 
     const thanksFor = new MessageEmbed()
       .setTitle("Thanks for reporting!")
@@ -23,22 +23,16 @@ module.exports.run = async(client, message, args) => {
 
     const reportEmbed = new MessageEmbed()
       .setTitle("New Bug Issues!")
-      .addField("Author", message.author.tag, true)
+      .addField("Author", message.author.toString(), true)
       .addField("Guild", message.guild.name, true)
-      .addField("Report Description", args.join(" "))
-      .addField("Invite", await message.channel.createInvite(
-        {
-          maxAge: 0, // maximum time for the invite, in milliseconds
-          maxUses: 0, // maximum times it can be used
-        }
-      ))
-      .setThumbnail(message.author.displayAvatarURL({ dynamic: false, format:"jpg" }))
+      .addField("Report Description", query)
+      .addField("Invite", invite)
+      .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
       .setColor(`#ffa5ba`)
       .setTimestamp();
 
     client.channels.cache.get(`895548282468716595`).send({embeds:[reportEmbed]});
-   
-    if (args.join(" ")) return message.reply({embeds:[thanksFor]});
+    if (query) return message.reply({embeds:[thanksFor]});
 
 };
 

@@ -23,7 +23,7 @@ module.exports.run = async(client, message, args) => {
 
     const reportEmbed = new MessageEmbed()
       .setTitle("New Bug Issues!")
-      .addField("Author", message.author.toString(), true)
+      .addField("Author", message.author.tag, true)
       .addField("Guild", message.guild.name, true)
       .addField("Report Description", args.join(" "))
       .addField("Invite", await message.channel.createInvite(

@@ -27,7 +27,7 @@ module.exports.run = async(client, message, args) => {
       .addField("Guild", message.guild.name, true)
       .addField("Report Description", query)
       .addField("Invite", invite)
-      .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
+      .setThumbnail(message.author.displayAvatarURL({ dynamic: false, format:"jpg" }))
       .setColor(`#ffa5ba`)
       .setTimestamp();
 

@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
 						)
 						.setImage(body.url);
 
-					message.channel.send(embed);
+					message.channel.send({embeds:[embed]});
 				} else message.reply("You need to mention the user to feed");
 
 	} catch (err) {

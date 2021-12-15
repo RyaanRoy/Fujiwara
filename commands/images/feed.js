@@ -21,7 +21,6 @@ module.exports.run = async (client, message, args) => {
 		message.channel.send(`There was an error!\n${err}`).catch();
 	}
 };
-
 module.exports.help = {
 	name: "feed",
 	description: "This command is used for generating pat.",

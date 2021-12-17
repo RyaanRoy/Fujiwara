@@ -23,6 +23,7 @@
 	"keywords": [],
 	"license": "MIT",
 	"dependencies": {
+		"@androz2091/discord-invites-tracker": "^1.1.0",
 		"@discordjs/opus": "^0.6.0",
 		"@discordjs/voice": "^0.6.0",
 		"@iamtraction/google-translate": "^1.1.2",

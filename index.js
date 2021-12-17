@@ -4,7 +4,12 @@ const Enmap = require("enmap");
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
 const { Util }= require('discord.js')
-
+const InvitesTracker = require('@androz2091/discord-invites-tracker');
+const tracker = InvitesTracker.init(client, {
+    fetchGuilds: true,
+    fetchVanity: true,
+    fetchAuditLogs: true
+});
 
 
 const client = new Discord.Client({
@@ -14,6 +19,7 @@ const client = new Discord.Client({
 		'GUILDS',
 		'GUILD_VOICE_STATES',
 		'GUILD_MESSAGES',
+		'GUILD_INVITES',
 	],
 });
 
@@ -151,6 +157,28 @@ client.on("messageCreate", async message => {
 	  }
 	);
 
+
+	tracker.on('guildMemberAdd', (member, type, invite) => {
+
+		const welcomeChannel = member.guild.channels.cache.find((ch) => ch.name === 'fujiwara-invite-tracker');
+	
+		if(type === 'normal'){
+			welcomeChannel.send(`${member} was invited by ${invite.inviter.username}!`);
+		}
+	
+		else if(type === 'vanity'){
+			welcomeChannel.send(`${member} joined using a vanity url!`);
+		}
+	
+		else if(type === 'permissions'){
+			welcomeChannel.send(`${member} joined but I can't figure out how you joined because I don't have the "Manage Server" permission!`);
+		}
+	
+		else if(type === 'unknown'){
+			welcomeChannel.send(`I can't figure out how ${member} joined the server...`);
+		}
+	
+	});
 
 
 

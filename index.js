@@ -160,7 +160,7 @@ client.on("messageCreate", async message => {
 
 	tracker.on('guildMemberAdd', (member, type, invite) => {
 
-		const welcomeChannel = member.guild.channels.cache.find((ch) => ch.name === 'fujiwara-invite-tracker');
+		const welcomeChannel = member.guild.channels.cache.find((ch) => ch.id === "921284034355658763");
 	
 		if(type === 'normal'){
 			welcomeChannel.send(`${member} was invited by ${invite.inviter.username}!`);

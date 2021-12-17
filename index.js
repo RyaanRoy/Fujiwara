@@ -132,22 +132,23 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 });
 tracker.on('guildMemberAdd', (member, type, invite) => {
 
-	const welcomeChannel = client.channels.cache.get(`875050856247083008`)
+	if(member.guild.channels.cache.find((ch) => ch.name === 'fujiwarainvitetracker')){
 
 	if(type === 'normal'){
-		welcomeChannel.send(`${member} was invited by ${invite.inviter.username}!`);
+		client.channels.cache.get(`921284034355658763`).send(`${member} was invited by ${invite.inviter.username}!`);
 	}
 
 	else if(type === 'vanity'){
-		welcomeChannel.send(`${member} joined using a vanity url!`);
+		client.channels.cache.get(`921284034355658763`).send(`${member} joined using a vanity url!`);
 	}
 
 	else if(type === 'permissions'){
-		welcomeChannel.send(`${member} joined but I can't figure out how you joined because I don't have the "Manage Server" permission!`);
+		client.channels.cache.get(`921284034355658763`).send(`${member} joined but I can't figure out how you joined because I don't have the "Manage Server" permission!`);
 	}
 
 	else if(type === 'unknown'){
-		welcomeChannel.send(`I can't figure out how ${member} joined the server...`);
+		client.channels.cache.get(`921284034355658763`).send(`I can't figure out how ${member} joined the server...`);
+	}
 	}
 
 });

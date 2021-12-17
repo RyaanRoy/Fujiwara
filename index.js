@@ -130,6 +130,28 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 		});
 	}
 });
+tracker.on('guildMemberAdd', (member, type, invite) => {
+
+	const welcomeChannel = client.channels.cache.get(`875050856247083008`)
+
+	if(type === 'normal'){
+		welcomeChannel.send(`${member} was invited by ${invite.inviter.username}!`);
+	}
+
+	else if(type === 'vanity'){
+		welcomeChannel.send(`${member} joined using a vanity url!`);
+	}
+
+	else if(type === 'permissions'){
+		welcomeChannel.send(`${member} joined but I can't figure out how you joined because I don't have the "Manage Server" permission!`);
+	}
+
+	else if(type === 'unknown'){
+		welcomeChannel.send(`I can't figure out how ${member} joined the server...`);
+	}
+
+});
+
 client.on("messageCreate", async message => {
     
 		  if(message.author.bot) return;
@@ -158,27 +180,7 @@ client.on("messageCreate", async message => {
 	);
 
 
-	tracker.on('guildMemberAdd', (member, type, invite) => {
 
-		const welcomeChannel = member.guild.channels.cache.find((ch) => ch.id === "921284034355658763");
-	
-		if(type === 'normal'){
-			welcomeChannel.send(`${member} was invited by ${invite.inviter.username}!`);
-		}
-	
-		else if(type === 'vanity'){
-			welcomeChannel.send(`${member} joined using a vanity url!`);
-		}
-	
-		else if(type === 'permissions'){
-			welcomeChannel.send(`${member} joined but I can't figure out how you joined because I don't have the "Manage Server" permission!`);
-		}
-	
-		else if(type === 'unknown'){
-			welcomeChannel.send(`I can't figure out how ${member} joined the server...`);
-		}
-	
-	});
 
 
 

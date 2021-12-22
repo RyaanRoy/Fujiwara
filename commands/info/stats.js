@@ -26,28 +26,28 @@ module.exports.run = async (client, message) => {
 		.setColor(message.guild.me.displayHexColor || client.color)
 		.addField("General", 
 		  `**❯ Client :** ${client.user.tag}
-		  **❯ Commands Total :** ${client.commands.size+12}
-		  **❯ Server :** ${client.guilds.cache.size.toLocaleString()} Servers
-		  **❯ Users :** ${client.guilds.cache
+		**❯ Commands Total :** ${client.commands.size+12}
+		**❯ Server :** ${client.guilds.cache.size.toLocaleString()} Servers
+		**❯ Users :** ${client.guilds.cache
 			.reduce((a, b) => a + b.memberCount, 0)
 			.toLocaleString()} Users
-		  **❯ Channels :** ${client.channels.cache.size.toLocaleString()} Channels
-		  **❯ Creation Date :** ${utc(client.user.createdTimestamp).format(
+		**❯ Channels :** ${client.channels.cache.size.toLocaleString()} Channels
+		**❯ Creation Date :** ${utc(client.user.createdTimestamp).format(
 			"Do MMMM YYYY HH:mm:ss"
 		  )}
-		  **❯ Node.js :** ${process.version}
-		  **❯ Version :** v${version}
-		  **❯ Discord.js :** v${djsversion}
-		  **❯ Bot Uptime :** ${pretty(client.uptime)}`,
+		**❯ Node.js :** ${process.version}
+		**❯ Version :** v${version}
+		**❯ Discord.js :** v${djsversion}
+		**❯ Bot Uptime :** ${pretty(client.uptime)}`,
 		  "\u200b",
 		)
 		.addField("System", 
 		  `**❯ OS Platform :** ${capitalizeFirst(process.platform)}
-		  **❯ OS Uptime :** ${ms(os.uptime() * 1000, { long: true })}
-		  **❯ CPU :**
-		  \u3000 Cores : ${os.cpus().length}
-		  \u3000 Model : ${core.model}
-		  \u3000 Speed : ${core.speed} MHz`,
+		**❯ OS Uptime :** ${ms(os.uptime() * 1000, { long: true })}
+		**❯ CPU :**
+		\u3000 Cores : ${os.cpus().length}
+		\u3000 Model : ${core.model}
+		\u3000 Speed : ${core.speed} MHz`,
 		)
 		.addField("Network", 
 		  `**❯ Latency :** ${Math.round(client.ws.ping)} ms`,

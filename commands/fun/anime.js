@@ -34,7 +34,7 @@ module.exports.run = async (client, message, args) => {
             .setDescription(
               `That anime isn't found!\n\n\`\`\`js\n${err}\n\`\`\``
             )
-            .setColor("RED")
+            .setColor("#cc338b")
         ]}
         )
       );

@@ -23,7 +23,7 @@ module.exports.run = async (client, message, args) => {
       .addField('Aired', data.aired, true)
       .addField('Score', data.score, true)
       .addField('Score Stats', data.scoreStats, true)
-      .addField('Link', data.url);
+      .addField('Link', `[MAL Link](${data.url})`, true);
 
       message.channel.send({ embeds: [malEmbed] });
 

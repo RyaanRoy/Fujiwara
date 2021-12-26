@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
     if (ment.id == message.author.id)
       return message.channel.send("How Is That Possible?");
     if (ment.id == client.user.id)
-      return message.channel.send("f-BAKA!");
+      return message.channel.send("B-BAKA!");
     const { body } = await request.get("https://api.waifu.pics/sfw/hug");
 
     let e = new MessageEmbed()

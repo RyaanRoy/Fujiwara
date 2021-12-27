@@ -1,4 +1,4 @@
-/**const Discord = require("discord.js");
+/* const Discord = require("discord.js");
 const { Client, Message, MessageEmbed } = require("discord.js");
 const fetch = require("node-fetch");
 const moment = require("moment");
@@ -43,4 +43,4 @@ module.exports.help = {
 	usage: "f-animecharacter <query>",
 	accessableby: "Member",
 	aliases: ["animecharactersearch"]
-}; **/
+};  */

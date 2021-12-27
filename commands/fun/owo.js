@@ -9,7 +9,7 @@ const uwuifier = new Uwuifier({
         stutters: 0.2
     },
     words: 1,
-    exclamations: 1
+    exclamations: 0.8
 });
 module.exports.run = async (client, message, args) => {
     const query = args.join(" ");

@@ -37,10 +37,10 @@ module.exports.run = async (client, message, args) => {
 };
 
 module.exports.help = {
-	name: "anime",
+	name: "animecharacter",
 	description:
-		"Searching anime",
-	usage: "f-anime <query>",
+		"Searching anime characters",
+	usage: "f-animecharacter <query>",
 	accessableby: "Member",
-	aliases: ["animesearch"]
+	aliases: ["animecharactersearch"]
 };

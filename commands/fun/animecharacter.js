@@ -13,12 +13,12 @@ module.exports.run = async (client, message, args) => {
     const Embed = new Discord.MessageEmbed()
       .setAuthor(`My Anime List search result for ${args}`.split(',').join(' '))
       .setThumbnail(res.anime_image)
-      .setDescription(res.desc)
+      .setDescription(JSON.stringify(res.description))
       .setColor('#ffc1cc') //I personally use bubblegum pink!
-      .addField('Name', res.name, true)
-      .addField('Gender', res.gender, true)
-      .addField('Origin', res.origin, false)
-      .addField('Anime Name', res.anime_name, true)
+      .addField('Name', JSON.stringify(res.name), true)
+      .addField('Gender', JSON.stringify(res.gender), true)
+      .addField('Origin', JSON.stringify(res.origin), truefalse)
+      .addField('Anime Name', JSON.stringify(res.anime_name), true)
       .setImage(res.character_image);
 
       message.channel.send({ embeds: [Embed] });

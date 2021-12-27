@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
 
   a.get_character_by_search(search)
     .then((res) => {
-      message.channel.send(res);
+      message.channel.send(JSON.stringify(res));
 
     })
       .catch((err) =>

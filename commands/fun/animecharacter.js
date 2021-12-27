@@ -2,37 +2,33 @@ const Discord = require("discord.js");
 const { Client, Message, MessageEmbed } = require("discord.js");
 const fetch = require("node-fetch");
 const moment = require("moment");
-
+const a = require('acb-api');
 module.exports.run = async (client, message, args) => {
   const search = `${args}`;
   if(!search)
-  return message.reply('Please add a search query if invalid command will not work.');
+  return message.reply('Please add a search query or command will not work.');
 
-  malScraper.getInfoFromName(search)
-    .then((data) => {
-    const malEmbed = new Discord.MessageEmbed()
+  a.get_character_by_search(search)
+    .then((res) => {
+    const Embed = new Discord.MessageEmbed()
       .setAuthor(`My Anime List search result for ${args}`.split(',').join(' '))
-      .setThumbnail(data.picture)
-      .setDescription(data.synopsis)
+      .setThumbnail(res.anime_image)
+      .setDescription(res.desc)
       .setColor('#ffc1cc') //I personally use bubblegum pink!
-      .addField('English Title', data.englishTitle, true)
-      .addField('Japanese Title', data.japaneseTitle, true)
-      .addField('Type', data.type, true)
-      .addField('Episodes', data.episodes, true)
-      .addField('Rating', data.rating, true)
-      .addField('Aired', data.aired, true)
-      .addField('Score', data.score, true)
-      .addField('Score Stats', data.scoreStats, true)
-      .addField('Link', `[MAL Link](${data.url})`, true);
+      .addField('Name', res.name, true)
+      .addField('Gender', res.gender, true)
+      .addField('Origin', res.origin, false)
+      .addField('Anime Name', res.anime_name, true)
+      .setImage(res.character_image);
 
-      message.channel.send({ embeds: [malEmbed] });
+      message.channel.send({ embeds: [Embed] });
 
     })
       .catch((err) =>
         message.channel.send({embeds:[
           new MessageEmbed()
             .setDescription(
-              `That anime isn't found!\n\n\`\`\`js\n${err}\n\`\`\``
+              `That character isn't found!\n\n\`\`\`js\n${err}\n\`\`\``
             )
             .setColor("#cc338b")
         ]}

@@ -9,8 +9,19 @@ module.exports.run = async (client, message, args) => {
   return message.reply('Please add a search query or command will not work.');
 
   a.get_character_by_search(search)
-    .then((res) => {
-      message.channel.send(JSON.stringify(res));
+    .then((data) => {
+    const Embed = new Discord.MessageEmbed()
+      .setAuthor(`My Anime List search result for ${args}`.split(',').join(' '))
+      .setThumbnail(data.anime_image)
+      .setDescription(JSON.stringify(data.description))
+      .setColor('#ffc1cc') //I personally use bubblegum pink!
+      .addField('Name', JSON.stringify(data.name), true)
+      .addField('Gender', JSON.stringify(data.gender), true)
+      .addField('Origin', JSON.stringify(data.origin), truefalse)
+      .addField('Anime Name', JSON.stringify(data.anime_name), true)
+      .setImage(data.character_image);
+
+      message.channel.send({ embeds: [Embed] });
 
     })
       .catch((err) =>

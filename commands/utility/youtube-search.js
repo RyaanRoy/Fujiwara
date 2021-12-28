@@ -34,5 +34,5 @@ module.exports.help = {
 	description: "Search Youtube",
 	usage: "f-youtube-search <query>",
 	accessableby: "Members",
-	aliases: ["yts"]
+	aliases: ["yts","youtubesearch","youtube"]
 };

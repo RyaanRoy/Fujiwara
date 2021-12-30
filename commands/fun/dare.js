@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 const r = require('better-tord');
 module.exports.run = async (client, message, args) => {
     const dare = r.get_dare();
-    message.channel.reply(dare);
+    message.reply(dare);
 };
 
 module.exports.help = {

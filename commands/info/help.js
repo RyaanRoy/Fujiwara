@@ -202,7 +202,7 @@ module.exports.run = async (client, message, args) => {
     let embed10 = new Discord.MessageEmbed()
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **NSFW Commands** `)
-    .addField(`Total NSFW Commands: 9`,
+    .addField(`Total NSFW Commands: 10`,
     `<:arrow:904250175822889010>||Blowjob||
 <:arrow:904250175822889010>||Spank||    
 <:arrow:904250175822889010>||Hentai||
@@ -211,6 +211,7 @@ module.exports.run = async (client, message, args) => {
 <:arrow:904250175822889010>||Trap||
 <:arrow:904250175822889010>||Boobs||
 <:arrow:904250175822889010>||Pussy||
+<:arrow:904250175822889010>||Lesbian||
 
 `)
     .setColor(`#cc338b`)

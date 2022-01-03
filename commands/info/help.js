@@ -201,7 +201,7 @@ module.exports.run = async (client, message, args) => {
 
     let embed10 = new Discord.MessageEmbed()
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
-    .setTitle(` **NSFW Commands Commands** `)
+    .setTitle(` **NSFW Commands** `)
     .addField(`Total NSFW Commands: 9`,
     `<:arrow:904250175822889010>||Blowjob||
 <:arrow:904250175822889010>||Spank||    

@@ -20,7 +20,6 @@ module.exports.run = async (client, message, args) => {
 <:arrow:904250175822889010> Giveaways
 <:arrow:904250175822889010> Image Generation
 <:arrow:904250175822889010> Games
-<:arrow:904250175822889010> NSFW
 <:arrow:904250175822889010> Roleplay
 <:arrow:904250175822889010> Music`)
     .setColor(`#cc338b`)
@@ -199,25 +198,8 @@ module.exports.run = async (client, message, args) => {
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp();
 
-    let embed10 = new Discord.MessageEmbed()
-    .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
-    .setTitle(` **NSFW Commands** `)
-    .addField(`Total NSFW Commands: 10`,
-    `<:arrow:904250175822889010>||Blowjob||
-<:arrow:904250175822889010>||Spank||    
-<:arrow:904250175822889010>||Hentai||
-<:arrow:904250175822889010>||Gasm||
-<:arrow:904250175822889010>||Futanari||
-<:arrow:904250175822889010>||Trap||
-<:arrow:904250175822889010>||Boobs||
-<:arrow:904250175822889010>||Pussy||
-<:arrow:904250175822889010>||Lesbian||
-
-`)
-    .setColor(`#cc338b`)
-    .setThumbnail(client.user.displayAvatarURL())
-    .setTimestamp();
-    let pages = [embed1,embed2, embed3, embed4, embed5, embed6, embed7, embed9, embed8, embed10]; 
+ 
+    let pages = [embed1,embed2, embed3, embed4, embed5, embed6, embed7, embed9, embed8]; 
     
 
     

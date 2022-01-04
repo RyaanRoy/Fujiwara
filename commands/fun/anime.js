@@ -27,7 +27,6 @@ module.exports.run = async (client, message, args) => {
       const row = new Discord.MessageActionRow()
 			.addComponents(
 				new Discord.MessageButton()
-					.setCustomId('primary')
 					.setLabel('MyAnimeList Link')
 					.setStyle('PRIMARY')
           .setURL(`${data.url}`),

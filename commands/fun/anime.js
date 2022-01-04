@@ -23,9 +23,16 @@ module.exports.run = async (client, message, args) => {
       .addField('Aired', data.aired, true)
       .addField('Score', data.score, true)
       .addField('Score Stats', data.scoreStats, true)
-      .addField('Link', `[MAL Link](${data.url})`, true);
-
-      message.channel.send({ embeds: [malEmbed] });
+      
+      const row = new Discord.MessageActionRow()
+			.addComponents(
+				new MessageButton()
+					.setCustomId('primary')
+					.setLabel('MyAnimeListLink')
+					.setStyle('PRIMARY')
+          .setURL(`${data.url}`),
+			);
+      message.channel.send({ embeds: [malEmbed],components: [row] });
 
     })
       .catch((err) =>

@@ -172,6 +172,7 @@ module.exports.run = async (client, message, args) => {
 <:arrow:904250175822889010>Truth
 <:arrow:904250175822889010>Dare
 <:arrow:904250175822889010>Neverhaveiever
+<:arrow:904250175822889010>Wouldyourather
 `)
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())

@@ -12,12 +12,12 @@ module.exports.run = async (client, message, args) => {
     const animeinfo=JSON.parse(res);
     let e = new MessageEmbed()
       .setColor("#FFC0CB")
-      .setTitle(`${animeinfo[0][0].name}`)
-      .addField(`Gender`,`${animeinfo[0][0].gender}`)
-      .addField(`Anime name`,`${animeinfo[0][0].anime_name}`)
-      .setDescription(`${animeinfo[0][0].desc}`)
-      .setImage(animeinfo[0][0].anime_image)
-      .setThumbnail(`${animeinfo[0][0].character_image}`)
+      .setTitle(`${animeinfo[0].name}`)
+      .addField(`Gender`,`${animeinfo[0].gender}`)
+      .addField(`Anime name`,`${animeinfo[0].anime_name}`)
+      .setDescription(`${animeinfo[0].desc}`)
+      .setImage(animeinfo[0].anime_image)
+      .setThumbnail(`${animeinfo[0].character_image}`)
       .setFooter(
         `${message.author.tag}`,
         message.author.displayAvatarURL({ dynamic: true })

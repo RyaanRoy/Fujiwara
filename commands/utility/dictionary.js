@@ -15,7 +15,7 @@ const res = await superagent.get(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${query}`
     )
     
-    const answer = res;
+    const answer = JSON.parse(res);
     const meanings = answer[0]["meanings"];
    const partOfSpeech0 = meanings[0]["partOfSpeech"];
 	const definition0 = meanings[0]["definitions"][0]["definition"];
@@ -24,7 +24,7 @@ const res = await superagent.get(
       new MessageEmbed()
         .setTitle(`Dictionary results for ${query}`)
         .setColor("#cc338b")
-        .setDescription(`${definition0}`)
+        .setDescription(definition0)
         .addField("EXAMPLE", example0, true)
         .addField("PART OF SPEECH", partOfSpeech0, true)
 
@@ -40,7 +40,7 @@ module.exports.help = {
 	name: "dictionary",
 	description:
 		"Searching oxford dictionary",
-	usage: "f-dictionry <query>",
+	usage: "f-dictionary <query>",
 	accessableby: "Member",
 	aliases: ["dic"]
 };

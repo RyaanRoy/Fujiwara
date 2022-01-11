@@ -13,34 +13,34 @@ module.exports.run = async (client, message, args) => {
     const {
       data: { list },
     } = (await axios.get(
-      `https://api.urbandictionary.com/v0/define?term=${query}`
+      `https://api.dictionaryapi.dev/api/v2/entries/en/${query}`
     ))
     
     const [answer] = list;
-
+    const meanings = answer[0]['meanings']
+   const partOfSpeech0 = meanings[0]['partOfSpeech']
+	const definition0 = meanings[0]['definitions'][0]['definition']
+    const example0 = meanings[0]['definitions'][0]['example']
     message.channel.send({embeds:[
       new MessageEmbed()
-        .setTitle(answer.word)
-        .setURL(answer.permalink)
+        .setTitle(`Dictionary results for ${query}`)
         .setColor("#cc338b")
-        .addField("DEFINITION", answer.definition)
-        .addField("EXAMPLE", answer.example)
-        .addField(
-          "RATINGS",
-          `${answer.thumbs_up} 👍 || ${answer.thumbs_down} 👎`
-        )
+        .setDescription(`${definition0}`)
+        .addField("EXAMPLE", example0, true)
+        .addField("PART OF SPEECH", partOfSpeech0, true)
+
     ]}
     );
         } catch (err) {
-          return message.channel.send(`Oh no, an error occurred. That word probably doesn't exist in the urban dictionary!`);
+          return message.channel.send(`Oh no, an error occurred. That word probably doesn't exist in the dictionary!`);
         }
 };
 
 module.exports.help = {
-	name: "urban",
+	name: "dictionary",
 	description:
-		"Searching urban",
-	usage: "f-urban <query>",
+		"Searching oxford dictionary",
+	usage: "f-dictionry <query>",
 	accessableby: "Member",
-	aliases: ["ub"]
+	aliases: ["dic"]
 };

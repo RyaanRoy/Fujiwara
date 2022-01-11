@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
   const embed = new MessageEmbed()
     .setTitle(meme.title)
     .setURL(meme.url)
-    .setColor("RANDOM")
+    .setColor("#cc338b")
     .setImage(meme.image)
     .setFooter(`👍 ${meme.upvotes} || 💬 ${meme.comments}`);
 

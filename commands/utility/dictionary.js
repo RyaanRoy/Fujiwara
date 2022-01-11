@@ -15,7 +15,7 @@ const res = await superagent.get(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${query}`
     )
     
-    const answer = JSON.stringify(res);
+    const answer = res;
     const meanings = answer[0]["meanings"];
    const partOfSpeech0 = meanings[0]["partOfSpeech"];
 	const definition0 = meanings[0]["definitions"][0]["definition"];

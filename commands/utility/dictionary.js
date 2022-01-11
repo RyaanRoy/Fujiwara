@@ -2,7 +2,8 @@ const Discord = require("discord.js");
 const { Client, Message, MessageEmbed } = require("discord.js");
 const fetch = require("node-fetch");
 const moment = require("moment");
-const axios = require("axios");
+
+const superagent = require("superagent");
 module.exports.run = async (client, message, args) => {
     let query = args.join(" ");
     if (!query)
@@ -10,15 +11,15 @@ module.exports.run = async (client, message, args) => {
 
     query = encodeURIComponent(query);
     try {
-const res = await axios.get(
+const res = await superagent.get(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${query}`
     )
     
     const answer = res.json();
-    const meanings = answer[0]['meanings']
-   const partOfSpeech0 = meanings[0]['partOfSpeech']
-	const definition0 = meanings[0]['definitions'][0]['definition']
-    const example0 = meanings[0]['definitions'][0]['example']
+    const meanings = answer[0]["meanings"];
+   const partOfSpeech0 = meanings[0]["partOfSpeech"];
+	const definition0 = meanings[0]["definitions"][0]["definition"];
+    const example0 = meanings[0]["definitions"][0]["example"];
     message.channel.send({embeds:[
       new MessageEmbed()
         .setTitle(`Dictionary results for ${query}`)
@@ -30,6 +31,7 @@ const res = await axios.get(
     ]}
     );
         } catch (err) {
+            console.log(err);
           return message.channel.send(`Oh no, an error occurred. That word probably doesn't exist in the dictionary!`);
         }
 };

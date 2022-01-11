@@ -10,13 +10,11 @@ module.exports.run = async (client, message, args) => {
 
     query = encodeURIComponent(query);
     try {
-    const {
-      data: { list },
-    } = (await axios.get(
+const res = await axios.get(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${query}`
-    ))
+    )
     
-    const [answer] = list;
+    const answer = res.json();
     const meanings = answer[0]['meanings']
    const partOfSpeech0 = meanings[0]['partOfSpeech']
 	const definition0 = meanings[0]['definitions'][0]['definition']

@@ -15,13 +15,15 @@ axios.get(`https://discord.com/api/users/${user.id}`,{
 	if(banner){
 const extension=banner.startsWith("a_") ? '.gif' : '.png';
 const url = `https://cdn.discordapp.com/banners/${user.id}/${banner}${extension}`;
-	
-const embed = new Discord.MessageEmbed()
-.setTitle(`${user.tag}'s banner'`)
-.setImage(url)
-.setTimestamp();
 
-message.channel.send({embeds:[embed]});
+message.reply({
+	files: [
+	  {
+		attachment: url,
+		name: `${user.tag}'s banner`,
+	  },
+	],
+  });
 
 }
 	else{

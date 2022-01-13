@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
       format: "png",
     });
 
-    message.channel.send({
+    message.reply({
       files: [
         {
           attachment: `https://vacefron.nl/api/wide?image=${avatar}`,

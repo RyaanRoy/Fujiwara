@@ -18,7 +18,7 @@ const url = `https://cdn.discordapp.com/banners/${user.id}/${banner}${extension}
 	
 const embed = new Discord.MessageEmbed()
 .setTitle(`${user.tag}'s banner'`)
-.setImage(`${url}?size=4096`)
+.setImage(`${url}?size=2048`)
 
 
 message.channel.send({embeds:[embed]});

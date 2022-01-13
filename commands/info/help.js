@@ -5,7 +5,9 @@ const config = require("../../config/config.json");
 const simplydjs = require("simply-djs");
 module.exports.run = async (client, message, args) => {
 
-
+	const helpArray = message.content.split(" ");
+	const helpArgs = helpArray.slice(1);
+    if (!helpArgs[0]) {
     let embed1 = new Discord.MessageEmbed()
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(`**Help with all commands**`)
@@ -79,7 +81,7 @@ module.exports.run = async (client, message, args) => {
 <:arrow:904250175822889010>Meme
 <:arrow:904250175822889010>Sudo
 `)
-    .setColor(``)
+    .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp();
 
@@ -221,8 +223,45 @@ module.exports.run = async (client, message, args) => {
       timeout: 300000,
       skipBtn: true,
       delBtn: false
-    });
+    });}
 
+	if (helpArgs[0]) {
+		let command = helpArgs[0];
+
+		if (client.commands.has(command)) {
+			command = client.commands.get(command);
+			let alia = command.help.aliases;
+			if (command.help.aliases < 1) alia = "No aliases";
+
+			const embed = new Discord.MessageEmbed()
+				.setAuthor(
+					`Command: ${command.help.name}`,
+					client.user.displayAvatarURL()
+				)
+				.setDescription(
+					`
+            **Description:**\n\`\`\`${
+							command.help.description ||
+							"There is no Description for this command."
+						}\`\`\`\n**Usage:**\n\`\`\`${
+						command.help.usage || "No Usage"
+					}\`\`\`\n**Permissions:**\n\`\`\`${
+						command.help.accessableby || "Members"
+					}\`\`\`\n**Aliases:**\n\`\`\`${alia}\`\`\``
+				)
+				.setColor("#4a4b4d")
+				.setFooter(
+					`© ${nowyear} ${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
+				);
+
+				message.channel.send({embeds:[embed]});
+		} else {
+			const embeds = new Discord.MessageEmbed()
+				.setDescription(`${emojis.cross} Command is not found!`)
+				.setColor(`#cc338b`);
+				message.channel.send({embeds:[embeds]});
+		}
+	}
 };
 
 module.exports.help = {

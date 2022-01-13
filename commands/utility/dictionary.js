@@ -9,7 +9,6 @@ module.exports.run = async (client, message, args) => {
     if (!query)
       return message.channel.send("Please specify a word to search for!");
 
-    query = encodeURIComponent(query);
     try {
 const res = await superagent.get(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${query}`

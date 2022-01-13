@@ -5,14 +5,12 @@ const config = require("../../config/config.json");
 const simplydjs = require("simply-djs");
 module.exports.run = async (client, message, args) => {
 
-	const helpArray = message.content.split(" ");
-	const helpArgs = helpArray.slice(1);
-    if (!helpArgs[0]) {
+
     let embed1 = new Discord.MessageEmbed()
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(`**Help with all commands**`)
     .setDescription(
-        `Yoo! **My prefix is:** f- \nClick [here](https://dsc.gg/fujiwara-recommended) to invite me to your server.\nTo chat with me simply mention or reply to me and ask a question.\n📱**Basic**: help, ping, uptime, vote\nFor more info about any command, use f-[commandname]`
+        `Yoo! **My prefix is:** f- \nClick [here](https://dsc.gg/fujiwara-recommended) to invite me to your server.\nTo chat with me simply mention or reply to me and ask a question.\n📱**Basic**: help, ping, uptime, vote`
     )
     .addField(`<a:duckdance:859068191871598592>   Support Server`, `To join the support server: [Invite to support server](https://discord.gg/qXDyWEesW6)`,false)
     .addField(`🐛   Annoying Bugs`,`See a bug? Use f-bugreport and describe the bug. It will be reviewed by the bot dev immediately!`, false)
@@ -223,45 +221,8 @@ module.exports.run = async (client, message, args) => {
       timeout: 300000,
       skipBtn: true,
       delBtn: false
-    });}
+    });
 
-	if (helpArgs[0]) {
-		let command = helpArgs[0];
-
-		if (client.commands.has(command)) {
-			command = client.commands.get(command);
-			let alia = command.help.aliases;
-			if (command.help.aliases < 1) alia = "No aliases";
-
-			const embed = new Discord.MessageEmbed()
-				.setAuthor(
-					`Command: ${command.help.name}`,
-					client.user.displayAvatarURL()
-				)
-				.setDescription(
-					`
-            **Description:**\n\`\`\`${
-							command.help.description ||
-							"There is no Description for this command."
-						}\`\`\`\n**Usage:**\n\`\`\`${
-						command.help.usage || "No Usage"
-					}\`\`\`\n**Permissions:**\n\`\`\`${
-						command.help.accessableby || "Members"
-					}\`\`\`\n**Aliases:**\n\`\`\`${alia}\`\`\``
-				)
-				.setColor("#4a4b4d")
-				.setFooter(
-					`© ${nowyear} ${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
-				);
-
-				message.channel.send({embeds:[embed]});
-		} else {
-			const embeds = new Discord.MessageEmbed()
-				.setDescription(`${emojis.cross} Command is not found!`)
-				.setColor(`#cc338b`);
-				message.channel.send({embeds:[embeds]});
-		}
-	}
 };
 
 module.exports.help = {

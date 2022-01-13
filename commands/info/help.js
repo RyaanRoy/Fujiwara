@@ -258,7 +258,7 @@ module.exports.run = async (client, message, args) => {
 		} else {
 			const embeds = new Discord.MessageEmbed()
 				.setDescription(`${emojis.cross} Command is not found!`)
-				.setColor("RED");
+				.setColor(`#cc338b`);
 				message.channel.send({embeds:[embeds]});
 		}
 	}

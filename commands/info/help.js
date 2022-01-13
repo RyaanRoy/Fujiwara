@@ -78,7 +78,7 @@ module.exports.run = async (client, message, args) => {
 <:arrow:904250175822889010>Meme
 <:arrow:904250175822889010>Sudo
 `)
-    .setColor(`#cc338b`)
+    .setColor(``)
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp();
 

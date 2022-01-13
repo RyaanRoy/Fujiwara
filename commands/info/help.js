@@ -117,7 +117,7 @@ module.exports.run = async (client, message, args) => {
     let embed6 = new Discord.MessageEmbed()
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **Image Commands** `)
-    .addField(`Total Image Commands: 14`,
+    .addField(`Total Image Commands: 15`,
     `<:arrow:904250175822889010>Captcha
 <:arrow:904250175822889010>Circle
 <:arrow:904250175822889010>Delete
@@ -130,6 +130,7 @@ module.exports.run = async (client, message, args) => {
 <:arrow:904250175822889010>Dog
 <:arrow:904250175822889010>Cat
 <:arrow:904250175822889010>Drake
+<:arrow:904250175822889010>Wide
 <:arrow:904250175822889010>Rip
 <:arrow:904250175822889010>Iphonex
 `)

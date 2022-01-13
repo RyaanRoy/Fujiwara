@@ -65,7 +65,7 @@ module.exports.run = async (client, message, args) => {
 					//	.addField('Bootup Time', derweSA);;
 					.setFooter(`Last Launched at ${derweSA}`);
 
-				message.edit({embeds:[serverembedss]});
+				message.channel.send({embeds:[serverembedss]});
 			});
 	});
 };

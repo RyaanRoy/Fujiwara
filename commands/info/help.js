@@ -85,7 +85,7 @@ module.exports.run = async (client, message, args) => {
     let embed5 = new Discord.MessageEmbed()
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **Utility Commands** `)
-    .addField(`Total Utility Commands: 22`,
+    .addField(`Total Utility Commands: 23`,
     `<:arrow:904250175822889010>Enlarge
 <:arrow:904250175822889010>Reminder
 <:arrow:904250175822889010>Maps
@@ -96,6 +96,7 @@ module.exports.run = async (client, message, args) => {
 <:arrow:904250175822889010>Serverinfo
 <:arrow:904250175822889010>Serveravatar
 <:arrow:904250175822889010>Avatar
+<:arrow:904250175822889010>Banner
 <:arrow:904250175822889010>Whois
 <:arrow:904250175822889010>Roleinfo
 <:arrow:904250175822889010>Channel

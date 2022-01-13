@@ -12,7 +12,7 @@ module.exports.run = (client, message, args) => {
 
 	const embed = new Discord.MessageEmbed()
 		.setColor("#cc338b")
-		.setTitle(`Avatar of ${message.mentions.users.first().username}`)
+		.setTitle(`Avatar of ${target.tag}`)
 		.setImage(
 			imageitem.displayAvatarURL({ dynamic: true, format: "jpg", size: 4096 })
 		);

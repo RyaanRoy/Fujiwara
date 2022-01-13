@@ -23,9 +23,9 @@ module.exports.run = async (client, message, args) => {
 };
 
 module.exports.help = {
-	name: "sudo",
-	description: "This command is used for sudoing as someone",
-	usage: "f-sudo<user-mention> <message>",
+	name: "wide",
+	description: "This command is used for getting wide avatar lol",
+	usage: "f-wide <mention",
 	accessableby: "Member",
 	aliases: []
 };

@@ -9,11 +9,11 @@ module.exports.run = (client, message, args) => {
           size: 4096,
           dynamic: true,
           format: "png",
-        })}) | [Avatar Link JPG](${user.displayAvatarURL({
+        })}) | [JPG](${user.displayAvatarURL({
           size: 4096,
           dynamic: true,
           format: "jpg",
-        })}) | [Avatar Link WEBP](${user.displayAvatarURL({
+        })}) | [WEBP](${user.displayAvatarURL({
           size: 4096,
           dynamic: true,
           format: "webp",

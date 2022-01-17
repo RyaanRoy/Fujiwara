@@ -9,15 +9,15 @@ module.exports.run = (client, message, args) => {
           size: 4096,
           dynamic: true,
           format: "png",
-        })}) || [Avatar Link JPG](${user.displayAvatarURL({
+        })}) | [Avatar Link JPG](${user.displayAvatarURL({
           size: 4096,
           dynamic: true,
           format: "jpg",
-        })} || [Avatar Link WEBP](${user.displayAvatarURL({
+        })}) | [Avatar Link WEBP](${user.displayAvatarURL({
           size: 4096,
           dynamic: true,
           format: "webp",
-        })}`
+        })})`
       )
       .setImage(user.avatarURL({ size: 4096, dynamic: true, format: "png" }));
 

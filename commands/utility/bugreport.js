@@ -28,7 +28,7 @@ module.exports.run = async(client, message, args) => {
       .addField("Report Description", query)
       .addField("Invite", invite)
       .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
-      .setColor(`#ffa5ba`)
+      .setColor(`#ffa5ba`) 
       .setTimestamp();
 
     client.channels.cache.get(`895548282468716595`).send({embeds:[reportEmbed]});

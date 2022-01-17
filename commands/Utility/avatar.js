@@ -5,11 +5,19 @@ module.exports.run = (client, message, args) => {
       .setColor("#cc338b")
       .setTitle(`${user.username}'s Avatar`)
       .setDescription(
-        `[Avatar Link](${user.displayAvatarURL({
+        `[Avatar Link PNG](${user.displayAvatarURL({
           size: 4096,
           dynamic: true,
           format: "png",
-        })})`
+        })}) || [Avatar Link JPG](${user.displayAvatarURL({
+          size: 4096,
+          dynamic: true,
+          format: "jpg",
+        })} || [Avatar Link WEBP](${user.displayAvatarURL({
+          size: 4096,
+          dynamic: true,
+          format: "webp",
+        })}`
       )
       .setImage(user.avatarURL({ size: 4096, dynamic: true, format: "png" }));
 

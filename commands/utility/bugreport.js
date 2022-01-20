@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
-const { Client, Message, MessageEmbed,GuildInviteManager } = require("discord.js");
+const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports.run = async(client, message, args) => {
     const owner = client.users.cache.get("744847481430343691");
     const query = args.join(" ");
-    const invite = GuildInviteManager.guild.invites.create(message.channelId)
+    const invite = await guild.invites.create(message.channelId,[{maxAge:0,maxUses:0}])
     
     if (!query) return message.reply("Please specify a query!");
 

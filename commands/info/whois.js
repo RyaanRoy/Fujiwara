@@ -52,7 +52,7 @@ module.exports.run = async (bot, message, args) => {
 	.addField(`Key Permissions`,`${finalPermissions.join(', ')}`)
 	.addField(`Other Information`, `Acc Created on: \n\`${moment(mention.user.createdAt).format("dddd, MMMM Do YYYY, h:mm:ss A")}\` \nJoined This Server on: \n\`${moment(mention.joinedAt).format("dddd, MMMM Do YYYY, h:mm:ss A")}\``)
 	.setThumbnail(mention.user.avatarURL({ dynamic: false, format: "jpg"}))
-	.setFooter(`ID: ${mention.user.id}`, mention.user.avatarURL({ dynamic: false, format: "jpg"}))
+	.setFooter({text:`ID: ${mention.user.id}`,iconURL: `${mention.user.avatarURL({ dynamic: false, format: "png"})}`})
 	.setTimestamp()
 	.setColor("#cc338b");
 	message.channel.send({ embeds: [userlol] })

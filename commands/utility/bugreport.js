@@ -26,12 +26,12 @@ module.exports.run = async(client, message, args) => {
       .addField("Author", message.author.toString(), true)
       .addField("Guild", message.guild.name, true)
       .addField("Report Description", query, false)
-      .addField("Invite", invite, false)
+      .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
       .setColor(`#ffa5ba`) 
       .setTimestamp();
 
     client.channels.cache.get(`895548282468716595`).send({embeds:[reportEmbed]});
-    if (query) return message.channel.send({embeds:[thanksFor]});
+    if (query) return message.reply({embeds:[thanksFor]});
 
 };
 

@@ -1,9 +1,14 @@
-const Discord = require("discord.js");
-const { Client, Message, MessageEmbed } = require("discord.js");
+
+const { Discord,Client, Message, MessageEmbed } = require("discord.js");
 module.exports.run = async(client, message, args) => {
-    const owner = client.users.cache.get("744847481430343691");
+   
     const query = args.join(" ");
-    const invite = await message.guild.invites.create(message.channelId,[{maxAge:0,maxUses:0}])
+    const invite = await message.channel.createInvite(
+      {
+        maxAge: 0, 
+        maxUses: 0,
+      }
+    )
     
     if (!query) return message.reply("Please specify a query!");
 
@@ -20,8 +25,8 @@ module.exports.run = async(client, message, args) => {
       .setTitle("New Bug Issues!")
       .addField("Author", message.author.toString(), true)
       .addField("Guild", message.guild.name, true)
-      .addField("Report Description", query, false)
-      .addField("Invite", invite, false)
+      .addField("Report Description", query)
+      .addField("Invite", `${invite}`)
       .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
       .setColor(`#ffa5ba`) 
       .setTimestamp();

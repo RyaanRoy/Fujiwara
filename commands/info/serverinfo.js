@@ -67,11 +67,7 @@ module.exports.run = async (client, message, args) => {
       )
       .addField(
         `Member Info`,
-        `Total Members: \`${message.guild.memberCount}\` \nHumans: \`${
-          message.guild.members.cache.filter((member) => !member.user.bot).size
-        }\` \nBots: \`${
-          message.guild.members.cache.filter((member) => member.user.bot).size
-        }\``
+        `Total Members: \`${message.guild.memberCount}\``
       )
       .addField(
         `Misc. Info`,

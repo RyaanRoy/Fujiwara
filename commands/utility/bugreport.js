@@ -11,7 +11,7 @@ module.exports.run = async(client, message, args) => {
     )
     
     if (!query) return message.reply("Please specify a query!");
-
+ console.log(invite);
     const thanksFor = new MessageEmbed()
       .setTitle("Thanks for reporting!")
       .setDescription(
@@ -32,6 +32,7 @@ module.exports.run = async(client, message, args) => {
       .setTimestamp();
 
     client.channels.cache.get(`895548282468716595`).send({embeds:[reportEmbed]});
+    
     if (query) return message.reply({embeds:[thanksFor]});
 
 };

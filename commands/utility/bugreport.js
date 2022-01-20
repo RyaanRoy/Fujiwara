@@ -25,14 +25,13 @@ module.exports.run = async(client, message, args) => {
       .setTitle("New Bug Issues!")
       .addField("Author", message.author.toString(), true)
       .addField("Guild", message.guild.name, true)
-      .addField("Report Description", query)
-      .addField("Invite", invite)
-      .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
+      .addField("Report Description", query, false)
+      .addField("Invite", invite, false)
       .setColor(`#ffa5ba`) 
       .setTimestamp();
 
     client.channels.cache.get(`895548282468716595`).send({embeds:[reportEmbed]});
-    if (query) return message.reply({embeds:[thanksFor]});
+    if (query) return message.channel.send({embeds:[thanksFor]});
 
 };
 

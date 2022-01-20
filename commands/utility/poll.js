@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 			i++;
 		}
 		message.delete();
-
+ 
 		const gg = await message.channel.send(
 			`:bar_chart: **${str1.replace(/"/g, "")}**`
 		);

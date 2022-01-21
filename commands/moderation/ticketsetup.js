@@ -11,9 +11,9 @@ module.exports.run = (client, message, args) => {
 };
 
 module.exports.help = {
-	name: "tickersetup",
-	description: "This command is used for setting up ticker system.",
-	usage: "f-ticketsetup <text> <channelMention>",
+	name: "ticketsetup",
+	description: "This command is used for setting up ticket system.",
+	usage: "f-ticketsetup <channelMention>",
 	accessableby: "Member",
 	aliases: ["ts"]
 };

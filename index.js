@@ -5,8 +5,8 @@ const Discord = require("discord.js");
 const fetch = require("node-fetch");
 const { Util }= require('discord.js')
 const InvitesTracker = require('@androz2091/discord-invites-tracker');
-
-
+const ts = require('djs-tickets')
+ts.start(client)
 
 const client = new Discord.Client({
 	partials: ["MESSAGE", "USER", "REACTION"],

@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
     let tag = args[1]
     let region = args[2]
     if (!args[0] || !args[1]) {
-        message.channel.send('Please specify your riot id correctly without a hashtag or space. (usage: -valmmr [name] [tag] [region])')
+        message.channel.send('Please specify your riot id correctly without a hashtag or space. (usage: f-valorant [name] [tag] [region])')
     }
     if (!region) {
         region = 'ap'

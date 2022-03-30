@@ -11,8 +11,8 @@ module.exports.run = async (client, message, args) => {
         message.channel.send('Please specify your riot id correctly without a hashtag or space. (usage: -valmmr [name] [tag] [region])')
     }
     if (!region) {
-        region = 'na'
-        message.channel.send('Because you did not set a region, it will be automatically set to NA.')
+        region = 'ap'
+        message.channel.send('Because you did not set a region, it will be automatically set to Asia-Pacific.')
     }
     axios.get(`https://api.henrikdev.xyz/valorant/v1/mmr/${region}/${profile}/${tag}`)
         .then(function (response) {

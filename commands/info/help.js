@@ -86,7 +86,7 @@ module.exports.run = async (client, message, args) => {
     let embed5 = new Discord.MessageEmbed()
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **Utility Commands** `)
-    .addField(`Total Utility Commands: 23`,
+    .addField(`Total Utility Commands: 24`,
     `<:arrow:904250175822889010>Enlarge
 <:arrow:904250175822889010>Reminder
 <:arrow:904250175822889010>Maps
@@ -110,6 +110,7 @@ module.exports.run = async (client, message, args) => {
 <:arrow:904250175822889010>Translate
 <:arrow:904250175822889010>Weather
 <:arrow:904250175822889010>Youtube-search
+<:arrow:904250175822889010>Valorant
 `)
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())

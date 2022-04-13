@@ -153,7 +153,7 @@ tracker.on('guildMemberAdd', (member, type, invite) => {
 	}
 
 });
-
++
 client.on("messageCreate", async message => {
     
 		  if(message.author.bot) return;

@@ -15,14 +15,14 @@ module.exports.run = async (client, message, args) => {
     .addField(`<a:duckdance:859068191871598592>   Support Server`, `To join the support server: [Invite to support server](https://discord.gg/qXDyWEesW6)`,false)
     .addField(`🐛   Annoying Bugs`,`See a bug? Use f-bugreport and describe the bug. It will be reviewed by the bot dev immediately!`, false)
     .addField(`Command Sections`,
-    `<:arrow:904250175822889010> Moderation
-<:arrow:904250175822889010> Fun
-<:arrow:904250175822889010> Utility
-<:arrow:904250175822889010> Giveaways
-<:arrow:904250175822889010> Image Generation
-<:arrow:904250175822889010> Games
-<:arrow:904250175822889010> Roleplay
-<:arrow:904250175822889010> Music`)
+    `<:D_Arrow:937938311467655169> Moderation
+<:D_Arrow:937938311467655169> Fun
+<:D_Arrow:937938311467655169> Utility
+<:D_Arrow:937938311467655169> Giveaways
+<:D_Arrow:937938311467655169> Image Generation
+<:D_Arrow:937938311467655169> Games
+<:D_Arrow:937938311467655169> Roleplay
+<:D_Arrow:937938311467655169> Music`)
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
     .setTimestamp()
@@ -33,21 +33,21 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **Moderation Commands** `)
     .addField(`Total Moderation Commands: 15`,
-    `<:arrow:904250175822889010>Purge
-<:arrow:904250175822889010>Mute
-<:arrow:904250175822889010>Unmute
-<:arrow:904250175822889010>Kick
-<:arrow:904250175822889010>Ban
-<:arrow:904250175822889010>Unban
-<:arrow:904250175822889010>Warn
-<:arrow:904250175822889010>Warnings
-<:arrow:904250175822889010>Clearwarn
-<:arrow:904250175822889010>Createchannel
-<:arrow:904250175822889010>Createemoji
-<:arrow:904250175822889010>Lockchannel
-<:arrow:904250175822889010>Unlockchannel
-<:arrow:904250175822889010>Rename
-<:arrow:904250175822889010>Slowmode
+    `<:D_Arrow:937938311467655169>Purge
+<:D_Arrow:937938311467655169>Mute
+<:D_Arrow:937938311467655169>Unmute
+<:D_Arrow:937938311467655169>Kick
+<:D_Arrow:937938311467655169>Ban
+<:D_Arrow:937938311467655169>Unban
+<:D_Arrow:937938311467655169>Warn
+<:D_Arrow:937938311467655169>Warnings
+<:D_Arrow:937938311467655169>Clearwarn
+<:D_Arrow:937938311467655169>Createchannel
+<:D_Arrow:937938311467655169>Createemoji
+<:D_Arrow:937938311467655169>Lockchannel
+<:D_Arrow:937938311467655169>Unlockchannel
+<:D_Arrow:937938311467655169>Rename
+<:D_Arrow:937938311467655169>Slowmode
 `)
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
@@ -57,9 +57,9 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **Giveaway Commands** `)
     .addField(`Total Giveaway Commands: 3`,
-    `<:arrow:904250175822889010>Gstart
-<:arrow:904250175822889010>Gend
-<:arrow:904250175822889010>Greroll
+    `<:D_Arrow:937938311467655169>Gstart
+<:D_Arrow:937938311467655169>Gend
+<:D_Arrow:937938311467655169>Greroll
 
 `)
     .setColor(`#cc338b`)
@@ -70,14 +70,14 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **Fun Commands** `)
     .addField(`Total Funny Commands: 7`,
-    `<:arrow:904250175822889010>8ball
-<:arrow:904250175822889010>Owo
-<:arrow:904250175822889010>Ship
-<:arrow:904250175822889010>AnimeSearch
-<:arrow:904250175822889010>Aes256
-<:arrow:904250175822889010>Deaes256
-<:arrow:904250175822889010>Meme
-<:arrow:904250175822889010>Sudo
+    `<:D_Arrow:937938311467655169>8ball
+<:D_Arrow:937938311467655169>Owo
+<:D_Arrow:937938311467655169>Ship
+<:D_Arrow:937938311467655169>AnimeSearch
+<:D_Arrow:937938311467655169>Aes256
+<:D_Arrow:937938311467655169>Deaes256
+<:D_Arrow:937938311467655169>Meme
+<:D_Arrow:937938311467655169>Sudo
 `)
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
@@ -87,30 +87,30 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **Utility Commands** `)
     .addField(`Total Utility Commands: 24`,
-    `<:arrow:904250175822889010>Enlarge
-<:arrow:904250175822889010>Reminder
-<:arrow:904250175822889010>Maps
-<:arrow:904250175822889010>Wikipedia
-<:arrow:904250175822889010>Urban
-<:arrow:904250175822889010>Google
-<:arrow:904250175822889010>Roblox
-<:arrow:904250175822889010>Serverinfo
-<:arrow:904250175822889010>Serveravatar
-<:arrow:904250175822889010>Avatar
-<:arrow:904250175822889010>Banner
-<:arrow:904250175822889010>Whois
-<:arrow:904250175822889010>Roleinfo
-<:arrow:904250175822889010>Channel
-<:arrow:904250175822889010>Embed (separate arguments with ;)
-<:arrow:904250175822889010>Imageembed
-<:arrow:904250175822889010>Reverse
-<:arrow:904250175822889010>Setafk
-<:arrow:904250175822889010>Stats
-<:arrow:904250175822889010>Timer
-<:arrow:904250175822889010>Translate
-<:arrow:904250175822889010>Weather
-<:arrow:904250175822889010>Youtube-search
-<:arrow:904250175822889010>Valorant
+    `<:D_Arrow:937938311467655169>Enlarge
+<:D_Arrow:937938311467655169>Reminder
+<:D_Arrow:937938311467655169>Maps
+<:D_Arrow:937938311467655169>Wikipedia
+<:D_Arrow:937938311467655169>Urban
+<:D_Arrow:937938311467655169>Google
+<:D_Arrow:937938311467655169>Roblox
+<:D_Arrow:937938311467655169>Serverinfo
+<:D_Arrow:937938311467655169>Serveravatar
+<:D_Arrow:937938311467655169>Avatar
+<:D_Arrow:937938311467655169>Banner
+<:D_Arrow:937938311467655169>Whois
+<:D_Arrow:937938311467655169>Roleinfo
+<:D_Arrow:937938311467655169>Channel
+<:D_Arrow:937938311467655169>Embed (separate arguments with ;)
+<:D_Arrow:937938311467655169>Imageembed
+<:D_Arrow:937938311467655169>Reverse
+<:D_Arrow:937938311467655169>Setafk
+<:D_Arrow:937938311467655169>Stats
+<:D_Arrow:937938311467655169>Timer
+<:D_Arrow:937938311467655169>Translate
+<:D_Arrow:937938311467655169>Weather
+<:D_Arrow:937938311467655169>Youtube-search
+<:D_Arrow:937938311467655169>Valorant
 `)
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
@@ -120,21 +120,21 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **Image Commands** `)
     .addField(`Total Image Commands: 15`,
-    `<:arrow:904250175822889010>Captcha
-<:arrow:904250175822889010>Circle
-<:arrow:904250175822889010>Delete
-<:arrow:904250175822889010>Gay
-<:arrow:904250175822889010>Changemymind
-<:arrow:904250175822889010>Trigger
-<:arrow:904250175822889010>Clyde
-<:arrow:904250175822889010>Petpet
-<:arrow:904250175822889010>Wasted
-<:arrow:904250175822889010>Dog
-<:arrow:904250175822889010>Cat
-<:arrow:904250175822889010>Drake
-<:arrow:904250175822889010>Wide
-<:arrow:904250175822889010>Rip
-<:arrow:904250175822889010>Iphonex
+    `<:D_Arrow:937938311467655169>Captcha
+<:D_Arrow:937938311467655169>Circle
+<:D_Arrow:937938311467655169>Delete
+<:D_Arrow:937938311467655169>Gay
+<:D_Arrow:937938311467655169>Changemymind
+<:D_Arrow:937938311467655169>Trigger
+<:D_Arrow:937938311467655169>Clyde
+<:D_Arrow:937938311467655169>Petpet
+<:D_Arrow:937938311467655169>Wasted
+<:D_Arrow:937938311467655169>Dog
+<:D_Arrow:937938311467655169>Cat
+<:D_Arrow:937938311467655169>Drake
+<:D_Arrow:937938311467655169>Wide
+<:D_Arrow:937938311467655169>Rip
+<:D_Arrow:937938311467655169>Iphonex
 `)
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
@@ -144,19 +144,19 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **Roleplay Commands** `)
     .addField(`Total Roleplay Commands: 13`,
-    `<:arrow:904250175822889010>Baka
-<:arrow:904250175822889010>Cuddle
-<:arrow:904250175822889010>Hug
-<:arrow:904250175822889010>Feed
-<:arrow:904250175822889010>Kiss
-<:arrow:904250175822889010>Meow
-<:arrow:904250175822889010>Poke
-<:arrow:904250175822889010>Pat
-<:arrow:904250175822889010>Slap
-<:arrow:904250175822889010>Punch
-<:arrow:904250175822889010>Kill
-<:arrow:904250175822889010>Smug
-<:arrow:904250175822889010>Waifu
+    `<:D_Arrow:937938311467655169>Baka
+<:D_Arrow:937938311467655169>Cuddle
+<:D_Arrow:937938311467655169>Hug
+<:D_Arrow:937938311467655169>Feed
+<:D_Arrow:937938311467655169>Kiss
+<:D_Arrow:937938311467655169>Meow
+<:D_Arrow:937938311467655169>Poke
+<:D_Arrow:937938311467655169>Pat
+<:D_Arrow:937938311467655169>Slap
+<:D_Arrow:937938311467655169>Punch
+<:D_Arrow:937938311467655169>Kill
+<:D_Arrow:937938311467655169>Smug
+<:D_Arrow:937938311467655169>Waifu
 `)
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
@@ -166,17 +166,17 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **Game Commands** `)
     .addField(`Total Game Commands: 10`,
-    `<:arrow:904250175822889010>Akinator
-<:arrow:904250175822889010>Football
-<:arrow:904250175822889010>Tictactoe
-<:arrow:904250175822889010>Youtubetogether
-<:arrow:904250175822889010>Betrayal
-<:arrow:904250175822889010>Trivia
-<:arrow:904250175822889010>Calculator
-<:arrow:904250175822889010>Truth
-<:arrow:904250175822889010>Dare
-<:arrow:904250175822889010>Neverhaveiever
-<:arrow:904250175822889010>Wouldyourather
+    `<:D_Arrow:937938311467655169>Akinator
+<:D_Arrow:937938311467655169>Football
+<:D_Arrow:937938311467655169>Tictactoe
+<:D_Arrow:937938311467655169>Youtubetogether
+<:D_Arrow:937938311467655169>Betrayal
+<:D_Arrow:937938311467655169>Trivia
+<:D_Arrow:937938311467655169>Calculator
+<:D_Arrow:937938311467655169>Truth
+<:D_Arrow:937938311467655169>Dare
+<:D_Arrow:937938311467655169>Neverhaveiever
+<:D_Arrow:937938311467655169>Wouldyourather
 `)
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
@@ -186,18 +186,18 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(`${client.user.username}`, client.user.displayAvatarURL())
     .setTitle(` **Music Commands** `)
     .addField(`Total Music Commands: 12`,
-    `<:arrow:904250175822889010>Play
-<:arrow:904250175822889010>Stop    
-<:arrow:904250175822889010>Pause
-<:arrow:904250175822889010>Resume
-<:arrow:904250175822889010>Queue
-<:arrow:904250175822889010>Autoplay
-<:arrow:904250175822889010>Loop
-<:arrow:904250175822889010>Volume
-<:arrow:904250175822889010>Skip
-<:arrow:904250175822889010>Lyrics
-<:arrow:904250175822889010>Filter
-<:arrow:904250175822889010>Jumpto
+    `<:D_Arrow:937938311467655169>Play
+<:D_Arrow:937938311467655169>Stop    
+<:D_Arrow:937938311467655169>Pause
+<:D_Arrow:937938311467655169>Resume
+<:D_Arrow:937938311467655169>Queue
+<:D_Arrow:937938311467655169>Autoplay
+<:D_Arrow:937938311467655169>Loop
+<:D_Arrow:937938311467655169>Volume
+<:D_Arrow:937938311467655169>Skip
+<:D_Arrow:937938311467655169>Lyrics
+<:D_Arrow:937938311467655169>Filter
+<:D_Arrow:937938311467655169>Jumpto
 `)
     .setColor(`#cc338b`)
     .setThumbnail(client.user.displayAvatarURL())
